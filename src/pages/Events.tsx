@@ -4,44 +4,44 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Music, Users } from "lucide-react";
-import partyImg from "@/assets/party.jpg";
-import liveMusicImg from "@/assets/live-music.jpg";
-import crowdImg from "@/assets/crowd.jpg";
+import liveBandImg from "@/assets/basement_12.jpg";
+import kafanskaImg from "@/assets/basement_7-2.jpg";
+import newYearImg from "@/assets/basement_39.jpg";
 const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState("Svi");
-  const categories = ["Svi", "Live Muzika", "DJ Program", "Kafanske Noći"];
+  const categories = ["Svi", "Muzika uživo", "DJ program", "Kafanska večer"];
   const events = [{
     id: 1,
-    title: "Subotnja Žurka",
+    title: "Subotnja žurka",
     date: "20. 11. 2025.",
     time: "22:00",
-    category: "DJ Program",
+    category: "DJ program",
     description: "Pridružite nam se za nezaboravnu subotnju noć uz najbolje DJ-eve i neumoljivu energiju!",
-    image: partyImg
+    image: newYearImg
   }, {
     id: 2,
-    title: "Live Band Večer",
+    title: "Live band večer",
     date: "27. 11. 2025.",
     time: "21:00",
-    category: "Live Muzika",
+    category: "Muzika uživo",
     description: "Uživajte u vrhunskoj live muzici uz najbolji regionalni bend.",
-    image: liveMusicImg
+    image: liveBandImg
   }, {
     id: 3,
-    title: "Kafanska Noć",
+    title: "Kafanska noć",
     date: "4. 12. 2025.",
     time: "20:00",
-    category: "Kafanske Noći",
+    category: "Kafanska večer",
     description: "Tradicionalna kafanska atmosfera sa najboljim hitovima i sjajnom zabavom.",
-    image: crowdImg
+    image: kafanskaImg
   }, {
     id: 4,
-    title: "Novogodišnja Noć 2026",
+    title: "Novogodišnja noć 2026",
     date: "31. 12. 2025.",
     time: "21:00",
-    category: "DJ Program",
+    category: "DJ program",
     description: "Dočekajte Novu godinu uz ekskluzivni program, šampanjac i nezaboravnu atmosferu!",
-    image: partyImg
+    image: newYearImg
   }];
   const filteredEvents = selectedCategory === "Svi" ? events : events.filter(event => event.category === selectedCategory);
   return <div className="min-h-screen bg-background">
