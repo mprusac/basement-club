@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         elegant: ['Cormorant Garamond', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       backgroundSize: {
         'size-200': '200% 200%',
