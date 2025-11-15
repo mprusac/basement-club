@@ -29,17 +29,18 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
+          ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
           : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="The Basement Club" className="h-12 md:h-16 w-auto" />
+          <Link to="/" className="flex items-center gap-3 group">
+            <img src={logo} alt="The Basement Club" className="h-10 md:h-12 w-auto drop-shadow-[0_0_8px_rgba(168,85,247,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.8)]" />
+            <span className="hidden sm:block text-xl md:text-2xl font-bold bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">The Basement</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -48,13 +49,14 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-semibold tracking-wide transition-all duration-300 hover:text-primary relative group ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-foreground/80"
                 }`}
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -75,7 +77,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block py-3 text-sm font-medium transition-colors hover:text-primary ${
+                className={`block py-3 text-sm font-semibold tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-foreground/80"
