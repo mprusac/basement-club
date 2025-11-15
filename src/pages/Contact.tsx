@@ -134,10 +134,10 @@ const Contact = () => {
       {/* Map Section - Full Width Dark Theme */}
       <section className="py-0 px-0">
         <div className="w-full h-[500px] relative">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2900.7234567890123!2d17.6234567!3d43.2234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDEzJzI0LjQiTiAxN8KwMzcnMjQuNCJF!5e0!3m2!1sen!2sba!4v1234567890123!5m2!1sen!2sba&style=feature:all|element:geometry|color:0x242f3e&style=feature:all|element:labels.text.stroke|color:0x242f3e&style=feature:all|element:labels.text.fill|color:0x746855&style=feature:administrative.locality|element:labels.text.fill|color:0xd59563&style=feature:poi|element:labels.text.fill|color:0xd59563&style=feature:poi.park|element:geometry|color:0x263c3f&style=feature:poi.park|element:labels.text.fill|color:0x6b9a76&style=feature:road|element:geometry|color:0x38414e&style=feature:road|element:geometry.stroke|color:0x212a37&style=feature:road|element:labels.text.fill|color:0x9ca5b3&style=feature:road.highway|element:geometry|color:0x746855&style=feature:road.highway|element:geometry.stroke|color:0x1f2835&style=feature:road.highway|element:labels.text.fill|color:0xf3d19c&style=feature:transit|element:geometry|color:0x2f3948&style=feature:transit.station|element:labels.text.fill|color:0xd59563&style=feature:water|element:geometry|color:0x17263c&style=feature:water|element:labels.text.fill|color:0x515c6d&style=feature:water|element:labels.text.stroke|color:0x17263c" width="100%" height="100%" style={{
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.4456789!2d17.6891234!3d43.2156789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zS3JhbGphIFRvbWlzbGF2YSA2MywgODgyNjAgxIxpdGx1aw!5e0!3m2!1shr!2sba!4v1620000000000!5m2!1shr!2sba&maptype=roadmap&zoom=15&q=Kralja+Tomislava+63,+88260+Čitluk,+Bosnia+and+Herzegovina" width="100%" height="100%" style={{
           border: 0,
-          filter: "contrast(1.1) brightness(0.85)"
-        }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="The Basement Club Location" />
+          filter: "invert(90%) hue-rotate(180deg) contrast(0.9) brightness(0.9)"
+        }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="The Basement Club Location - Kralja Tomislava 63, Čitluk" />
           <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-background/20 to-transparent" />
         </div>
       </section>
