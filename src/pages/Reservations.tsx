@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import floorPlanImg from "@/assets/floor-plan.jpg";
-
 const Reservations = () => {
   const [selectedTable, setSelectedTable] = useState<string>("");
   const [formData, setFormData] = useState({
@@ -15,12 +14,10 @@ const Reservations = () => {
     phone: "",
     date: "",
     guests: "2",
-    note: "",
+    note: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!selectedTable) {
       toast.error("Molimo odaberite stol ili VIP prostor");
       return;
@@ -28,7 +25,7 @@ const Reservations = () => {
 
     // Simulate reservation
     toast.success("Rezervacija primljena!", {
-      description: `Uspješno ste rezervisali ${selectedTable}. Kontaktiramo vas uskoro.`,
+      description: `Uspješno ste rezervisali ${selectedTable}. Kontaktiramo vas uskoro.`
     });
 
     // Reset form
@@ -39,19 +36,16 @@ const Reservations = () => {
       phone: "",
       date: "",
       guests: "2",
-      note: "",
+      note: ""
     });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
@@ -90,11 +84,7 @@ const Reservations = () => {
               </div>
               
               <div className="relative border-4 border-primary/30 rounded-lg overflow-hidden">
-                <img
-                  src={floorPlanImg}
-                  alt="Floor Plan"
-                  className="w-full h-auto"
-                />
+                <img src={floorPlanImg} alt="Floor Plan" className="w-full h-auto" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
               </div>
 
@@ -102,7 +92,7 @@ const Reservations = () => {
                 <h3 className="font-semibold text-lg mb-3 text-primary">Napomena</h3>
                 <p className="text-sm text-muted-foreground">
                   Za precizne informacije o dostupnosti stolova i VIP prostora, 
-                  kontaktirajte nas direktno na: <br/>
+                  kontaktirajte nas direktno na: <br />
                   <span className="text-primary font-semibold">+387 63 267 715</span> ili{" "}
                   <span className="text-primary font-semibold">+387 63 196 490</span>
                 </p>
@@ -112,130 +102,63 @@ const Reservations = () => {
             {/* Reservation Form */}
             <div>
               <div className="bg-card p-8 rounded-lg border border-border shadow-xl">
-                <h2 className="text-3xl font-bold mb-6 text-primary">Podaci za Rezervaciju</h2>
+                <h2 className="text-3xl font-bold mb-6 text-primary">Podaci za rezervaciju</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Selected Table Display */}
-                  {selectedTable && (
-                    <div className="p-4 bg-primary/10 rounded-lg border border-primary">
+                  {selectedTable && <div className="p-4 bg-primary/10 rounded-lg border border-primary">
                       <p className="text-sm font-medium">Odabrani prostor:</p>
                       <p className="text-lg font-bold text-primary">{selectedTable}</p>
-                    </div>
-                  )}
+                    </div>}
 
                   {/* Table Selection Buttons */}
                   <div>
                     <Label>Odaberite Prostor *</Label>
                     <div className="grid grid-cols-2 gap-3 mt-2">
-                      {["Stol 1", "Stol 2", "Stol 3", "VIP Boks A", "VIP Boks B", "Šank Zona"].map((table) => (
-                        <button
-                          key={table}
-                          type="button"
-                          onClick={() => setSelectedTable(table)}
-                          className={`p-3 rounded-lg border transition-all ${
-                            selectedTable === table
-                              ? "bg-primary text-primary-foreground border-primary"
-                              : "bg-card border-border hover:border-primary"
-                          }`}
-                        >
+                      {["Stol 1", "Stol 2", "Stol 3", "VIP Boks A", "VIP Boks B", "Šank Zona"].map(table => <button key={table} type="button" onClick={() => setSelectedTable(table)} className={`p-3 rounded-lg border transition-all ${selectedTable === table ? "bg-primary text-primary-foreground border-primary" : "bg-card border-border hover:border-primary"}`}>
                           {table}
-                        </button>
-                      ))}
+                        </button>)}
                     </div>
                   </div>
 
                   {/* Name */}
                   <div>
                     <Label htmlFor="name">Ime i Prezime *</Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      placeholder="Vaše ime i prezime"
-                      className="mt-1"
-                    />
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Vaše ime i prezime" className="mt-1" />
                   </div>
 
                   {/* Email */}
                   <div>
                     <Label htmlFor="email">Email *</Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      placeholder="vas@email.com"
-                      className="mt-1"
-                    />
+                    <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="vas@email.com" className="mt-1" />
                   </div>
 
                   {/* Phone */}
                   <div>
                     <Label htmlFor="phone">Telefon *</Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      required
-                      placeholder="+387 xx xxx xxx"
-                      className="mt-1"
-                    />
+                    <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} required placeholder="+387 xx xxx xxx" className="mt-1" />
                   </div>
 
                   {/* Date and Guests */}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="date">Datum *</Label>
-                      <Input
-                        id="date"
-                        name="date"
-                        type="date"
-                        value={formData.date}
-                        onChange={handleChange}
-                        required
-                        className="mt-1"
-                      />
+                      <Input id="date" name="date" type="date" value={formData.date} onChange={handleChange} required className="mt-1" />
                     </div>
                     <div>
                       <Label htmlFor="guests">Broj Gostiju *</Label>
-                      <Input
-                        id="guests"
-                        name="guests"
-                        type="number"
-                        min="1"
-                        value={formData.guests}
-                        onChange={handleChange}
-                        required
-                        className="mt-1"
-                      />
+                      <Input id="guests" name="guests" type="number" min="1" value={formData.guests} onChange={handleChange} required className="mt-1" />
                     </div>
                   </div>
 
                   {/* Note */}
                   <div>
                     <Label htmlFor="note">Dodatna Napomena</Label>
-                    <textarea
-                      id="note"
-                      name="note"
-                      value={formData.note}
-                      onChange={handleChange}
-                      placeholder="Posebni zahtjevi ili pitanja..."
-                      className="mt-1 w-full min-h-[100px] px-3 py-2 rounded-md border border-input bg-background text-sm"
-                    />
+                    <textarea id="note" name="note" value={formData.note} onChange={handleChange} placeholder="Posebni zahtjevi ili pitanja..." className="mt-1 w-full min-h-[100px] px-3 py-2 rounded-md border border-input bg-background text-sm" />
                   </div>
 
                   {/* Submit Button */}
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 glow-effect"
-                  >
+                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 glow-effect">
                     Pošalji Rezervaciju
                   </Button>
 
@@ -250,8 +173,6 @@ const Reservations = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Reservations;
