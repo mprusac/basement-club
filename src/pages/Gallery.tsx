@@ -12,6 +12,11 @@ import wines from "@/assets/wines.jpg";
 import basement42 from "@/assets/basement_42.jpg";
 import basement10 from "@/assets/basement_10.jpg";
 import basement13 from "@/assets/basement_13.jpg";
+import basement31 from "@/assets/basement_31.jpg";
+import basement37 from "@/assets/basement_37.jpg";
+import basement38 from "@/assets/basement_38.jpg";
+import basement24 from "@/assets/basement_24.jpg";
+import basement422 from "@/assets/basement_42-2.jpg";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const images = [{
@@ -44,6 +49,21 @@ const Gallery = () => {
   }, {
     src: basement13,
     alt: "noćni provod"
+  }, {
+    src: basement31,
+    alt: "live band nastup"
+  }, {
+    src: basement37,
+    alt: "žurka i ples"
+  }, {
+    src: basement38,
+    alt: "DJ u akciji"
+  }, {
+    src: basement24,
+    alt: "kulinarstvo i degustacija"
+  }, {
+    src: basement422,
+    alt: "elegantna atmosfera"
   }];
   return <div className="min-h-screen bg-background">
       <Navigation />
