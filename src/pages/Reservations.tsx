@@ -76,9 +76,7 @@ const Reservations = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold mb-4 text-primary">Raspored kluba</h2>
-                <p className="text-muted-foreground">
-                  kliknite na željeni stol ili prostor da ga odaberete
-                </p>
+                <p className="text-muted-foreground">Kliknite na željeni stol ili prostor da ga odaberete:</p>
               </div>
               
               <div className="relative border-4 border-primary/30 rounded-lg overflow-hidden">
