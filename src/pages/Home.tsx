@@ -3,9 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, Wine, Music } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import crowdImg from "@/assets/crowd.jpg";
 import liveMusicImg from "@/assets/live-music.jpg";
 const Home = () => {
+  const aboutSection = useScrollAnimation();
+  const featuresSection = useScrollAnimation();
+  const ctaSection = useScrollAnimation();
+
   return <div className="min-h-screen">
       <Navigation />
       
@@ -53,7 +58,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-background">
+      <section ref={aboutSection.ref} className={`py-20 px-4 bg-background transition-all duration-1000 ${aboutSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
@@ -73,7 +78,7 @@ const Home = () => {
       </section>
 
       {/* Features */}
-      <section className="py-20 px-4 bg-card">
+      <section ref={featuresSection.ref} className={`py-20 px-4 bg-card transition-all duration-1000 ${featuresSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-16 text-primary">Naša ponuda</h2>
           <div className="grid md:grid-cols-4 gap-8">
@@ -113,7 +118,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary/20 to-purple-900/20">
+      <section ref={ctaSection.ref} className={`py-20 px-4 bg-gradient-to-br from-primary/20 to-purple-900/20 transition-all duration-1000 ${ctaSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Spremni za nezaboravnu noć?</h2>
           <p className="text-xl text-white/80 mb-8">

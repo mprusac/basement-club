@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
 import { toast } from "sonner";
 const Contact = () => {
+  const contactSection = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -43,7 +45,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4">
+      <section ref={contactSection.ref} className={`py-16 px-4 transition-all duration-1000 ${contactSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}

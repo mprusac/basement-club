@@ -1,9 +1,11 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Wine, Beer, GlassWater, Coffee } from "lucide-react";
 import winesImg from "@/assets/wines.jpg";
 const Menu = () => {
+  const menuSection = useScrollAnimation();
   const [selectedCategory, setSelectedCategory] = useState("Vina");
   const menuCategories = {
     Vina: [{
@@ -141,7 +143,7 @@ const Menu = () => {
       </section>
 
       {/* Menu Items */}
-      <section className="py-16 px-4">
+      <section ref={menuSection.ref} className={`py-16 px-4 transition-all duration-1000 ${menuSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-4xl">
           <div className="space-y-4">
             {menuCategories[selectedCategory as keyof typeof menuCategories].map((item, index) => <div key={index} className="bg-card p-6 rounded-lg border border-border hover:border-primary transition-all hover:shadow-lg animate-fade-in" style={{

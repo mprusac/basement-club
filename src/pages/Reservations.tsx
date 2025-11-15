@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import floorPlanImg from "@/assets/floor-plan.jpg";
 const Reservations = () => {
+  const reservationSection = useScrollAnimation();
   const [selectedTable, setSelectedTable] = useState<string>("");
   const [formData, setFormData] = useState({
     name: "",
@@ -69,7 +71,7 @@ const Reservations = () => {
       </section>
 
       {/* Reservation Section */}
-      <section className="py-16 px-4">
+      <section ref={reservationSection.ref} className={`py-16 px-4 transition-all duration-1000 ${reservationSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Floor Plan */}
