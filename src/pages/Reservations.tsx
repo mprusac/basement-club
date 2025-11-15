@@ -75,7 +75,7 @@ const Reservations = () => {
             {/* Floor Plan */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold mb-4 text-primary">raspored kluba</h2>
+                <h2 className="text-3xl font-bold mb-4 text-primary">Raspored kluba</h2>
                 <p className="text-muted-foreground">
                   kliknite na željeni stol ili prostor da ga odaberete
                 </p>
