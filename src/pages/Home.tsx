@@ -5,22 +5,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import crowdImg from "@/assets/crowd.jpg";
 import liveMusicImg from "@/assets/live-music.jpg";
-
 const Home = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section with Video Background */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
+        <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
         
@@ -76,16 +68,8 @@ const Home = () => {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img 
-                src={crowdImg} 
-                alt="Club atmosphere" 
-                className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-              />
-              <img 
-                src={liveMusicImg} 
-                alt="Live music" 
-                className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mt-8"
-              />
+              <img src={crowdImg} alt="Club atmosphere" className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300" />
+              <img src={liveMusicImg} alt="Live music" className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 mt-8" />
             </div>
           </div>
         </div>
@@ -94,13 +78,13 @@ const Home = () => {
       {/* Features */}
       <section className="py-20 px-4 bg-card">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-16 text-primary">Naša Ponuda</h2>
+          <h2 className="text-4xl font-bold text-center mb-16 text-primary">Naša ponuda</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <Music className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Live Muzika</h3>
+              <h3 className="text-xl font-semibold mb-2">Live muzika</h3>
               <p className="text-muted-foreground">Vrhunski izvođači i DJ-evi</p>
             </div>
             
@@ -108,7 +92,7 @@ const Home = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <Wine className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Premium Piće</h3>
+              <h3 className="text-xl font-semibold mb-2">Premium piće</h3>
               <p className="text-muted-foreground">Odabrana vina i kokteli</p>
             </div>
             
@@ -116,7 +100,7 @@ const Home = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <MapPin className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">VIP Prostor</h3>
+              <h3 className="text-xl font-semibold mb-2">VIP prostor</h3>
               <p className="text-muted-foreground">Ekskluzivni stolovi i boksi</p>
             </div>
             
@@ -147,8 +131,6 @@ const Home = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
