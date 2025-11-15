@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo-new.png";
+import logo from "@/assets/logo-basement.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,7 +39,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <img src={logo} alt="The Basement Club & Lounge" className="h-12 md:h-16 w-auto transition-all duration-300 group-hover:opacity-90" />
+            <img src={logo} alt="The Basement Club & Lounge" className="h-16 md:h-20 w-auto transition-all duration-300 group-hover:opacity-90" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -48,7 +48,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-lg font-elegant font-medium tracking-wide transition-all duration-300 hover:text-primary relative group ${
+                className={`text-lg font-montserrat font-black tracking-wide transition-all duration-300 hover:text-primary relative group ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-foreground/80"
@@ -76,7 +76,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block py-3 text-lg font-elegant font-medium tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 ${
+                className={`block py-3 text-lg font-montserrat font-black tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-foreground/80"
