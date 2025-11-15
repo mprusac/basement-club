@@ -9,18 +9,24 @@ import party from "@/assets/party.jpg";
 import sparkler from "@/assets/sparkler.jpg";
 import lounge from "@/assets/lounge.jpg";
 import wines from "@/assets/wines.jpg";
+import basement42 from "@/assets/basement_42.jpg";
+import basement10 from "@/assets/basement_10.jpg";
+import basement13 from "@/assets/basement_13.jpg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    { src: interior1, alt: "Unutrašnjost kluba" },
-    { src: crowd, alt: "Atmosfera u klubu" },
-    { src: liveMusic, alt: "Live muzika" },
-    { src: party, alt: "Žurka" },
-    { src: sparkler, alt: "Slavlje" },
-    { src: lounge, alt: "Lounge prostor" },
-    { src: wines, alt: "Premium vina" },
+    { src: interior1, alt: "unutrašnjost kluba" },
+    { src: crowd, alt: "atmosfera u klubu" },
+    { src: liveMusic, alt: "live muzika" },
+    { src: party, alt: "žurka" },
+    { src: sparkler, alt: "slavlje" },
+    { src: lounge, alt: "lounge prostor" },
+    { src: wines, alt: "premium vina" },
+    { src: basement42, alt: "ambijent i atmosfera" },
+    { src: basement10, alt: "live nastup" },
+    { src: basement13, alt: "noćni provod" },
   ];
 
   return (
@@ -34,7 +40,7 @@ const Gallery = () => {
             Galerija
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Zavirite u atmosferu The Basement Club kroz našu foto galeriju
+            zavirite u atmosferu The Basement Club kroz našu foto galeriju
           </p>
         </div>
       </section>

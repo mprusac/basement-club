@@ -58,10 +58,10 @@ const Reservations = () => {
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/20 to-purple-900/10">
         <div className="container mx-auto max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
-            Rezervišite Svoj Prostor
+            Rezervišite svoj prostor
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Odaberite stol ili VIP boks i garantujte sebi nezaboravnu večer
+            odaberite stol ili VIP boks i garantujte sebi nezaboravnu večer
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2">
@@ -83,9 +83,9 @@ const Reservations = () => {
             {/* Floor Plan */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-3xl font-bold mb-4 text-primary">Raspored Klubа</h2>
+                <h2 className="text-3xl font-bold mb-4 text-primary">raspored kluba</h2>
                 <p className="text-muted-foreground">
-                  Kliknite na željeni stol ili prostor da ga odaberete
+                  kliknite na željeni stol ili prostor da ga odaberete
                 </p>
               </div>
               

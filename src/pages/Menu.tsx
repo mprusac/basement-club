@@ -63,10 +63,10 @@ const Menu = () => {
         
         <div className="relative container mx-auto max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
-            Naš Meni
+            Naš meni
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Odabrana kolekcija premium vina, žestokih pića i koktela
+            odabrana kolekcija premium vina, žestokih pića i koktela
           </p>
         </div>
       </section>
