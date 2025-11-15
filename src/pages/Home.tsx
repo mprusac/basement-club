@@ -39,13 +39,13 @@ const Home = () => {
             Live glazba, premium vina i nezaboravni događaji
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/reservations">
-              <Button size="lg" variant="outline" className="border-2 border-secondary text-white hover:bg-secondary hover:text-black px-8 py-6 text-lg">
+            <Link to="/reservations" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-64 border-2 border-secondary text-white hover:bg-secondary hover:text-black px-8 py-6 text-lg">
                 Rezerviraj stol
               </Button>
             </Link>
-            <Link to="/events">
-              <Button size="lg" variant="outline" className="border-2 border-secondary text-white hover:bg-secondary hover:text-black px-8 py-6 text-lg">
+            <Link to="/events" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-64 border-2 border-secondary text-white hover:bg-secondary hover:text-black px-8 py-6 text-lg">
                 Pogledajte događaje
               </Button>
             </Link>
