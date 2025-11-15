@@ -115,13 +115,13 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-primary/20 to-purple-900/20">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">Spremni za Nezaboravnu Noć?</h2>
+          <h2 className="text-4xl font-bold mb-6 text-white">Spremni za nezaboravnu noć?</h2>
           <p className="text-xl text-white/80 mb-8">
-            Rezervišite svoj stol danas i postanite dio ekskluzivnog iskustva
+            Rezervirajte svoj stol danas i postanite dio ekskluzivnog iskustva
           </p>
           <Link to="/reservations">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-12 py-6 text-lg gold-glow">
-              Rezervišite Sada
+              Rezervirajte sada
             </Button>
           </Link>
         </div>
