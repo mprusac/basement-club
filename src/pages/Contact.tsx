@@ -107,22 +107,22 @@ const Contact = () => {
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Label htmlFor="name">ime i prezime *</Label>
-                    <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="vaše ime" className="mt-1" />
+                    <Label htmlFor="name">Ime i prezime *</Label>
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Vaše ime" className="mt-1" />
                   </div>
 
                   <div>
-                    <Label htmlFor="email">email *</Label>
+                    <Label htmlFor="email">Email *</Label>
                     <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="vas@email.com" className="mt-1" />
                   </div>
 
                   <div>
-                    <Label htmlFor="message">poruka *</Label>
-                    <textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="vaša poruka..." rows={6} className="mt-1 w-full px-3 py-2 rounded-md border border-input bg-background text-sm resize-none focus:outline-none focus:ring-2 focus:ring-ring" />
+                    <Label htmlFor="message">Poruka *</Label>
+                    <textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Vaša poruka..." rows={6} className="mt-1 w-full px-3 py-2 rounded-md border border-input bg-background text-sm resize-none focus:outline-none focus:ring-2 focus:ring-ring" />
                   </div>
 
                   <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
-                    pošalji poruku
+                    Pošalji poruku
                   </Button>
                 </form>
               </div>
