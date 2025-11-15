@@ -54,9 +54,7 @@ const Reservations = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
             Rezervirajte svoj prostor
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            odaberite stol ili VIP boks i garantujte sebi nezaboravnu večer
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Odaberite stol ili VIP box i osigurajte sebi nezaboravnu večer!</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-primary rounded" />

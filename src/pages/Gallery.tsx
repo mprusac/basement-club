@@ -12,25 +12,40 @@ import wines from "@/assets/wines.jpg";
 import basement42 from "@/assets/basement_42.jpg";
 import basement10 from "@/assets/basement_10.jpg";
 import basement13 from "@/assets/basement_13.jpg";
-
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const images = [
-    { src: interior1, alt: "unutrašnjost kluba" },
-    { src: crowd, alt: "atmosfera u klubu" },
-    { src: liveMusic, alt: "live muzika" },
-    { src: party, alt: "žurka" },
-    { src: sparkler, alt: "slavlje" },
-    { src: lounge, alt: "lounge prostor" },
-    { src: wines, alt: "premium vina" },
-    { src: basement42, alt: "ambijent i atmosfera" },
-    { src: basement10, alt: "live nastup" },
-    { src: basement13, alt: "noćni provod" },
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const images = [{
+    src: interior1,
+    alt: "unutrašnjost kluba"
+  }, {
+    src: crowd,
+    alt: "atmosfera u klubu"
+  }, {
+    src: liveMusic,
+    alt: "live muzika"
+  }, {
+    src: party,
+    alt: "žurka"
+  }, {
+    src: sparkler,
+    alt: "slavlje"
+  }, {
+    src: lounge,
+    alt: "lounge prostor"
+  }, {
+    src: wines,
+    alt: "premium vina"
+  }, {
+    src: basement42,
+    alt: "ambijent i atmosfera"
+  }, {
+    src: basement10,
+    alt: "live nastup"
+  }, {
+    src: basement13,
+    alt: "noćni provod"
+  }];
+  return <div className="min-h-screen bg-background">
       <Navigation />
 
       {/* Hero Section */}
@@ -40,7 +55,7 @@ const Gallery = () => {
             Galerija
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            zavirite u atmosferu The Basement Club kroz našu foto galeriju
+            Zavirite u atmosferu The Basement Club-a kroz našu foto galeriju!
           </p>
         </div>
       </section>
@@ -49,54 +64,30 @@ const Gallery = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setSelectedImage(image.src)}
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+            {images.map((image, index) => <div key={index} className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer animate-fade-in" style={{
+            animationDelay: `${index * 0.1}s`
+          }} onClick={() => setSelectedImage(image.src)}>
+                <img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-4 left-4 text-white font-medium">
                     {image.alt}
                   </div>
                 </div>
                 <div className="absolute inset-0 ring-2 ring-primary/0 group-hover:ring-primary/50 transition-all duration-300 rounded-lg" />
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
 
       {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
-            onClick={() => setSelectedImage(null)}
-          >
+      {selectedImage && <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 animate-fade-in" onClick={() => setSelectedImage(null)}>
+          <button className="absolute top-4 right-4 text-white hover:text-primary transition-colors" onClick={() => setSelectedImage(null)}>
             <X size={32} />
           </button>
-          <img
-            src={selectedImage}
-            alt="Gallery image"
-            className="max-w-full max-h-[90vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
+          <img src={selectedImage} alt="Gallery image" className="max-w-full max-h-[90vh] object-contain rounded-lg" onClick={e => e.stopPropagation()} />
+        </div>}
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Gallery;
