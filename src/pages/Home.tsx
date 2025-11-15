@@ -65,13 +65,13 @@ const Home = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
-              <h2 className="text-4xl font-bold mb-6 text-primary">O Klubu</h2>
+              <h2 className="text-4xl font-bold mb-6 text-primary">O klubu</h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
                 The Basement Club & Lounge je ekskluzivan noćni klub smješten u srcu Čitluka. 
                 Nudimo jedinstvenu kombinaciju elegantne atmosfere, vrhunske muzike i premium usluge.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Sa našim VIP prostorom, live nastupima i pažljivo odabranom ponudom pića, 
+                sa našim VIP prostorom, live nastupima i pažljivo odabranom ponudom pića, 
                 garantujemo nezaboravno iskustvo za sve naše goste.
               </p>
             </div>
