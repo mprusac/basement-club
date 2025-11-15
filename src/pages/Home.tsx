@@ -29,24 +29,24 @@ const Home = () => {
         
         {/* Content */}
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-secondary">
             THE BASEMENT
           </h1>
           <p className="text-2xl md:text-3xl text-white/90 mb-2 font-light">
             CLUB & LOUNGE
           </p>
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Luksuzni lounge & noćni bar - Live muzika, premium vina i nezaboravni događaji
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto font-serif italic">
+            Live glazba, premium vina i nezaboravni događaji
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/reservations">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg glow-effect">
-                Rezervišite Stol
+              <Button size="lg" variant="outline" className="border-2 border-secondary text-white hover:bg-secondary hover:text-black px-8 py-6 text-lg">
+                Rezerviraj stol
               </Button>
             </Link>
             <Link to="/events">
-              <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground px-8 py-6 text-lg">
-                Pogledajte Događaje
+              <Button size="lg" variant="outline" className="border-2 border-secondary text-white hover:bg-secondary hover:text-black px-8 py-6 text-lg">
+                Pogledajte događaje
               </Button>
             </Link>
           </div>
