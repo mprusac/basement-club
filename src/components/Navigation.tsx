@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-new.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,9 +38,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt="The Basement Club" className="h-10 md:h-12 w-auto drop-shadow-[0_0_8px_rgba(168,85,247,0.5)] transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(168,85,247,0.8)]" />
-            <span className="hidden sm:block text-xl md:text-2xl font-bold bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">The Basement</span>
+          <Link to="/" className="flex items-center group">
+            <img src={logo} alt="The Basement Club & Lounge" className="h-12 md:h-16 w-auto transition-all duration-300 group-hover:opacity-90" />
           </Link>
 
           {/* Desktop Navigation */}
