@@ -48,7 +48,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-semibold tracking-wide transition-all duration-300 hover:text-primary relative group ${
+                className={`text-lg font-elegant font-medium tracking-wide transition-all duration-300 hover:text-primary relative group ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-foreground/80"
@@ -76,7 +76,7 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block py-3 text-sm font-semibold tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 ${
+                className={`block py-3 text-lg font-elegant font-medium tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-foreground/80"

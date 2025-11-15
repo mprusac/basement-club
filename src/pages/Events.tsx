@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Music, Users } from "lucide-react";
@@ -9,6 +10,7 @@ import kafanskaImg from "@/assets/basement_7-2.jpg";
 import newYearImg from "@/assets/basement_39.jpg";
 const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState("Svi");
+  const eventsSection = useScrollAnimation();
   const categories = ["Svi", "Muzika uživo", "DJ program", "Kafanska večer"];
   const events = [{
     id: 1,
@@ -69,7 +71,7 @@ const Events = () => {
       </section>
 
       {/* Events Grid */}
-      <section className="py-16 px-4">
+      <section ref={eventsSection.ref} className={`py-16 px-4 transition-all duration-1000 ${eventsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-8">
             {filteredEvents.map((event, index) => <Card key={event.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card border-border animate-fade-in" style={{

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { X } from "lucide-react";
 import interior1 from "@/assets/interior-1.png";
 import crowd from "@/assets/crowd.jpg";
@@ -18,6 +19,7 @@ import basement38 from "@/assets/basement_38.jpg";
 import basement24 from "@/assets/basement_24.jpg";
 import basement422 from "@/assets/basement_42-2.jpg";
 const Gallery = () => {
+  const gallerySection = useScrollAnimation();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const images = [{
     src: interior1,
@@ -81,7 +83,7 @@ const Gallery = () => {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-16 px-4">
+      <section ref={gallerySection.ref} className={`py-16 px-4 transition-all duration-1000 ${gallerySection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {images.map((image, index) => <div key={index} className="group relative aspect-square overflow-hidden rounded-lg cursor-pointer animate-fade-in" style={{

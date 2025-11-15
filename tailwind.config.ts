@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        elegant: ['Cormorant Garamond', 'serif'],
       },
       backgroundSize: {
         'size-200': '200% 200%',
