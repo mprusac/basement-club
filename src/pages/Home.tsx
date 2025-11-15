@@ -62,10 +62,7 @@ const Home = () => {
                 The Basement Club & Lounge je ekskluzivan noćni klub smješten u srcu Čitluka. 
                 Nudimo jedinstvenu kombinaciju elegantne atmosfere, vrhunske muzike i premium usluge.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                sa našim VIP prostorom, live nastupima i pažljivo odabranom ponudom pića, 
-                garantujemo nezaboravno iskustvo za sve naše goste.
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">Sa našim VIP prostorom, live nastupima i pažljivo odabranom ponudom pića, garantujemo nezaboravno iskustvo za sve naše goste.</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img src={crowdImg} alt="Club atmosphere" className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300" />
