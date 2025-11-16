@@ -17,7 +17,7 @@ const Home = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/hero-video.mp4" type="video/mp4" />
+          <source src="/bb-2.mp4" type="video/mp4" />
         </video>
         
         {/* Overlay */}
