@@ -33,7 +33,7 @@ const Events = () => {
     date: "27. 11. 2025.",
     time: "21:00",
     category: "Muzika uživo",
-    description: "Uživajte u vrhunskoj svirci uživo uz najbolji regionalni bend!",
+    description: "Uživajte u vrhunskoj svirci i toplom ambijentu uz najbolji regionalni bend!",
     image: liveBandImg
   }, {
     id: 3,
