@@ -298,7 +298,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("bina")}
                        onMouseEnter={() => setHoveredSection("bina")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="290" y="60" width="200" height="150"
+                      <rect x="330" y="60" width="200" height="150"
                         fill={selectedSection === "bina" || hoveredSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
                         stroke={selectedSection === "bina" || hoveredSection === "bina" ? sections[1].color : "hsl(var(--border))"}
@@ -472,7 +472,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="290" y="60" width="200" height="150"
+                      <rect x="330" y="60" width="200" height="150"
                         fill={selectedSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "bina" ? 0.4 : 0.1}
                         stroke={selectedSection === "bina" ? sections[1].color : "hsl(var(--border))"}
@@ -505,7 +505,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="270" y="240" width="120" height="320"
+                      <rect x="290" y="240" width="120" height="290"
                         fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : 0.1}
                         stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
