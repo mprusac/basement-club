@@ -243,15 +243,15 @@ const Reservations = () => {
 
           {/* Step 1: Section Selection */}
           {step === "section" && (
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4 text-primary">Odaberite sektor</h2>
-                <p className="text-muted-foreground">Kliknite na željeni sektor kluba</p>
+                <p className="text-muted-foreground">Kliknite na željeni sektor na tlocrtu ili odaberite iz liste</p>
               </div>
 
               {/* Section Dropdown */}
               <div className="mb-8 max-w-md mx-auto">
-                <Label>Ili odaberite iz liste</Label>
+                <Label>Odaberite iz liste</Label>
                 <Select value={selectedSection} onValueChange={(value) => handleSectionSelect(value as Section)}>
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder="Odaberite sektor..." />
@@ -259,29 +259,148 @@ const Reservations = () => {
                   <SelectContent>
                     {sections.map((section) => (
                       <SelectItem key={section.id} value={section.id}>
-                        {section.name}
+                        {section.name} ({tables.filter(t => t.section === section.id && t.available).length} dostupno)
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* Section Buttons */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section) => (
-                  <button
-                    key={section.id}
-                    onClick={() => handleSectionSelect(section.id)}
-                    className="group relative p-8 rounded-xl border-2 border-border hover:border-primary transition-all duration-300 bg-card hover:shadow-xl hover:scale-105"
-                    style={{ borderColor: selectedSection === section.id ? section.color : undefined }}
-                  >
-                    <div className="absolute top-4 right-4 w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{section.name}</h3>
-                    <p className="text-sm text-muted-foreground">
-                      {tables.filter(t => t.section === section.id && t.available).length} dostupnih stolova
-                    </p>
-                  </button>
-                ))}
+              {/* Interactive Floor Plan - All Sections */}
+              <div className="bg-card rounded-lg border-2 border-border p-8 mb-8">
+                <svg viewBox="0 0 600 700" className="w-full h-auto">
+                  {/* Background */}
+                  <rect width="600" height="700" fill="hsl(var(--background))" />
+                  
+                  {/* Section Background Areas - Clickable */}
+                  <g className="cursor-pointer" onClick={() => handleSectionSelect("ulaz")}>
+                    <rect x="70" y="60" width="200" height="150" 
+                      fill={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--muted))"}
+                      opacity={selectedSection === "ulaz" ? 0.3 : 0.1}
+                      stroke={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--border))"}
+                      strokeWidth={selectedSection === "ulaz" ? 3 : 1}
+                      rx="8"
+                      className="transition-all duration-300 hover:opacity-20"
+                    />
+                  </g>
+                  
+                  <g className="cursor-pointer" onClick={() => handleSectionSelect("bina")}>
+                    <rect x="330" y="60" width="200" height="150"
+                      fill={selectedSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
+                      opacity={selectedSection === "bina" ? 0.3 : 0.1}
+                      stroke={selectedSection === "bina" ? sections[1].color : "hsl(var(--border))"}
+                      strokeWidth={selectedSection === "bina" ? 3 : 1}
+                      rx="8"
+                      className="transition-all duration-300 hover:opacity-20"
+                    />
+                  </g>
+                  
+                  <g className="cursor-pointer" onClick={() => handleSectionSelect("lijevi-sank")}>
+                    <rect x="90" y="260" width="60" height="370"
+                      fill={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--muted))"}
+                      opacity={selectedSection === "lijevi-sank" ? 0.3 : 0.1}
+                      stroke={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--border))"}
+                      strokeWidth={selectedSection === "lijevi-sank" ? 3 : 1}
+                      rx="8"
+                      className="transition-all duration-300 hover:opacity-20"
+                    />
+                  </g>
+                  
+                  <g className="cursor-pointer" onClick={() => handleSectionSelect("centar")}>
+                    <rect x="170" y="260" width="100" height="370"
+                      fill={selectedSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
+                      opacity={selectedSection === "centar" ? 0.3 : 0.1}
+                      stroke={selectedSection === "centar" ? sections[3].color : "hsl(var(--border))"}
+                      strokeWidth={selectedSection === "centar" ? 3 : 1}
+                      rx="8"
+                      className="transition-all duration-300 hover:opacity-20"
+                    />
+                  </g>
+                  
+                  <g className="cursor-pointer" onClick={() => handleSectionSelect("desna")}>
+                    <rect x="290" y="260" width="240" height="370"
+                      fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
+                      opacity={selectedSection === "desna" ? 0.3 : 0.1}
+                      stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
+                      strokeWidth={selectedSection === "desna" ? 3 : 1}
+                      rx="8"
+                      className="transition-all duration-300 hover:opacity-20"
+                    />
+                  </g>
+                  
+                  <g className="cursor-pointer" onClick={() => handleSectionSelect("glavni-sank")}>
+                    <rect x="180" y="640" width="240" height="50"
+                      fill={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
+                      opacity={selectedSection === "glavni-sank" ? 0.3 : 0.1}
+                      stroke={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
+                      strokeWidth={selectedSection === "glavni-sank" ? 3 : 1}
+                      rx="8"
+                      className="transition-all duration-300 hover:opacity-20"
+                    />
+                  </g>
+                  
+                  {/* Section Labels */}
+                  <text x="150" y="50" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" className="pointer-events-none">ULAZ</text>
+                  <text x="420" y="50" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" className="pointer-events-none">BINA</text>
+                  <text x="50" y="400" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="bold" className="pointer-events-none">DJ</text>
+                  <text x="280" y="670" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" className="pointer-events-none">GLAVNI ŠANK</text>
+
+                  {/* All Tables */}
+                  {tables.map((table) => {
+                    const sectionColor = sections.find(s => s.id === table.section)?.color || "#666";
+                    const isInSelectedSection = selectedSection === table.section;
+                    
+                    return (
+                      <g key={table.id} className="pointer-events-none">
+                        <circle
+                          cx={table.x}
+                          cy={table.y}
+                          r={isInSelectedSection ? 20 : 16}
+                          fill={!table.available ? "hsl(var(--muted))" : isInSelectedSection ? sectionColor : "hsl(var(--card))"}
+                          stroke={isInSelectedSection ? sectionColor : "hsl(var(--border))"}
+                          strokeWidth={isInSelectedSection ? 3 : 2}
+                          opacity={!table.available ? 0.5 : isInSelectedSection ? 1 : 0.8}
+                          className="transition-all duration-300"
+                        />
+                        <text
+                          x={table.x}
+                          y={table.y + 5}
+                          textAnchor="middle"
+                          fill={isInSelectedSection ? "white" : "hsl(var(--foreground))"}
+                          fontSize="11"
+                          fontWeight="bold"
+                          opacity={isInSelectedSection ? 1 : 0.6}
+                          className="pointer-events-none"
+                        >
+                          {table.number}
+                        </text>
+                      </g>
+                    );
+                  })}
+                </svg>
+
+                {/* Legend */}
+                <div className="flex items-center justify-center gap-6 mt-6 text-sm flex-wrap">
+                  {sections.map((section) => (
+                    <div key={section.id} className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
+                      <span className={selectedSection === section.id ? "font-bold text-primary" : ""}>{section.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {selectedSection && (
+                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center">
+                  <p className="text-lg font-semibold mb-2">Odabrani sektor: <span className="text-primary text-2xl">{sections.find(s => s.id === selectedSection)?.name}</span></p>
+                  <p className="text-muted-foreground">{tables.filter(t => t.section === selectedSection && t.available).length} dostupnih stolova</p>
+                </div>
+              )}
+
+              <div className="flex gap-4">
+                <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedSection}>
+                  Nastavi na odabir stola
+                </Button>
               </div>
 
               <div className="mt-12 bg-card p-6 rounded-lg border border-border">
