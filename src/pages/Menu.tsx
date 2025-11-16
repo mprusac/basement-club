@@ -141,7 +141,7 @@ const Menu = () => {
             {Object.keys(menuCategories).map(category => {
             const Icon = categoryIcons[category];
             return <button key={category} onClick={() => setSelectedCategory(category)} className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all border-2 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg scale-105" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
-                  <Icon className="w-5 h-5" />
+                  <Icon className="w-5 h-5 text-club-bronze" />
                   {category}
                 </button>;
           })}

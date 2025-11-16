@@ -86,7 +86,7 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground antialiased font-montserrat;
+    @apply bg-background text-foreground antialiased font-montserrat font-normal;
   }
   
   html {
