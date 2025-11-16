@@ -2,15 +2,18 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useParallax } from "@/hooks/useParallax";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Music, Users } from "lucide-react";
 import liveBandImg from "@/assets/basement_12.jpg";
 import kafanskaImg from "@/assets/basement_7-2.jpg";
 import newYearImg from "@/assets/basement_39.jpg";
+import heroImg from "@/assets/basement_31-2.jpg";
 const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState("Svi");
   const eventsSection = useScrollAnimation();
+  const parallaxOffset = useParallax(0.5);
   const categories = ["Svi", "Muzika uživo", "DJ program", "Kafanska večer"];
   const events = [{
     id: 1,
@@ -50,8 +53,17 @@ const Events = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/20 to-purple-900/10">
-        <div className="container mx-auto max-w-6xl text-center">
+      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroImg})`,
+            transform: `translateY(${parallaxOffset}px)`,
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        
+        <div className="relative container mx-auto max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
             Nadolazeći događaji
           </h1>
