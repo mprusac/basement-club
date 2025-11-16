@@ -53,9 +53,7 @@ const Reservations = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/20 to-purple-900/10">
         <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
-            Rezervirajte svoj prostor
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">Rezervirajte svoj stol</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Odaberite stol ili VIP box i osigurajte sebi nezaboravnu večer!</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2">
