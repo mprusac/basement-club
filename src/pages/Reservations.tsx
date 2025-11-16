@@ -115,6 +115,7 @@ const Reservations = () => {
   const [step, setStep] = useState<"section" | "table" | "details">("section");
   const [selectedSection, setSelectedSection] = useState<Section | "">("");
   const [selectedTable, setSelectedTable] = useState<Table | null>(null);
+  const [hoveredSection, setHoveredSection] = useState<Section | "">("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -275,69 +276,87 @@ const Reservations = () => {
                   {/* Rotated layout container */}
                   <g transform="translate(375, 275) rotate(90) translate(-300, -350)">
                     {/* Section Background Areas - Clickable */}
-                    <g className="cursor-pointer" onClick={() => handleSectionSelect("ulaz")}>
+                    <g className="cursor-pointer transition-all duration-300" 
+                       onClick={() => handleSectionSelect("ulaz")}
+                       onMouseEnter={() => setHoveredSection("ulaz")}
+                       onMouseLeave={() => setHoveredSection("")}>
                       <rect x="70" y="60" width="200" height="150" 
-                        fill={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "ulaz" ? 0.3 : 0.1}
-                        stroke={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "ulaz" ? 3 : 1}
+                        fill={selectedSection === "ulaz" || hoveredSection === "ulaz" ? sections[0].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.1}
+                        stroke={selectedSection === "ulaz" || hoveredSection === "ulaz" ? sections[0].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "ulaz" ? 3 : hoveredSection === "ulaz" ? 2 : 1}
                         rx="8"
-                        className="transition-all duration-300 hover:opacity-20"
+                        className="transition-all duration-300"
                       />
                     </g>
                     
-                    <g className="cursor-pointer" onClick={() => handleSectionSelect("bina")}>
+                    <g className="cursor-pointer transition-all duration-300" 
+                       onClick={() => handleSectionSelect("bina")}
+                       onMouseEnter={() => setHoveredSection("bina")}
+                       onMouseLeave={() => setHoveredSection("")}>
                       <rect x="330" y="60" width="200" height="150"
-                        fill={selectedSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "bina" ? 0.3 : 0.1}
-                        stroke={selectedSection === "bina" ? sections[1].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "bina" ? 3 : 1}
+                        fill={selectedSection === "bina" || hoveredSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
+                        stroke={selectedSection === "bina" || hoveredSection === "bina" ? sections[1].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "bina" ? 3 : hoveredSection === "bina" ? 2 : 1}
                         rx="8"
-                        className="transition-all duration-300 hover:opacity-20"
+                        className="transition-all duration-300"
                       />
                     </g>
                     
-                    <g className="cursor-pointer" onClick={() => handleSectionSelect("lijevi-sank")}>
+                    <g className="cursor-pointer transition-all duration-300" 
+                       onClick={() => handleSectionSelect("lijevi-sank")}
+                       onMouseEnter={() => setHoveredSection("lijevi-sank")}
+                       onMouseLeave={() => setHoveredSection("")}>
                       <rect x="90" y="260" width="60" height="370"
-                        fill={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "lijevi-sank" ? 0.3 : 0.1}
-                        stroke={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : 1}
+                        fill={selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank" ? sections[2].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.1}
+                        stroke={selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank" ? sections[2].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : hoveredSection === "lijevi-sank" ? 2 : 1}
                         rx="8"
-                        className="transition-all duration-300 hover:opacity-20"
+                        className="transition-all duration-300"
                       />
                     </g>
                     
-                    <g className="cursor-pointer" onClick={() => handleSectionSelect("centar")}>
+                    <g className="cursor-pointer transition-all duration-300" 
+                       onClick={() => handleSectionSelect("centar")}
+                       onMouseEnter={() => setHoveredSection("centar")}
+                       onMouseLeave={() => setHoveredSection("")}>
                       <rect x="170" y="260" width="100" height="370"
-                        fill={selectedSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "centar" ? 0.3 : 0.1}
-                        stroke={selectedSection === "centar" ? sections[3].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "centar" ? 3 : 1}
+                        fill={selectedSection === "centar" || hoveredSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
+                        stroke={selectedSection === "centar" || hoveredSection === "centar" ? sections[3].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "centar" ? 3 : hoveredSection === "centar" ? 2 : 1}
                         rx="8"
-                        className="transition-all duration-300 hover:opacity-20"
+                        className="transition-all duration-300"
                       />
                     </g>
                     
-                    <g className="cursor-pointer" onClick={() => handleSectionSelect("desna")}>
+                    <g className="cursor-pointer transition-all duration-300" 
+                       onClick={() => handleSectionSelect("desna")}
+                       onMouseEnter={() => setHoveredSection("desna")}
+                       onMouseLeave={() => setHoveredSection("")}>
                       <rect x="290" y="260" width="240" height="370"
-                        fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "desna" ? 0.3 : 0.1}
-                        stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "desna" ? 3 : 1}
+                        fill={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
+                        stroke={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "desna" ? 3 : hoveredSection === "desna" ? 2 : 1}
                         rx="8"
-                        className="transition-all duration-300 hover:opacity-20"
+                        className="transition-all duration-300"
                       />
                     </g>
                     
-                    <g className="cursor-pointer" onClick={() => handleSectionSelect("glavni-sank")}>
+                    <g className="cursor-pointer transition-all duration-300" 
+                       onClick={() => handleSectionSelect("glavni-sank")}
+                       onMouseEnter={() => setHoveredSection("glavni-sank")}
+                       onMouseLeave={() => setHoveredSection("")}>
                       <rect x="180" y="640" width="240" height="50"
-                        fill={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "glavni-sank" ? 0.3 : 0.1}
-                        stroke={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "glavni-sank" ? 3 : 1}
+                        fill={selectedSection === "glavni-sank" || hoveredSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
+                        stroke={selectedSection === "glavni-sank" || hoveredSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "glavni-sank" ? 3 : hoveredSection === "glavni-sank" ? 2 : 1}
                         rx="8"
-                        className="transition-all duration-300 hover:opacity-20"
+                        className="transition-all duration-300"
                       />
                     </g>
                     
@@ -345,27 +364,28 @@ const Reservations = () => {
                     {tables.map((table) => {
                       const sectionColor = sections.find(s => s.id === table.section)?.color || "#666";
                       const isInSelectedSection = selectedSection === table.section;
+                      const isInHoveredSection = hoveredSection === table.section;
                       
                       return (
                         <g key={table.id} className="pointer-events-none">
                           <circle
                             cx={table.x}
                             cy={table.y}
-                            r={isInSelectedSection ? 20 : 16}
-                            fill={!table.available ? "hsl(var(--muted))" : isInSelectedSection ? sectionColor : "hsl(var(--card))"}
-                            stroke={isInSelectedSection ? sectionColor : "hsl(var(--border))"}
-                            strokeWidth={isInSelectedSection ? 3 : 2}
-                            opacity={!table.available ? 0.5 : isInSelectedSection ? 1 : 0.8}
+                            r={isInSelectedSection || isInHoveredSection ? 20 : 16}
+                            fill={!table.available ? "hsl(var(--muted))" : (isInSelectedSection || isInHoveredSection) ? sectionColor : "hsl(var(--card))"}
+                            stroke={(isInSelectedSection || isInHoveredSection) ? sectionColor : "hsl(var(--border))"}
+                            strokeWidth={(isInSelectedSection || isInHoveredSection) ? 3 : 2}
+                            opacity={!table.available ? 0.5 : (isInSelectedSection || isInHoveredSection) ? 1 : 0.8}
                             className="transition-all duration-300"
                           />
                           <text
                             x={table.x}
                             y={table.y + 5}
                             textAnchor="middle"
-                            fill={isInSelectedSection ? "white" : "hsl(var(--foreground))"}
+                            fill={(isInSelectedSection || isInHoveredSection) ? "white" : "hsl(var(--foreground))"}
                             fontSize="11"
                             fontWeight="bold"
-                            opacity={isInSelectedSection ? 1 : 0.6}
+                            opacity={(isInSelectedSection || isInHoveredSection) ? 1 : 0.6}
                             className="pointer-events-none"
                             transform={`rotate(-90, ${table.x}, ${table.y})`}
                           >
