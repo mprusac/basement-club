@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import floorPlanImg from "@/assets/floor-plan.jpg";
-import heroImg from "@/assets/basement_31.jpg";
+import heroImg from "@/assets/basement_45-2.jpg";
 const Reservations = () => {
   const reservationSection = useScrollAnimation();
   const parallaxOffset = useParallax(0.5);
