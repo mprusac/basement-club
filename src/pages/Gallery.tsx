@@ -2,7 +2,9 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useParallax } from "@/hooks/useParallax";
 import { X } from "lucide-react";
+import heroImg from "@/assets/basement_10-2.jpg";
 import interior1 from "@/assets/interior-1.png";
 import crowd from "@/assets/crowd.jpg";
 import liveMusic from "@/assets/live-music.jpg";
@@ -20,6 +22,7 @@ import basement24 from "@/assets/basement_24.jpg";
 import basement422 from "@/assets/basement_42-2.jpg";
 const Gallery = () => {
   const gallerySection = useScrollAnimation();
+  const parallaxOffset = useParallax(0.5);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const images = [{
     src: interior1,
@@ -71,8 +74,17 @@ const Gallery = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/20 to-purple-900/10">
-        <div className="container mx-auto max-w-6xl text-center">
+      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroImg})`,
+            transform: `translateY(${parallaxOffset}px)`,
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        
+        <div className="relative container mx-auto max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
             Galerija
           </h1>

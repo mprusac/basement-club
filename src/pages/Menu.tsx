@@ -2,10 +2,13 @@ import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useParallax } from "@/hooks/useParallax";
 import { Wine, Beer, GlassWater, Coffee } from "lucide-react";
 import winesImg from "@/assets/wines.jpg";
+import heroImg from "@/assets/basement_30-2.jpg";
 const Menu = () => {
   const menuSection = useScrollAnimation();
+  const parallaxOffset = useParallax(0.5);
   const [selectedCategory, setSelectedCategory] = useState("Vina");
   const menuCategories = {
     Vina: [{
@@ -114,10 +117,14 @@ const Menu = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <img src={winesImg} alt="Wines" className="w-full h-full object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroImg})`,
+            transform: `translateY(${parallaxOffset}px)`,
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
