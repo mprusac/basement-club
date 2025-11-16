@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useParallax } from "@/hooks/useParallax";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Calendar, Music, Users } from "lucide-react";
 import liveBandImg from "@/assets/basement_12.jpg";
 import kafanskaImg from "@/assets/basement_7-2.jpg";
@@ -12,6 +14,7 @@ import newYearImg from "@/assets/basement_39.jpg";
 import saturdayPartyImg from "@/assets/saturday-party.jpg";
 import heroImg from "@/assets/party-crowd.jpg";
 const Events = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("Svi");
   const eventsSection = useScrollAnimation();
   const parallaxOffset = useParallax(0.5);
@@ -104,8 +107,15 @@ const Events = () => {
                     <span>{event.time}</span>
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">{event.description}</p>
+                  <Button 
+                    onClick={() => navigate('/reservations')}
+                    className="w-full"
+                    variant="default"
+                  >
+                    Rezerviraj
+                  </Button>
                 </CardContent>
               </Card>)}
           </div>
