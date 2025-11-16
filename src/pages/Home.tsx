@@ -108,7 +108,7 @@ const Home = () => {
                 <Calendar className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
               <h3 className="text-xl font-normal mb-2">Događaji</h3>
-              <p className="text-muted-foreground font-normal">Tematske noći i koncerti</p>
+              <p className="text-muted-foreground font-normal">Tematske noći i nastupi</p>
             </div>
           </div>
         </div>
@@ -118,9 +118,7 @@ const Home = () => {
       <section ref={ctaSection.ref} className={`py-20 px-4 bg-gradient-to-br from-primary/20 to-purple-900/20 transition-all duration-1000 ${ctaSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Spremni za nezaboravnu noć?</h2>
-          <p className="text-xl text-white/80 mb-8">
-            Rezervirajte svoj stol danas i postanite dio ekskluzivnog iskustva
-          </p>
+          <p className="text-xl text-white/80 mb-8">Rezervirajte svoj stol danas i postanite dio ekskluzivnog iskustva!</p>
           <Link to="/reservations">
             <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground px-12 py-6 text-lg gold-glow">
               Rezervirajte sada
