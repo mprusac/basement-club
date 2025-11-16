@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useParallax } from "@/hooks/useParallax";
 import { X } from "lucide-react";
-import heroImg from "@/assets/basement_10-2.jpg";
+import heroImg from "@/assets/basement_12-2.jpg";
 import interior1 from "@/assets/interior-1.png";
 import crowd from "@/assets/crowd.jpg";
 import liveMusic from "@/assets/live-music.jpg";
