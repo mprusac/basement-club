@@ -340,7 +340,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("desna")}
                        onMouseEnter={() => setHoveredSection("desna")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="275" y="210" width="135" height="410"
+                      <rect x="275" y="220" width="135" height="400"
                         fill={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
                         stroke={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--border))"}
@@ -505,7 +505,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="275" y="210" width="135" height="410"
+                      <rect x="275" y="220" width="135" height="400"
                         fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : 0.1}
                         stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
