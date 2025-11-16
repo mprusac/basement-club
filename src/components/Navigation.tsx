@@ -39,7 +39,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center group -ml-2">
-            <img src={logo} alt="The Basement Club & Lounge" className="h-18 md:h-21 w-auto transition-all duration-300 group-hover:opacity-90" />
+            <img src={logo} alt="The Basement Club & Lounge" className="h-14 md:h-16 w-auto transition-all duration-300 group-hover:opacity-90" />
           </Link>
 
           {/* Desktop Navigation */}

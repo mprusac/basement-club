@@ -74,6 +74,16 @@ const Reservations = () => {
           <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
             Odaberite stol ili VIP box i osigurajte sebi nezaboravnu večer!
           </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">
+              <div className="w-4 h-4 bg-primary rounded shadow-lg shadow-primary/50" />
+              <span className="text-sm text-white">Dostupno</span>
+            </div>
+            <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">
+              <div className="w-4 h-4 bg-secondary rounded shadow-lg shadow-secondary/50" />
+              <span className="text-sm text-white">VIP Prostor</span>
+            </div>
+          </div>
         </div>
       </section>
 
