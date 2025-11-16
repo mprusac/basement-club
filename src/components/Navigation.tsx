@@ -35,11 +35,11 @@ const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-3">
+      <div className="container mx-auto px-6 py-1.5">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center group -ml-2">
-            <img src={logo} alt="The Basement Club & Lounge" className="h-20 md:h-24 w-auto transition-all duration-300 group-hover:opacity-90" />
+            <img src={logo} alt="The Basement Club & Lounge" className="h-14 md:h-16 w-auto transition-all duration-300 group-hover:opacity-90" />
           </Link>
 
           {/* Desktop Navigation */}
