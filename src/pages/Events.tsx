@@ -9,7 +9,7 @@ import { Calendar, Music, Users } from "lucide-react";
 import liveBandImg from "@/assets/basement_12.jpg";
 import kafanskaImg from "@/assets/basement_7-2.jpg";
 import newYearImg from "@/assets/basement_39.jpg";
-import heroImg from "@/assets/basement_31-2.jpg";
+import heroImg from "@/assets/party-crowd.jpg";
 const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState("Svi");
   const eventsSection = useScrollAnimation();

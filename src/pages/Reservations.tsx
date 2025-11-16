@@ -68,7 +68,7 @@ const Reservations = () => {
         
         {/* Content */}
         <div className="container mx-auto max-w-6xl text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze drop-shadow-lg animate-fade-in">
             Rezervirajte svoj stol
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
