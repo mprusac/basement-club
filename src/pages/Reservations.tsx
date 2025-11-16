@@ -402,9 +402,8 @@ const Reservations = () => {
                   
                   {/* Section Labels - positioned for horizontal layout */}
                   <text x="700" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 700, 270)">ULAZ</text>
-                  <text x="630" y="350" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 630, 350)">BINA</text>
+                  <text x="630" y="380" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 630, 380)">BINA</text>
                   <text x="375" y="35" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="bold" textAnchor="middle" className="pointer-events-none">DJ</text>
-                  <text x="680" y="430" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 680, 430)">GLAVNI ŠANK</text>
                 </svg>
 
                 {/* Legend */}
@@ -565,9 +564,8 @@ const Reservations = () => {
                   
                   {/* Section Labels - positioned for horizontal layout */}
                   <text x="700" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 700, 270)">ULAZ</text>
-                  <text x="630" y="350" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 630, 350)">BINA</text>
+                  <text x="630" y="380" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 630, 380)">BINA</text>
                   <text x="375" y="35" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">DJ</text>
-                  <text x="680" y="430" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 680, 430)">GLAVNI ŠANK</text>
                 </svg>
 
                 {/* Legend */}
