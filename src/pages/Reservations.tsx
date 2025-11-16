@@ -133,6 +133,10 @@ const Reservations = () => {
   };
 
   const handleTableSelect = (table: Table) => {
+    if (table.section !== selectedSection) {
+      toast.error("Molimo odaberite stol iz odabranog sektora");
+      return;
+    }
     if (!table.available) {
       toast.error("Ovaj stol je već rezervisan");
       return;
@@ -269,12 +273,12 @@ const Reservations = () => {
 
               {/* Interactive Floor Plan - All Sections */}
               <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
-                <svg viewBox="0 0 750 550" className="w-full h-auto max-h-[600px]">
+                <svg viewBox="0 0 750 520" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="550" fill="hsl(var(--background))" />
+                  <rect width="750" height="520" fill="hsl(var(--background))" />
                   
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 275) rotate(90) translate(-300, -350)">
+                  <g transform="translate(375, 260) rotate(90) translate(-300, -335)">
                     {/* Section Background Areas - Clickable */}
                     <g className="cursor-pointer transition-all duration-300" 
                        onClick={() => handleSectionSelect("ulaz")}
@@ -336,7 +340,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("desna")}
                        onMouseEnter={() => setHoveredSection("desna")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="290" y="260" width="240" height="370"
+                      <rect x="290" y="260" width="240" height="350"
                         fill={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
                         stroke={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--border))"}
@@ -350,7 +354,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("glavni-sank")}
                        onMouseEnter={() => setHoveredSection("glavni-sank")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="180" y="640" width="240" height="50"
+                      <rect x="180" y="620" width="240" height="50"
                         fill={selectedSection === "glavni-sank" || hoveredSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
                         stroke={selectedSection === "glavni-sank" || hoveredSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
@@ -397,10 +401,10 @@ const Reservations = () => {
                   </g>
                   
                   {/* Section Labels - positioned for horizontal layout */}
-                  <text x="110" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none">ULAZ</text>
-                  <text x="640" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none">BINA</text>
-                  <text x="375" y="40" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="bold" textAnchor="middle" className="pointer-events-none">DJ</text>
-                  <text x="375" y="530" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none">GLAVNI ŠANK</text>
+                  <text x="720" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 720, 270)">ULAZ</text>
+                  <text x="640" y="310" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 640, 310)">BINA</text>
+                  <text x="375" y="50" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="bold" textAnchor="middle" className="pointer-events-none">DJ</text>
+                  <text x="375" y="490" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none">GLAVNI ŠANK</text>
                 </svg>
 
                 {/* Legend */}
@@ -450,35 +454,103 @@ const Reservations = () => {
 
               {/* Interactive Floor Plan */}
               <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
-                <svg viewBox="0 0 750 550" className="w-full h-auto max-h-[600px]">
+                <svg viewBox="0 0 750 520" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="550" fill="hsl(var(--background))" />
+                  <rect width="750" height="520" fill="hsl(var(--background))" />
                   
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 275) rotate(90) translate(-300, -350)">
-                    {/* Tables */}
-                    {sectionTables.map((table) => {
-                      const sectionColor = sections.find(s => s.id === table.section)?.color || "#666";
+                  <g transform="translate(375, 260) rotate(90) translate(-300, -335)">
+                    {/* Section Background Areas */}
+                    <g>
+                      <rect x="70" y="60" width="200" height="150" 
+                        fill={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "ulaz" ? 0.4 : 0.1}
+                        stroke={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "ulaz" ? 3 : 1}
+                        rx="8"
+                        className="transition-all duration-300"
+                      />
+                    </g>
+                    
+                    <g>
+                      <rect x="330" y="60" width="200" height="150"
+                        fill={selectedSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "bina" ? 0.4 : 0.1}
+                        stroke={selectedSection === "bina" ? sections[1].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "bina" ? 3 : 1}
+                        rx="8"
+                        className="transition-all duration-300"
+                      />
+                    </g>
+                    
+                    <g>
+                      <rect x="90" y="260" width="60" height="370"
+                        fill={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "lijevi-sank" ? 0.4 : 0.1}
+                        stroke={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : 1}
+                        rx="8"
+                        className="transition-all duration-300"
+                      />
+                    </g>
+                    
+                    <g>
+                      <rect x="170" y="260" width="100" height="370"
+                        fill={selectedSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "centar" ? 0.4 : 0.1}
+                        stroke={selectedSection === "centar" ? sections[3].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "centar" ? 3 : 1}
+                        rx="8"
+                        className="transition-all duration-300"
+                      />
+                    </g>
+                    
+                    <g>
+                      <rect x="290" y="260" width="240" height="350"
+                        fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "desna" ? 0.4 : 0.1}
+                        stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "desna" ? 3 : 1}
+                        rx="8"
+                        className="transition-all duration-300"
+                      />
+                    </g>
+                    
+                    <g>
+                      <rect x="180" y="620" width="240" height="50"
+                        fill={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
+                        opacity={selectedSection === "glavni-sank" ? 0.4 : 0.1}
+                        stroke={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
+                        strokeWidth={selectedSection === "glavni-sank" ? 3 : 1}
+                        rx="8"
+                        className="transition-all duration-300"
+                      />
+                    </g>
+                    
+                    {/* All Tables */}
+                    {tables.map((table) => {
+                       const sectionColor = sections.find(s => s.id === table.section)?.color || "#666";
                       const isSelected = selectedTable?.id === table.id;
+                      const isInSelectedSection = table.section === selectedSection;
                       
                       return (
                         <g key={table.id}>
                           <circle
                             cx={table.x}
                             cy={table.y}
-                            r={isSelected ? 22 : 18}
-                            fill={!table.available ? "hsl(var(--muted))" : isSelected ? sectionColor : "hsl(var(--card))"}
-                            stroke={isSelected ? sectionColor : "hsl(var(--border))"}
-                            strokeWidth={isSelected ? 3 : 2}
+                            r={isSelected ? 22 : isInSelectedSection ? 20 : 16}
+                            fill={!table.available ? "hsl(var(--muted))" : isSelected ? sectionColor : isInSelectedSection ? sectionColor : "hsl(var(--card))"}
+                            stroke={isSelected || isInSelectedSection ? sectionColor : "hsl(var(--border))"}
+                            strokeWidth={isSelected ? 3 : isInSelectedSection ? 2 : 1}
                             className="cursor-pointer transition-all duration-200"
                             onClick={() => handleTableSelect(table)}
-                            opacity={!table.available ? 0.5 : 1}
+                            opacity={!table.available ? 0.5 : isSelected || isInSelectedSection ? 1 : 0.6}
                           />
                           <text
                             x={table.x}
                             y={table.y + 5}
                             textAnchor="middle"
-                            fill={isSelected ? "white" : "hsl(var(--foreground))"}
+                            fill={isSelected || isInSelectedSection ? "white" : "hsl(var(--foreground))"}
                             fontSize="12"
                             fontWeight="bold"
                             className="pointer-events-none"
@@ -492,10 +564,10 @@ const Reservations = () => {
                   </g>
                   
                   {/* Section Labels - positioned for horizontal layout */}
-                  <text x="110" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">ULAZ</text>
-                  <text x="640" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">BINA</text>
-                  <text x="375" y="40" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">DJ</text>
-                  <text x="375" y="530" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">GLAVNI ŠANK</text>
+                  <text x="720" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 720, 270)">ULAZ</text>
+                  <text x="640" y="310" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 640, 310)">BINA</text>
+                  <text x="375" y="50" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">DJ</text>
+                  <text x="375" y="490" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">GLAVNI ŠANK</text>
                 </svg>
 
                 {/* Legend */}
