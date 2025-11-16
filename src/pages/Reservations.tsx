@@ -424,7 +424,7 @@ const Reservations = () => {
                         x="275"
                         y="220"
                         width="135"
-                        height="300"
+                        height="200"
                         fill={
                           selectedSection === "desna" || hoveredSection === "desna"
                             ? sections[4].color
@@ -677,7 +677,7 @@ const Reservations = () => {
                         x="275"
                         y="220"
                         width="135"
-                        height="400"
+                        height="300"
                         fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : 0.1}
                         stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
