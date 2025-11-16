@@ -55,20 +55,17 @@ const Events = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-4 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImg})`,
-            transform: `translateY(${parallaxOffset}px)`,
-          }}
-        />
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+        backgroundImage: `url(${heroImg})`,
+        transform: `translateY(${parallaxOffset}px)`
+      }} />
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
             Nadolazeći događaji
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Pronađite svoju savršenu noć - od live muzike do tematskih žurki!</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Doživi savršenu noć - od svirki uživo do tematskih partija!</p>
         </div>
       </section>
 
