@@ -273,12 +273,12 @@ const Reservations = () => {
 
               {/* Interactive Floor Plan - All Sections */}
               <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
-                <svg viewBox="0 0 750 520" className="w-full h-auto max-h-[600px]">
+                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="520" fill="hsl(var(--background))" />
+                  <rect width="750" height="480" fill="hsl(var(--background))" />
                   
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 260) rotate(90) translate(-300, -335)">
+                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
                     {/* Section Background Areas - Clickable */}
                     <g className="cursor-pointer transition-all duration-300" 
                        onClick={() => handleSectionSelect("ulaz")}
@@ -340,7 +340,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("desna")}
                        onMouseEnter={() => setHoveredSection("desna")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="290" y="260" width="240" height="350"
+                      <rect x="290" y="240" width="120" height="340"
                         fill={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
                         stroke={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--border))"}
@@ -354,7 +354,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("glavni-sank")}
                        onMouseEnter={() => setHoveredSection("glavni-sank")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="180" y="620" width="240" height="50"
+                      <rect x="425" y="240" width="95" height="380"
                         fill={selectedSection === "glavni-sank" || hoveredSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
                         stroke={selectedSection === "glavni-sank" || hoveredSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
@@ -401,10 +401,10 @@ const Reservations = () => {
                   </g>
                   
                   {/* Section Labels - positioned for horizontal layout */}
-                  <text x="720" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 720, 270)">ULAZ</text>
-                  <text x="640" y="310" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 640, 310)">BINA</text>
-                  <text x="375" y="50" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="bold" textAnchor="middle" className="pointer-events-none">DJ</text>
-                  <text x="375" y="490" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none">GLAVNI ŠANK</text>
+                  <text x="700" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 700, 270)">ULAZ</text>
+                  <text x="630" y="350" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 630, 350)">BINA</text>
+                  <text x="375" y="35" fill="hsl(var(--muted-foreground))" fontSize="12" fontWeight="bold" textAnchor="middle" className="pointer-events-none">DJ</text>
+                  <text x="680" y="430" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" className="pointer-events-none" transform="rotate(90, 680, 430)">GLAVNI ŠANK</text>
                 </svg>
 
                 {/* Legend */}
@@ -454,12 +454,12 @@ const Reservations = () => {
 
               {/* Interactive Floor Plan */}
               <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
-                <svg viewBox="0 0 750 520" className="w-full h-auto max-h-[600px]">
+                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="520" fill="hsl(var(--background))" />
+                  <rect width="750" height="480" fill="hsl(var(--background))" />
                   
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 260) rotate(90) translate(-300, -335)">
+                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
                     {/* Section Background Areas */}
                     <g>
                       <rect x="70" y="60" width="200" height="150" 
@@ -506,7 +506,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="290" y="260" width="240" height="350"
+                      <rect x="290" y="240" width="120" height="340"
                         fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : 0.1}
                         stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
@@ -517,7 +517,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="180" y="620" width="240" height="50"
+                      <rect x="425" y="240" width="95" height="380"
                         fill={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "glavni-sank" ? 0.4 : 0.1}
                         stroke={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
@@ -564,10 +564,10 @@ const Reservations = () => {
                   </g>
                   
                   {/* Section Labels - positioned for horizontal layout */}
-                  <text x="720" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 720, 270)">ULAZ</text>
-                  <text x="640" y="310" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 640, 310)">BINA</text>
-                  <text x="375" y="50" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">DJ</text>
-                  <text x="375" y="490" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">GLAVNI ŠANK</text>
+                  <text x="700" y="270" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 700, 270)">ULAZ</text>
+                  <text x="630" y="350" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 630, 350)">BINA</text>
+                  <text x="375" y="35" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle">DJ</text>
+                  <text x="680" y="430" fill="hsl(var(--muted-foreground))" fontSize="14" fontWeight="bold" textAnchor="middle" transform="rotate(90, 680, 430)">GLAVNI ŠANK</text>
                 </svg>
 
                 {/* Legend */}
