@@ -326,7 +326,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("centar")}
                        onMouseEnter={() => setHoveredSection("centar")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="170" y="260" width="100" height="370"
+                      <rect x="160" y="260" width="100" height="370"
                         fill={selectedSection === "centar" || hoveredSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
                         stroke={selectedSection === "centar" || hoveredSection === "centar" ? sections[3].color : "hsl(var(--border))"}
@@ -340,7 +340,7 @@ const Reservations = () => {
                        onClick={() => handleSectionSelect("desna")}
                        onMouseEnter={() => setHoveredSection("desna")}
                        onMouseLeave={() => setHoveredSection("")}>
-                      <rect x="290" y="240" width="120" height="340"
+                      <rect x="290" y="240" width="120" height="50"
                         fill={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
                         stroke={selectedSection === "desna" || hoveredSection === "desna" ? sections[4].color : "hsl(var(--border))"}
@@ -495,7 +495,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="170" y="260" width="100" height="370"
+                      <rect x="160" y="260" width="100" height="370"
                         fill={selectedSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "centar" ? 0.4 : 0.1}
                         stroke={selectedSection === "centar" ? sections[3].color : "hsl(var(--border))"}
@@ -506,7 +506,7 @@ const Reservations = () => {
                     </g>
                     
                     <g>
-                      <rect x="290" y="240" width="120" height="340"
+                      <rect x="290" y="240" width="120" height="50"
                         fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : 0.1}
                         stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
