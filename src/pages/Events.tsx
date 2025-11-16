@@ -9,6 +9,7 @@ import { Calendar, Music, Users } from "lucide-react";
 import liveBandImg from "@/assets/basement_12.jpg";
 import kafanskaImg from "@/assets/basement_7-2.jpg";
 import newYearImg from "@/assets/basement_39.jpg";
+import saturdayPartyImg from "@/assets/saturday-party.jpg";
 import heroImg from "@/assets/party-crowd.jpg";
 const Events = () => {
   const [selectedCategory, setSelectedCategory] = useState("Svi");
@@ -22,7 +23,7 @@ const Events = () => {
     time: "22:00",
     category: "DJ program",
     description: "Pridružite nam se za nezaboravnu subotnju noć uz najbolje DJ-eve i neumoljivu energiju!",
-    image: newYearImg
+    image: saturdayPartyImg
   }, {
     id: 2,
     title: "Live band večer",

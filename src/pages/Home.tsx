@@ -81,34 +81,34 @@ const Home = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                <Music className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+                <Music className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Live muzika</h3>
-              <p className="text-muted-foreground">Vrhunski izvođači i DJ-evi</p>
+              <h3 className="text-xl font-normal mb-2">Live muzika</h3>
+              <p className="text-muted-foreground font-normal">Vrhunski izvođači i DJ-evi</p>
             </div>
             
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                <Wine className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+                <Wine className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Premium piće</h3>
-              <p className="text-muted-foreground">Odabrana vina i kokteli</p>
+              <h3 className="text-xl font-normal mb-2">Premium piće</h3>
+              <p className="text-muted-foreground font-normal">Odabrana vina i kokteli</p>
             </div>
             
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                <MapPin className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+                <MapPin className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">VIP prostor</h3>
-              <p className="text-muted-foreground">Ekskluzivni stolovi i boksi</p>
+              <h3 className="text-xl font-normal mb-2">VIP prostor</h3>
+              <p className="text-muted-foreground font-normal">Ekskluzivni stolovi i boksi</p>
             </div>
             
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
-                <Calendar className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+                <Calendar className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Događaji</h3>
-              <p className="text-muted-foreground">Tematske noći i koncerti</p>
+              <h3 className="text-xl font-normal mb-2">Događaji</h3>
+              <p className="text-muted-foreground font-normal">Tematske noći i koncerti</p>
             </div>
           </div>
         </div>
