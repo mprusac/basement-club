@@ -127,7 +127,7 @@ const Menu = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
             Naš meni
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Odabrana kolekcija premium vina, žestokih pića i koktela</p>
@@ -140,7 +140,7 @@ const Menu = () => {
           <div className="flex flex-wrap gap-3 justify-center">
             {Object.keys(menuCategories).map(category => {
             const Icon = categoryIcons[category];
-            return <button key={category} onClick={() => setSelectedCategory(category)} className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all ${selectedCategory === category ? "bg-primary text-primary-foreground shadow-lg scale-105" : "bg-card hover:bg-muted text-foreground"}`}>
+            return <button key={category} onClick={() => setSelectedCategory(category)} className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all border-2 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg scale-105" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
                   <Icon className="w-5 h-5" />
                   {category}
                 </button>;

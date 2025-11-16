@@ -28,6 +28,9 @@ All colors MUST be HSL.
 
     --accent: 45 100% 60%;
     --accent-foreground: 0 0% 10%;
+    
+    --club-bronze: 30 50% 55%;
+    --club-bronze-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -71,6 +74,9 @@ All colors MUST be HSL.
     --border: 270 20% 20%;
     --input: 270 20% 20%;
     --ring: 280 60% 50%;
+    
+    --club-bronze: 30 50% 55%;
+    --club-bronze-foreground: 0 0% 10%;
   }
 }
 

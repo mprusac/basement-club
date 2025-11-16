@@ -64,7 +64,7 @@ const Events = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
             Nadolazeći događaji
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Pronađite svoju savršenu noć - od live muzike do tematskih žurki!</p>
@@ -75,7 +75,7 @@ const Events = () => {
       <section className="py-8 px-4 border-b border-border">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-wrap gap-3 justify-center">
-            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-all ${selectedCategory === category ? "bg-primary text-primary-foreground shadow-lg" : "bg-card hover:bg-muted text-foreground"}`}>
+            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-all border-2 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
                 {category}
               </button>)}
           </div>

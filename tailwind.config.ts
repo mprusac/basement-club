@@ -68,6 +68,10 @@ export default {
           DEFAULT: 'hsl(45 100% 60%)',
           dark: 'hsl(38 100% 50%)',
         },
+        'club-bronze': {
+          DEFAULT: 'hsl(var(--club-bronze))',
+          foreground: 'hsl(var(--club-bronze-foreground))',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

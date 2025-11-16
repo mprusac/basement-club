@@ -85,7 +85,7 @@ const Gallery = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
             Galerija
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -107,7 +107,7 @@ const Gallery = () => {
                     {image.alt}
                   </div>
                 </div>
-                <div className="absolute inset-0 ring-2 ring-primary/0 group-hover:ring-primary/50 transition-all duration-300 rounded-lg" />
+                <div className="absolute inset-0 ring-2 ring-club-bronze/0 group-hover:ring-club-bronze transition-all duration-300 rounded-lg" />
               </div>)}
           </div>
         </div>
