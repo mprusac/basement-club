@@ -54,7 +54,7 @@ const Reservations = () => {
       <Navigation />
 
       {/* Hero Section with Parallax */}
-      <section className="relative pt-24 pb-12 px-4 overflow-hidden">
+      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
         {/* Parallax Background */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
