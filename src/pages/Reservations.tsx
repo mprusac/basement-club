@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
@@ -8,6 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { Calendar, Clock, Tag } from "lucide-react";
 import heroImg from "@/assets/basement_45-2.jpg";
 
 type Section = "ulaz" | "bina" | "lijevi-sank" | "centar" | "desna" | "glavni-sank";
@@ -109,6 +111,8 @@ const tables: Table[] = [
 ];
 
 const Reservations = () => {
+  const location = useLocation();
+  const eventInfo = location.state as { eventTitle?: string; eventDate?: string; eventTime?: string; eventCategory?: string } | null;
   const reservationSection = useScrollAnimation();
   const parallaxOffset = useParallax(0.5);
 
@@ -275,6 +279,31 @@ const Reservations = () => {
                 <h2 className="text-3xl font-bold mb-4 text-primary">Odaberite sektor</h2>
                 <p className="text-muted-foreground">Kliknite na željeni sektor na tlocrtu ili odaberite iz liste</p>
               </div>
+
+              {/* Event Info Banner */}
+              {eventInfo && (
+                <div className="mb-8 max-w-2xl mx-auto bg-primary/10 border-2 border-primary/30 rounded-lg p-4">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-primary mb-2">{eventInfo.eventTitle}</h3>
+                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+                        <span className="flex items-center gap-1.5">
+                          <Calendar className="w-4 h-4" />
+                          {eventInfo.eventDate}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Clock className="w-4 h-4" />
+                          {eventInfo.eventTime}
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                          <Tag className="w-4 h-4" />
+                          {eventInfo.eventCategory}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Section Dropdown */}
               <div className="mb-8 max-w-md mx-auto">
