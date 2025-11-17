@@ -334,12 +334,12 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className="bg-card rounded-lg border-2 border-border p-4">
-                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
+                <svg viewBox="0 0 710 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="480" fill="hsl(var(--background))" />
+                  <rect width="710" height="480" fill="hsl(var(--background))" />
 
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
+                  <g transform="translate(355, 240) rotate(90) translate(-300, -315)">
                     {/* Section Background Areas - Clickable */}
                     <g
                       className="cursor-pointer transition-all duration-300"
@@ -696,12 +696,12 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className="bg-card rounded-lg border-2 border-border p-4">
-                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
+                <svg viewBox="0 0 710 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="480" fill="hsl(var(--background))" />
+                  <rect width="710" height="480" fill="hsl(var(--background))" />
 
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
+                  <g transform="translate(355, 240) rotate(90) translate(-300, -315)">
                     {/* Section Background Areas - Clickable */}
                     <g
                       className="cursor-pointer transition-all duration-300"
