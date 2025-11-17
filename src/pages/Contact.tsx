@@ -55,7 +55,7 @@ const Contact = () => {
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <MapPin className="w-6 h-6 text-club-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Adresa</h3>
                       <p className="text-muted-foreground">
@@ -66,7 +66,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
-                    <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Phone className="w-6 h-6 text-club-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Telefon</h3>
                       <a href="tel:+38763267715" className="text-muted-foreground hover:text-primary transition-colors block">
@@ -79,7 +79,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
-                    <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Clock className="w-6 h-6 text-club-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">Radno vrijeme</h3>
                       <p className="text-muted-foreground">
@@ -90,7 +90,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
-                    <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                    <Mail className="w-6 h-6 text-club-gold flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-semibold mb-1">​E-mail</h3>
                       <a href="mailto:info@basementclub.ba" className="text-muted-foreground hover:text-primary transition-colors">
@@ -123,7 +123,7 @@ const Contact = () => {
                     <textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Vaša poruka..." rows={6} className="mt-1 w-full px-3 py-2 rounded-md border border-input bg-background text-sm resize-none focus:outline-none focus:ring-2 focus:ring-ring" />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full bg-primary hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Button type="submit" size="lg" variant="premium" className="w-full">
                     Pošalji poruku
                   </Button>
                 </form>

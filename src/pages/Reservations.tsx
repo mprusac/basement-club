@@ -1110,8 +1110,8 @@ const Reservations = () => {
                   <Button type="button" onClick={handleBack} variant="outline" size="lg" className="flex-1">
                     Nazad
                   </Button>
-                  <Button type="submit" size="lg" className="flex-1">
-                    Rezerviraj
+                  <Button type="submit" size="lg" variant="premium" className="flex-1">
+                    Rezervirajte sada
                   </Button>
                 </div>
 
