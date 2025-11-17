@@ -616,14 +616,6 @@ const Reservations = () => {
                   </p>
                 </div>
               )}
-
-              <div className="mt-12 bg-card p-6 rounded-lg border border-border">
-                <h3 className="font-semibold text-lg mb-3 text-primary">Kontakt za rezervacije</h3>
-                <p className="text-sm text-muted-foreground">
-                  Za direktne rezervacije nazovite: <span className="text-primary font-semibold">+387 63 267 715</span>{" "}
-                  ili <span className="text-primary font-semibold">+387 63 196 490</span>
-                </p>
-              </div>
             </div>
           )}
 
