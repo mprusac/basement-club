@@ -673,7 +673,7 @@ const Reservations = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-2">
-                    <Button onClick={handleBack} variant="outline" size="lg" className="flex-1">
+                    <Button onClick={handleBack} variant="outline" size="lg" className="flex-1 hover:border-club-bronze hover:text-club-bronze">
                       Nazad
                     </Button>
                     <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedTable}>
@@ -1093,7 +1093,7 @@ const Reservations = () => {
 
                 {/* Buttons */}
                 <div className="flex gap-4 pt-4">
-                  <Button type="button" onClick={handleBack} variant="outline" size="lg" className="flex-1">
+                  <Button type="button" onClick={handleBack} variant="outline" size="lg" className="flex-1 hover:border-club-bronze hover:text-club-bronze">
                     Nazad
                   </Button>
                   <Button type="submit" size="lg" variant="premium" className="flex-1">
