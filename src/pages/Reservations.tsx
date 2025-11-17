@@ -280,50 +280,51 @@ const Reservations = () => {
                 <p className="text-muted-foreground">Kliknite na željeni sektor na tlocrtu ili odaberite iz liste</p>
               </div>
 
-              {/* Event Info Banner */}
-              {eventInfo && (
-                <div className="mb-8 max-w-2xl mx-auto bg-primary/10 border-2 border-primary/30 rounded-lg p-4">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-primary mb-2">{eventInfo.eventTitle}</h3>
-                      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="w-4 h-4" />
+              {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
+              <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
+                {/* Left Column: Event Info + Dropdown */}
+                <div className="space-y-4">
+                  {/* Event Info Banner */}
+                  {eventInfo && (
+                    <div className="bg-primary/10 border-2 border-primary/30 rounded-lg p-3">
+                      <h3 className="text-base font-bold text-primary mb-2">{eventInfo.eventTitle}</h3>
+                      <div className="space-y-1.5 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
                           {eventInfo.eventDate}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Clock className="w-4 h-4" />
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-3.5 h-3.5" />
                           {eventInfo.eventTime}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Tag className="w-4 h-4" />
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Tag className="w-3.5 h-3.5" />
                           {eventInfo.eventCategory}
-                        </span>
+                        </div>
                       </div>
                     </div>
+                  )}
+
+                  {/* Section Dropdown */}
+                  <div>
+                    <Label>Odaberite iz liste</Label>
+                    <Select value={selectedSection} onValueChange={(value) => handleSectionSelect(value as Section)}>
+                      <SelectTrigger className="mt-2">
+                        <SelectValue placeholder="Odaberite sektor..." />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {sections.map((section) => (
+                          <SelectItem key={section.id} value={section.id}>
+                            {section.name} ({tables.filter((t) => t.section === section.id && t.available).length} dostupno)
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
-              )}
 
-              {/* Section Dropdown */}
-              <div className="mb-8 max-w-md mx-auto">
-                <Label>Odaberite iz liste</Label>
-                <Select value={selectedSection} onValueChange={(value) => handleSectionSelect(value as Section)}>
-                  <SelectTrigger className="mt-2">
-                    <SelectValue placeholder="Odaberite sektor..." />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {sections.map((section) => (
-                      <SelectItem key={section.id} value={section.id}>
-                        {section.name} ({tables.filter((t) => t.section === section.id && t.available).length} dostupno)
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-
-              {/* Interactive Floor Plan - All Sections */}
-              <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
+                {/* Right Column: Floor Plan */}
+                <div className="bg-card rounded-lg border-2 border-border p-4">
                 <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
                   <rect width="750" height="480" fill="hsl(var(--background))" />
@@ -590,10 +591,11 @@ const Reservations = () => {
                     </div>
                   ))}
                 </div>
+                </div>
               </div>
 
               {selectedSection && (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center">
+                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center mt-6">
                   <p className="text-lg font-semibold mb-2">
                     Odabrani sektor:{" "}
                     <span className="text-primary text-2xl">
@@ -606,7 +608,7 @@ const Reservations = () => {
                 </div>
               )}
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-6">
                 <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedSection}>
                   Nastavi na odabir stola
                 </Button>
@@ -632,8 +634,33 @@ const Reservations = () => {
                 <p className="text-muted-foreground">Odaberite željeni stol</p>
               </div>
 
-              {/* Interactive Floor Plan */}
-              <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
+              {/* Grid Layout: Event Info on Left, Floor Plan on Right */}
+              <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
+                {/* Left Column: Event Info */}
+                <div>
+                  {eventInfo && (
+                    <div className="bg-primary/10 border-2 border-primary/30 rounded-lg p-3">
+                      <h3 className="text-base font-bold text-primary mb-2">{eventInfo.eventTitle}</h3>
+                      <div className="space-y-1.5 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {eventInfo.eventDate}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-3.5 h-3.5" />
+                          {eventInfo.eventTime}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Tag className="w-3.5 h-3.5" />
+                          {eventInfo.eventCategory}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Right Column: Floor Plan */}
+                <div className="bg-card rounded-lg border-2 border-border p-4">
                 <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
                   <rect width="750" height="480" fill="hsl(var(--background))" />
@@ -828,10 +855,11 @@ const Reservations = () => {
                     <span>Zauzeto</span>
                   </div>
                 </div>
+                </div>
               </div>
 
               {selectedTable && (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center">
+                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center mt-6">
                   <p className="text-lg font-semibold mb-2">
                     Odabrani stol: <span className="text-primary text-2xl">#{selectedTable.number}</span>
                   </p>
@@ -841,7 +869,7 @@ const Reservations = () => {
                 </div>
               )}
 
-              <div className="flex gap-4">
+              <div className="flex gap-4 mt-6">
                 <Button onClick={handleBack} variant="outline" size="lg" className="flex-1">
                   Nazad
                 </Button>
