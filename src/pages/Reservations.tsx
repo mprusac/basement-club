@@ -333,7 +333,7 @@ const Reservations = () => {
                 </div>
 
                 {/* Right Column: Floor Plan */}
-                <div className="bg-card rounded-lg border-2 border-border p-4">
+                <div className="bg-card rounded-lg border border-border p-2">
                 <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
                   <rect width="750" height="480" fill="hsl(var(--background))" />
