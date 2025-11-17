@@ -1038,33 +1038,19 @@ const Reservations = () => {
                   />
                 </div>
 
-                {/* Date and Guests */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="date">Datum *</Label>
-                    <Input
-                      id="date"
-                      name="date"
-                      type="date"
-                      value={formData.date}
-                      onChange={handleChange}
-                      required
-                      className="mt-2"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="guests">Broj Gostiju *</Label>
-                    <Input
-                      id="guests"
-                      name="guests"
-                      type="number"
-                      min="1"
-                      value={formData.guests}
-                      onChange={handleChange}
-                      required
-                      className="mt-2"
-                    />
-                  </div>
+                {/* Number of Guests */}
+                <div>
+                  <Label htmlFor="guests">Broj Gostiju *</Label>
+                  <Input
+                    id="guests"
+                    name="guests"
+                    type="number"
+                    min="1"
+                    value={formData.guests}
+                    onChange={handleChange}
+                    required
+                    className="mt-2"
+                  />
                 </div>
 
                 {/* Gender Selection */}
