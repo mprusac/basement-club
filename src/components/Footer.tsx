@@ -11,11 +11,11 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-primary mb-4">Kontakt</h3>
             <div className="space-y-3 text-muted-foreground">
               <div className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-club-gold" />
                 <span>Kralja Tomislava 63, 88260 Čitluk, BiH</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 flex-shrink-0 text-primary" />
+                <Phone className="w-5 h-5 flex-shrink-0 text-club-gold" />
                 <div className="flex flex-col">
                   <a href="tel:+38763267715" className="hover:text-primary transition-colors">
                     +387 63 267 715
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <Clock className="w-5 h-5 mt-0.5 flex-shrink-0 text-primary" />
+                <Clock className="w-5 h-5 mt-0.5 flex-shrink-0 text-club-gold" />
                 <span>Pon - Ned: 07:00 - 03:00</span>
               </div>
             </div>
@@ -59,17 +59,17 @@ const Footer = () => {
                 href="https://www.facebook.com/clubthebasement"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-club-gold/10 flex items-center justify-center hover:bg-club-gold transition-colors group"
               >
-                <Facebook className="w-5 h-5 text-primary hover:text-primary-foreground" />
+                <Facebook className="w-5 h-5 text-club-gold group-hover:text-black transition-colors" />
               </a>
               <a
                 href="https://www.instagram.com/clubthebasement"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center hover:bg-primary transition-colors"
+                className="w-10 h-10 rounded-full bg-club-gold/10 flex items-center justify-center hover:bg-club-gold transition-colors group"
               >
-                <Instagram className="w-5 h-5 text-primary hover:text-primary-foreground" />
+                <Instagram className="w-5 h-5 text-club-gold group-hover:text-black transition-colors" />
               </a>
             </div>
           </div>

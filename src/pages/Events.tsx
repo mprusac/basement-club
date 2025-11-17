@@ -119,7 +119,7 @@ const Events = () => {
                       } 
                     })}
                     className="w-full"
-                    variant="default"
+                    variant="premium"
                   >
                     Rezerviraj
                   </Button>
