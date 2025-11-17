@@ -65,8 +65,8 @@ export default {
           light: 'hsl(280 60% 60%)',
         },
         'club-gold': {
-          DEFAULT: 'hsl(45 100% 60%)',
-          dark: 'hsl(38 100% 50%)',
+          DEFAULT: 'hsl(32 55% 58%)',
+          dark: 'hsl(32 55% 50%)',
         },
         'club-bronze': {
           DEFAULT: 'hsl(var(--club-bronze))',
