@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -120,6 +120,7 @@ const Reservations = () => {
   const [selectedSection, setSelectedSection] = useState<Section | "">("");
   const [selectedTable, setSelectedTable] = useState<Table | null>(null);
   const [hoveredSection, setHoveredSection] = useState<Section | "">("");
+  const [isNavVisible, setIsNavVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -204,7 +205,21 @@ const Reservations = () => {
   const sectionTables = tables.filter((t) => t.section === selectedSection);
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      {/* Hover detection area at the top */}
+      <div 
+        className="fixed top-0 left-0 right-0 h-20 z-[60]"
+        onMouseEnter={() => setIsNavVisible(true)}
+        onMouseLeave={() => setIsNavVisible(false)}
+      />
+      
+      {/* Navigation with auto-hide */}
+      <div 
+        className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
+          isNavVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <Navigation />
+      </div>
 
       {/* Hero Section with Parallax */}
       <section className="relative pt-24 pb-6 px-4 overflow-hidden">
