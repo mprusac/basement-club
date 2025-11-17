@@ -233,9 +233,9 @@ const Reservations = () => {
       {/* Reservation Section */}
       <section
         ref={reservationSection.ref}
-        className={`py-8 px-4 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`py-8 px-2 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        <div className="container mx-auto max-w-7xl">
+        <div className="container mx-auto max-w-[1400px]">
           {/* Progress Steps */}
           <div className="mb-12">
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -276,9 +276,9 @@ const Reservations = () => {
 
           {/* Step 1: Section Selection */}
           {step === "section" && (
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-full mx-auto">
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
-              <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
+              <div className="grid lg:grid-cols-[280px_1fr] gap-3 items-start">
                 {/* Left Column: Event Info + Dropdown */}
                 <div className="space-y-4">
                   {/* Event Info Banner */}
@@ -629,9 +629,9 @@ const Reservations = () => {
 
           {/* Step 2: Table Selection */}
           {step === "table" && (
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-full mx-auto">
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
-              <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
+              <div className="grid lg:grid-cols-[280px_1fr] gap-3 items-start">
                 {/* Left Column: Event Info + Dropdown */}
                 <div className="space-y-4">
                   {/* Event Info Banner */}
