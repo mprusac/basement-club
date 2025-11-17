@@ -34,9 +34,14 @@ const Home = () => {
           <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto font-serif italic">
             Live glazba, premium vina i nezaboravni događaji
           </p>
-          <div className="flex justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/events" className="w-full sm:w-auto">
               <Button size="lg" variant="premium" className="w-full sm:w-64 px-8 py-6 text-lg">
+                Rezervirajte sada
+              </Button>
+            </Link>
+            <Link to="/events" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="w-full sm:w-64 border-2 border-club-bronze text-white hover:bg-club-bronze hover:text-black px-8 py-6 text-lg">
                 Pogledajte događaje
               </Button>
             </Link>
