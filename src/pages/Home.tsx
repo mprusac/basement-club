@@ -116,7 +116,7 @@ const Home = () => {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Spremni za nezaboravnu noć?</h2>
           <p className="text-xl text-white/80 mb-8">Rezervirajte svoj stol danas i postanite dio ekskluzivnog iskustva!</p>
-          <Link to="/reservations">
+          <Link to="/events">
             <Button size="lg" variant="premium" className="px-12 py-6 text-lg">
               Rezervirajte sada
             </Button>
