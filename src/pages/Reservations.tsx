@@ -132,7 +132,9 @@ const Reservations = () => {
 
   const handleSectionSelect = (sectionId: Section) => {
     setSelectedSection(sectionId);
-    setStep("table");
+    if (step === "section") {
+      setStep("table");
+    }
     setSelectedTable(null);
   };
 
@@ -312,7 +314,7 @@ const Reservations = () => {
                       <SelectTrigger className="mt-2">
                         <SelectValue placeholder="Odaberite sektor..." />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="z-50 bg-background">
                         {sections.map((section) => (
                           <SelectItem key={section.id} value={section.id}>
                             {section.name} ({tables.filter((t) => t.section === section.id && t.available).length} dostupno)
@@ -634,10 +636,11 @@ const Reservations = () => {
                 <p className="text-muted-foreground">Odaberite željeni stol</p>
               </div>
 
-              {/* Grid Layout: Event Info on Left, Floor Plan on Right */}
+              {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
-                {/* Left Column: Event Info */}
-                <div>
+                {/* Left Column: Event Info + Dropdown */}
+                <div className="space-y-4">
+                  {/* Event Info Banner */}
                   {eventInfo && (
                     <div className="bg-primary/10 border-2 border-primary/30 rounded-lg p-3">
                       <h3 className="text-base font-bold text-primary mb-2">{eventInfo.eventTitle}</h3>
@@ -657,6 +660,23 @@ const Reservations = () => {
                       </div>
                     </div>
                   )}
+
+                  {/* Section Dropdown */}
+                  <div>
+                    <Label>Odaberite sektor</Label>
+                    <Select value={selectedSection} onValueChange={(value) => handleSectionSelect(value as Section)}>
+                      <SelectTrigger className="mt-2">
+                        <SelectValue placeholder="Odaberite sektor..." />
+                      </SelectTrigger>
+                      <SelectContent className="z-50 bg-background">
+                        {sections.map((section) => (
+                          <SelectItem key={section.id} value={section.id}>
+                            {section.name} ({tables.filter((t) => t.section === section.id && t.available).length} dostupno)
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
 
                 {/* Right Column: Floor Plan */}
