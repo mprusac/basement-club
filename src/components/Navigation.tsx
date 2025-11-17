@@ -21,7 +21,6 @@ const Navigation = () => {
   const navLinks = [
     { name: "Početna", path: "/" },
     { name: "Događaji", path: "/events" },
-    { name: "Rezervacije", path: "/reservations" },
     { name: "Meni", path: "/menu" },
     { name: "Galerija", path: "/gallery" },
     { name: "Kontakt", path: "/contact" },

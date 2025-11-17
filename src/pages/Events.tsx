@@ -110,7 +110,14 @@ const Events = () => {
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground leading-relaxed">{event.description}</p>
                   <Button 
-                    onClick={() => navigate('/reservations')}
+                    onClick={() => navigate('/reservations', { 
+                      state: { 
+                        eventTitle: event.title,
+                        eventDate: event.date,
+                        eventTime: event.time,
+                        eventCategory: event.category
+                      } 
+                    })}
                     className="w-full"
                     variant="default"
                   >
