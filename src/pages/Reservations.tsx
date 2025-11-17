@@ -84,16 +84,16 @@ const tables: Table[] = [
   { id: "42", number: 42, section: "centar", x: 240, y: 600, available: true },
   { id: "43", number: 43, section: "centar", x: 200, y: 640, available: true },
 
-  // Desna zona (44-52)
-  { id: "44", number: 44, section: "desna", x: 340, y: 260, available: true },
-  { id: "45", number: 45, section: "desna", x: 380, y: 280, available: true },
-  { id: "46", number: 46, section: "desna", x: 360, y: 320, available: true },
-  { id: "47", number: 47, section: "desna", x: 400, y: 320, available: true },
-  { id: "48", number: 48, section: "desna", x: 380, y: 360, available: false },
-  { id: "49", number: 49, section: "desna", x: 380, y: 420, available: true },
+  // Desna zona (44-52) - repositioned for even distribution
+  { id: "44", number: 44, section: "desna", x: 340, y: 240, available: true },
+  { id: "45", number: 45, section: "desna", x: 380, y: 240, available: true },
+  { id: "46", number: 46, section: "desna", x: 360, y: 290, available: true },
+  { id: "47", number: 47, section: "desna", x: 400, y: 290, available: true },
+  { id: "48", number: 48, section: "desna", x: 380, y: 340, available: false },
+  { id: "49", number: 49, section: "desna", x: 380, y: 410, available: true },
   { id: "50", number: 50, section: "desna", x: 360, y: 480, available: true },
   { id: "51", number: 51, section: "desna", x: 400, y: 480, available: true },
-  { id: "52", number: 52, section: "desna", x: 380, y: 540, available: true },
+  { id: "52", number: 52, section: "desna", x: 380, y: 550, available: true },
 
   // Glavni šank (53-64)
   { id: "53", number: 53, section: "glavni-sank", x: 440, y: 260, available: true },
@@ -319,8 +319,8 @@ const Reservations = () => {
                     </Select>
                   </div>
 
-                  {/* Message when sector selected */}
-                  {selectedSection && (
+                  {/* Message when sector selected but no table chosen */}
+                  {selectedSection && !selectedTable && (
                     <p className="text-sm text-muted-foreground text-center">
                       Odaberite željeni stol
                     </p>
@@ -672,8 +672,8 @@ const Reservations = () => {
                     </Select>
                   </div>
 
-                  {/* Message when sector selected */}
-                  {selectedSection && (
+                  {/* Message when sector selected but no table chosen */}
+                  {selectedSection && !selectedTable && (
                     <p className="text-sm text-muted-foreground text-center">
                       Odaberite željeni stol
                     </p>
