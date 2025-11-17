@@ -56,56 +56,56 @@ const tables: Table[] = [
   { id: "20", number: 20, section: "bina", x: 500, y: 180, available: true },
 
   // Lijevi šank/DJ zona (21-29)
-  { id: "21", number: 21, section: "lijevi-sank", x: 120, y: 230, available: true },
-  { id: "22", number: 22, section: "lijevi-sank", x: 120, y: 270, available: true },
-  { id: "23", number: 23, section: "lijevi-sank", x: 120, y: 310, available: true },
-  { id: "24", number: 24, section: "lijevi-sank", x: 120, y: 350, available: true },
-  { id: "25", number: 25, section: "lijevi-sank", x: 120, y: 390, available: false },
-  { id: "26", number: 26, section: "lijevi-sank", x: 120, y: 430, available: true },
-  { id: "27", number: 27, section: "lijevi-sank", x: 120, y: 470, available: true },
-  { id: "28", number: 28, section: "lijevi-sank", x: 120, y: 510, available: true },
-  { id: "29", number: 29, section: "lijevi-sank", x: 120, y: 550, available: true },
+  { id: "21", number: 21, section: "lijevi-sank", x: 120, y: 280, available: true },
+  { id: "22", number: 22, section: "lijevi-sank", x: 120, y: 320, available: true },
+  { id: "23", number: 23, section: "lijevi-sank", x: 120, y: 360, available: true },
+  { id: "24", number: 24, section: "lijevi-sank", x: 120, y: 400, available: true },
+  { id: "25", number: 25, section: "lijevi-sank", x: 120, y: 440, available: false },
+  { id: "26", number: 26, section: "lijevi-sank", x: 120, y: 480, available: true },
+  { id: "27", number: 27, section: "lijevi-sank", x: 120, y: 520, available: true },
+  { id: "28", number: 28, section: "lijevi-sank", x: 120, y: 560, available: true },
+  { id: "29", number: 29, section: "lijevi-sank", x: 120, y: 600, available: true },
 
   // Centralna zona (30-43)
-  { id: "30", number: 30, section: "centar", x: 220, y: 230, available: true },
-  { id: "31", number: 31, section: "centar", x: 200, y: 270, available: true },
-  { id: "32", number: 32, section: "centar", x: 240, y: 270, available: true },
-  { id: "33", number: 33, section: "centar", x: 220, y: 310, available: true },
-  { id: "34", number: 34, section: "centar", x: 200, y: 350, available: true },
-  { id: "35", number: 35, section: "centar", x: 200, y: 390, available: true },
-  { id: "36", number: 36, section: "centar", x: 200, y: 430, available: false },
-  { id: "37", number: 37, section: "centar", x: 240, y: 350, available: true },
-  { id: "38", number: 38, section: "centar", x: 240, y: 390, available: true },
-  { id: "39", number: 39, section: "centar", x: 240, y: 430, available: true },
-  { id: "40", number: 40, section: "centar", x: 240, y: 470, available: true },
-  { id: "41", number: 41, section: "centar", x: 220, y: 510, available: true },
-  { id: "42", number: 42, section: "centar", x: 240, y: 550, available: true },
-  { id: "43", number: 43, section: "centar", x: 200, y: 590, available: true },
+  { id: "30", number: 30, section: "centar", x: 220, y: 280, available: true },
+  { id: "31", number: 31, section: "centar", x: 200, y: 320, available: true },
+  { id: "32", number: 32, section: "centar", x: 240, y: 320, available: true },
+  { id: "33", number: 33, section: "centar", x: 220, y: 360, available: true },
+  { id: "34", number: 34, section: "centar", x: 200, y: 400, available: true },
+  { id: "35", number: 35, section: "centar", x: 200, y: 440, available: true },
+  { id: "36", number: 36, section: "centar", x: 200, y: 480, available: false },
+  { id: "37", number: 37, section: "centar", x: 240, y: 400, available: true },
+  { id: "38", number: 38, section: "centar", x: 240, y: 440, available: true },
+  { id: "39", number: 39, section: "centar", x: 240, y: 480, available: true },
+  { id: "40", number: 40, section: "centar", x: 240, y: 520, available: true },
+  { id: "41", number: 41, section: "centar", x: 220, y: 560, available: true },
+  { id: "42", number: 42, section: "centar", x: 240, y: 600, available: true },
+  { id: "43", number: 43, section: "centar", x: 200, y: 640, available: true },
 
   // Desna zona (44-52)
-  { id: "44", number: 44, section: "desna", x: 340, y: 210, available: true },
-  { id: "45", number: 45, section: "desna", x: 380, y: 230, available: true },
-  { id: "46", number: 46, section: "desna", x: 360, y: 270, available: true },
-  { id: "47", number: 47, section: "desna", x: 400, y: 270, available: true },
-  { id: "48", number: 48, section: "desna", x: 380, y: 310, available: false },
-  { id: "49", number: 49, section: "desna", x: 380, y: 370, available: true },
-  { id: "50", number: 50, section: "desna", x: 360, y: 430, available: true },
-  { id: "51", number: 51, section: "desna", x: 400, y: 430, available: true },
-  { id: "52", number: 52, section: "desna", x: 380, y: 490, available: true },
+  { id: "44", number: 44, section: "desna", x: 340, y: 260, available: true },
+  { id: "45", number: 45, section: "desna", x: 380, y: 280, available: true },
+  { id: "46", number: 46, section: "desna", x: 360, y: 320, available: true },
+  { id: "47", number: 47, section: "desna", x: 400, y: 320, available: true },
+  { id: "48", number: 48, section: "desna", x: 380, y: 360, available: false },
+  { id: "49", number: 49, section: "desna", x: 380, y: 420, available: true },
+  { id: "50", number: 50, section: "desna", x: 360, y: 480, available: true },
+  { id: "51", number: 51, section: "desna", x: 400, y: 480, available: true },
+  { id: "52", number: 52, section: "desna", x: 380, y: 540, available: true },
 
   // Glavni šank (53-64)
-  { id: "53", number: 53, section: "glavni-sank", x: 440, y: 210, available: true },
-  { id: "54", number: 54, section: "glavni-sank", x: 440, y: 290, available: true },
-  { id: "55", number: 55, section: "glavni-sank", x: 440, y: 350, available: true },
-  { id: "56", number: 56, section: "glavni-sank", x: 440, y: 410, available: true },
-  { id: "57", number: 57, section: "glavni-sank", x: 440, y: 490, available: true },
-  { id: "58", number: 58, section: "glavni-sank", x: 500, y: 210, available: true },
-  { id: "59", number: 59, section: "glavni-sank", x: 500, y: 270, available: false },
-  { id: "60", number: 60, section: "glavni-sank", x: 500, y: 310, available: true },
-  { id: "61", number: 61, section: "glavni-sank", x: 500, y: 370, available: true },
-  { id: "62", number: 62, section: "glavni-sank", x: 500, y: 430, available: true },
-  { id: "63", number: 63, section: "glavni-sank", x: 500, y: 490, available: true },
-  { id: "64", number: 64, section: "glavni-sank", x: 500, y: 550, available: true },
+  { id: "53", number: 53, section: "glavni-sank", x: 440, y: 260, available: true },
+  { id: "54", number: 54, section: "glavni-sank", x: 440, y: 340, available: true },
+  { id: "55", number: 55, section: "glavni-sank", x: 440, y: 400, available: true },
+  { id: "56", number: 56, section: "glavni-sank", x: 440, y: 460, available: true },
+  { id: "57", number: 57, section: "glavni-sank", x: 440, y: 540, available: true },
+  { id: "58", number: 58, section: "glavni-sank", x: 500, y: 260, available: true },
+  { id: "59", number: 59, section: "glavni-sank", x: 500, y: 320, available: false },
+  { id: "60", number: 60, section: "glavni-sank", x: 500, y: 360, available: true },
+  { id: "61", number: 61, section: "glavni-sank", x: 500, y: 420, available: true },
+  { id: "62", number: 62, section: "glavni-sank", x: 500, y: 480, available: true },
+  { id: "63", number: 63, section: "glavni-sank", x: 500, y: 540, available: true },
+  { id: "64", number: 64, section: "glavni-sank", x: 500, y: 600, available: true },
 ];
 
 const Reservations = () => {
@@ -201,7 +201,7 @@ const Reservations = () => {
       <Navigation />
 
       {/* Hero Section with Parallax */}
-      <section className="relative pt-24 pb-8 px-4 overflow-hidden">
+      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
         {/* Parallax Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -227,7 +227,7 @@ const Reservations = () => {
       {/* Reservation Section */}
       <section
         ref={reservationSection.ref}
-        className={`py-8 px-4 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`py-16 px-4 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
         <div className="container mx-auto max-w-7xl">
           {/* Progress Steps */}
@@ -294,13 +294,13 @@ const Reservations = () => {
               </div>
 
               {/* Interactive Floor Plan - All Sections */}
-              <div className="bg-card rounded-lg border-2 border-border p-2 mb-6">
-                <svg viewBox="0 0 750 400" className="w-full h-auto max-h-[450px]">
+              <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
+                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="400" fill="hsl(var(--background))" />
+                  <rect width="750" height="480" fill="hsl(var(--background))" />
 
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 200) rotate(90) translate(-300, -315)">
+                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
                     {/* Section Background Areas - Clickable */}
                     <g
                       className="cursor-pointer transition-all duration-300"
@@ -366,7 +366,7 @@ const Reservations = () => {
                     >
                       <rect
                         x="90"
-                        y="210"
+                        y="260"
                         width="60"
                         height="370"
                         fill={
@@ -394,7 +394,7 @@ const Reservations = () => {
                     >
                       <rect
                         x="160"
-                        y="210"
+                        y="260"
                         width="100"
                         height="370"
                         fill={
@@ -422,7 +422,7 @@ const Reservations = () => {
                     >
                       <rect
                         x="275"
-                        y="170"
+                        y="220"
                         width="135"
                         height="400"
                         fill={
@@ -450,7 +450,7 @@ const Reservations = () => {
                     >
                       <rect
                         x="425"
-                        y="190"
+                        y="240"
                         width="95"
                         height="380"
                         fill={
@@ -604,13 +604,13 @@ const Reservations = () => {
               </div>
 
               {/* Interactive Floor Plan */}
-              <div className="bg-card rounded-lg border-2 border-border p-2 mb-6">
-                <svg viewBox="0 0 750 400" className="w-full h-auto max-h-[450px]">
+              <div className="bg-card rounded-lg border-2 border-border p-4 mb-8">
+                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                   {/* Background */}
-                  <rect width="750" height="400" fill="hsl(var(--background))" />
+                  <rect width="750" height="480" fill="hsl(var(--background))" />
 
                   {/* Rotated layout container */}
-                  <g transform="translate(375, 200) rotate(90) translate(-300, -315)">
+                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
                     {/* Section Background Areas */}
                     <g>
                       <rect
@@ -645,7 +645,7 @@ const Reservations = () => {
                     <g>
                       <rect
                         x="90"
-                        y="210"
+                        y="260"
                         width="60"
                         height="370"
                         fill={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--muted))"}
@@ -660,7 +660,7 @@ const Reservations = () => {
                     <g>
                       <rect
                         x="160"
-                        y="210"
+                        y="260"
                         width="100"
                         height="370"
                         fill={selectedSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
@@ -675,9 +675,9 @@ const Reservations = () => {
                     <g>
                       <rect
                         x="275"
-                        y="170"
+                        y="220"
                         width="135"
-                        height="400"
+                        height="380"
                         fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
                         opacity={selectedSection === "desna" ? 0.4 : 0.1}
                         stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
@@ -690,7 +690,7 @@ const Reservations = () => {
                     <g>
                       <rect
                         x="425"
-                        y="190"
+                        y="240"
                         width="95"
                         height="380"
                         fill={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
