@@ -84,16 +84,16 @@ const tables: Table[] = [
   { id: "42", number: 42, section: "centar", x: 240, y: 600, available: true },
   { id: "43", number: 43, section: "centar", x: 200, y: 640, available: true },
 
-  // Desna zona (44-52) - moved up for better positioning
-  { id: "44", number: 44, section: "desna", x: 340, y: 230, available: true },
-  { id: "45", number: 45, section: "desna", x: 380, y: 230, available: true },
-  { id: "46", number: 46, section: "desna", x: 360, y: 280, available: true },
-  { id: "47", number: 47, section: "desna", x: 400, y: 280, available: true },
-  { id: "48", number: 48, section: "desna", x: 380, y: 330, available: false },
-  { id: "49", number: 49, section: "desna", x: 380, y: 380, available: true },
-  { id: "50", number: 50, section: "desna", x: 360, y: 440, available: true },
-  { id: "51", number: 51, section: "desna", x: 400, y: 440, available: true },
-  { id: "52", number: 52, section: "desna", x: 380, y: 510, available: true },
+  // Desna zona (44-52) - moved left and down closer to central zone
+  { id: "44", number: 44, section: "desna", x: 310, y: 250, available: true },
+  { id: "45", number: 45, section: "desna", x: 350, y: 250, available: true },
+  { id: "46", number: 46, section: "desna", x: 330, y: 310, available: true },
+  { id: "47", number: 47, section: "desna", x: 370, y: 310, available: true },
+  { id: "48", number: 48, section: "desna", x: 350, y: 360, available: false },
+  { id: "49", number: 49, section: "desna", x: 350, y: 420, available: true },
+  { id: "50", number: 50, section: "desna", x: 330, y: 480, available: true },
+  { id: "51", number: 51, section: "desna", x: 370, y: 480, available: true },
+  { id: "52", number: 52, section: "desna", x: 350, y: 550, available: true },
 
   // Glavni šank (53-64)
   { id: "53", number: 53, section: "glavni-sank", x: 440, y: 260, available: true },
