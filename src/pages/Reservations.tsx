@@ -207,7 +207,7 @@ const Reservations = () => {
       <Navigation />
 
       {/* Hero Section with Parallax */}
-      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+      <section className="relative pt-24 pb-6 px-4 overflow-hidden">
         {/* Parallax Background */}
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -221,10 +221,10 @@ const Reservations = () => {
 
         {/* Content */}
         <div className="container mx-auto max-w-6xl text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze drop-shadow-lg animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-club-bronze drop-shadow-lg animate-fade-in">
             Rezervirajte svoj stol
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-lg text-white/90 max-w-2xl mx-auto drop-shadow-md">
             Odaberite stol ili VIP box i osigurajte sebi nezaboravnu večer!
           </p>
         </div>
@@ -233,7 +233,7 @@ const Reservations = () => {
       {/* Reservation Section */}
       <section
         ref={reservationSection.ref}
-        className={`py-16 px-4 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`py-8 px-4 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
         <div className="container mx-auto max-w-7xl">
           {/* Progress Steps */}
@@ -277,11 +277,6 @@ const Reservations = () => {
           {/* Step 1: Section Selection */}
           {step === "section" && (
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-4 text-primary">Odaberite sektor</h2>
-                <p className="text-muted-foreground">Kliknite na željeni sektor na tlocrtu ili odaberite iz liste</p>
-              </div>
-
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
                 {/* Left Column: Event Info + Dropdown */}
@@ -323,6 +318,11 @@ const Reservations = () => {
                       </SelectContent>
                     </Select>
                   </div>
+
+                  {/* Continue Button */}
+                  <Button onClick={handleContinue} size="lg" className="w-full" disabled={!selectedSection}>
+                    Nastavi
+                  </Button>
                 </div>
 
                 {/* Right Column: Floor Plan */}
@@ -597,7 +597,7 @@ const Reservations = () => {
               </div>
 
               {selectedSection && (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center mt-6">
+                <div className="bg-primary/10 border border-primary rounded-lg p-6 text-center mt-6">
                   <p className="text-lg font-semibold mb-2">
                     Odabrani sektor:{" "}
                     <span className="text-primary text-2xl">
@@ -609,12 +609,6 @@ const Reservations = () => {
                   </p>
                 </div>
               )}
-
-              <div className="flex gap-4 mt-6">
-                <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedSection}>
-                  Nastavi na odabir stola
-                </Button>
-              </div>
 
               <div className="mt-12 bg-card p-6 rounded-lg border border-border">
                 <h3 className="font-semibold text-lg mb-3 text-primary">Kontakt za rezervacije</h3>
@@ -629,13 +623,6 @@ const Reservations = () => {
           {/* Step 2: Table Selection */}
           {step === "table" && (
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-4 text-primary">
-                  {sections.find((s) => s.id === selectedSection)?.name}
-                </h2>
-                <p className="text-muted-foreground">Odaberite željeni stol</p>
-              </div>
-
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-6 items-start">
                 {/* Left Column: Event Info + Dropdown */}
@@ -676,6 +663,16 @@ const Reservations = () => {
                         ))}
                       </SelectContent>
                     </Select>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex gap-2">
+                    <Button onClick={handleBack} variant="outline" size="lg" className="flex-1">
+                      Nazad
+                    </Button>
+                    <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedTable}>
+                      Nastavi
+                    </Button>
                   </div>
                 </div>
 
@@ -879,7 +876,7 @@ const Reservations = () => {
               </div>
 
               {selectedTable && (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 text-center mt-6">
+                <div className="bg-primary/10 border border-primary rounded-lg p-6 text-center mt-6">
                   <p className="text-lg font-semibold mb-2">
                     Odabrani stol: <span className="text-primary text-2xl">#{selectedTable.number}</span>
                   </p>
@@ -888,15 +885,6 @@ const Reservations = () => {
                   </p>
                 </div>
               )}
-
-              <div className="flex gap-4 mt-6">
-                <Button onClick={handleBack} variant="outline" size="lg" className="flex-1">
-                  Nazad
-                </Button>
-                <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedTable}>
-                  Nastavi
-                </Button>
-              </div>
             </div>
           )}
 
