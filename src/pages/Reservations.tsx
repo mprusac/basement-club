@@ -319,6 +319,13 @@ const Reservations = () => {
                     </Select>
                   </div>
 
+                  {/* Message when sector selected */}
+                  {selectedSection && (
+                    <p className="text-sm text-muted-foreground text-center">
+                      Odaberite željeni stol
+                    </p>
+                  )}
+
                   {/* Continue Button */}
                   <Button onClick={handleContinue} size="lg" className="w-full" disabled={!selectedSection}>
                     Nastavi
@@ -665,6 +672,13 @@ const Reservations = () => {
                     </Select>
                   </div>
 
+                  {/* Message when sector selected */}
+                  {selectedSection && (
+                    <p className="text-sm text-muted-foreground text-center">
+                      Odaberite željeni stol
+                    </p>
+                  )}
+
                   {/* Action Buttons */}
                   <div className="flex gap-2">
                     <Button onClick={handleBack} variant="outline" size="lg" className="flex-1">
@@ -674,6 +688,18 @@ const Reservations = () => {
                       Nastavi
                     </Button>
                   </div>
+
+                  {/* Selected Table Info */}
+                  {selectedTable && (
+                    <div className="bg-primary/10 border border-primary rounded-lg p-3 text-center">
+                      <p className="text-sm font-semibold">
+                        Odabrani stol: <span className="text-primary text-lg">#{selectedTable.number}</span>
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        u sektoru {sections.find((s) => s.id === selectedTable.section)?.name}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Right Column: Floor Plan */}
@@ -875,16 +901,6 @@ const Reservations = () => {
                 </div>
               </div>
 
-              {selectedTable && (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 text-center mt-6">
-                  <p className="text-lg font-semibold mb-2">
-                    Odabrani stol: <span className="text-primary text-2xl">#{selectedTable.number}</span>
-                  </p>
-                  <p className="text-muted-foreground">
-                    u sektoru {sections.find((s) => s.id === selectedTable.section)?.name}
-                  </p>
-                </div>
-              )}
             </div>
           )}
 
