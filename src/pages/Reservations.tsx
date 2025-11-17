@@ -34,16 +34,16 @@ const sections: { id: Section; name: string; color: string }[] = [
 
 const tables: Table[] = [
   // Ulaz zona (1-10)
-  { id: "1", number: 1, section: "ulaz", x: 100, y: 80, available: true },
-  { id: "2", number: 2, section: "ulaz", x: 150, y: 80, available: true },
-  { id: "3", number: 3, section: "ulaz", x: 200, y: 80, available: true },
-  { id: "4", number: 4, section: "ulaz", x: 100, y: 130, available: true },
-  { id: "5", number: 5, section: "ulaz", x: 150, y: 130, available: true },
-  { id: "6", number: 6, section: "ulaz", x: 200, y: 130, available: false },
-  { id: "7", number: 7, section: "ulaz", x: 250, y: 130, available: true },
-  { id: "8", number: 8, section: "ulaz", x: 100, y: 180, available: true },
-  { id: "9", number: 9, section: "ulaz", x: 150, y: 180, available: true },
-  { id: "10", number: 10, section: "ulaz", x: 200, y: 180, available: true },
+  { id: "1", number: 1, section: "ulaz", x: 100, y: 280, available: true },
+  { id: "2", number: 2, section: "ulaz", x: 150, y: 280, available: true },
+  { id: "3", number: 3, section: "ulaz", x: 200, y: 280, available: true },
+  { id: "4", number: 4, section: "ulaz", x: 100, y: 330, available: true },
+  { id: "5", number: 5, section: "ulaz", x: 150, y: 330, available: true },
+  { id: "6", number: 6, section: "ulaz", x: 200, y: 330, available: false },
+  { id: "7", number: 7, section: "ulaz", x: 250, y: 330, available: true },
+  { id: "8", number: 8, section: "ulaz", x: 100, y: 380, available: true },
+  { id: "9", number: 9, section: "ulaz", x: 150, y: 380, available: true },
+  { id: "10", number: 10, section: "ulaz", x: 200, y: 380, available: true },
 
   // Bina zona (11-20)
   { id: "11", number: 11, section: "bina", x: 350, y: 80, available: true },
@@ -349,7 +349,7 @@ const Reservations = () => {
                     >
                       <rect
                         x="70"
-                        y="60"
+                        y="260"
                         width="200"
                         height="150"
                         fill={
