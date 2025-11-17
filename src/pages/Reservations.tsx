@@ -710,92 +710,170 @@ const Reservations = () => {
 
                   {/* Rotated layout container */}
                   <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
-                    {/* Section Background Areas */}
-                    <g>
+                    {/* Section Background Areas - Clickable */}
+                    <g
+                      className="cursor-pointer transition-all duration-300"
+                      onClick={() => handleSectionSelect("ulaz")}
+                      onMouseEnter={() => setHoveredSection("ulaz")}
+                      onMouseLeave={() => setHoveredSection("")}
+                    >
                       <rect
                         x="70"
                         y="60"
                         width="200"
                         height="150"
-                        fill={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "ulaz" ? 0.4 : 0.1}
-                        stroke={selectedSection === "ulaz" ? sections[0].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "ulaz" ? 3 : 1}
+                        fill={
+                          selectedSection === "ulaz" || hoveredSection === "ulaz"
+                            ? sections[0].color
+                            : "hsl(var(--muted))"
+                        }
+                        opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.1}
+                        stroke={
+                          selectedSection === "ulaz" || hoveredSection === "ulaz"
+                            ? sections[0].color
+                            : "hsl(var(--border))"
+                        }
+                        strokeWidth={selectedSection === "ulaz" ? 3 : hoveredSection === "ulaz" ? 2 : 1}
                         rx="8"
                         className="transition-all duration-300"
                       />
                     </g>
 
-                    <g>
+                    <g
+                      className="cursor-pointer transition-all duration-300"
+                      onClick={() => handleSectionSelect("bina")}
+                      onMouseEnter={() => setHoveredSection("bina")}
+                      onMouseLeave={() => setHoveredSection("")}
+                    >
                       <rect
                         x="330"
                         y="60"
                         width="200"
                         height="150"
-                        fill={selectedSection === "bina" ? sections[1].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "bina" ? 0.4 : 0.1}
-                        stroke={selectedSection === "bina" ? sections[1].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "bina" ? 3 : 1}
+                        fill={
+                          selectedSection === "bina" || hoveredSection === "bina"
+                            ? sections[1].color
+                            : "hsl(var(--muted))"
+                        }
+                        opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
+                        stroke={
+                          selectedSection === "bina" || hoveredSection === "bina"
+                            ? sections[1].color
+                            : "hsl(var(--border))"
+                        }
+                        strokeWidth={selectedSection === "bina" ? 3 : hoveredSection === "bina" ? 2 : 1}
                         rx="8"
                         className="transition-all duration-300"
                       />
                     </g>
 
-                    <g>
+                    <g
+                      className="cursor-pointer transition-all duration-300"
+                      onClick={() => handleSectionSelect("lijevi-sank")}
+                      onMouseEnter={() => setHoveredSection("lijevi-sank")}
+                      onMouseLeave={() => setHoveredSection("")}
+                    >
                       <rect
                         x="90"
                         y="260"
                         width="60"
                         height="370"
-                        fill={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "lijevi-sank" ? 0.4 : 0.1}
-                        stroke={selectedSection === "lijevi-sank" ? sections[2].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : 1}
+                        fill={
+                          selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
+                            ? sections[2].color
+                            : "hsl(var(--muted))"
+                        }
+                        opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.1}
+                        stroke={
+                          selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
+                            ? sections[2].color
+                            : "hsl(var(--border))"
+                        }
+                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : hoveredSection === "lijevi-sank" ? 2 : 1}
                         rx="8"
                         className="transition-all duration-300"
                       />
                     </g>
 
-                    <g>
+                    <g
+                      className="cursor-pointer transition-all duration-300"
+                      onClick={() => handleSectionSelect("centar")}
+                      onMouseEnter={() => setHoveredSection("centar")}
+                      onMouseLeave={() => setHoveredSection("")}
+                    >
                       <rect
                         x="160"
                         y="260"
                         width="100"
                         height="370"
-                        fill={selectedSection === "centar" ? sections[3].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "centar" ? 0.4 : 0.1}
-                        stroke={selectedSection === "centar" ? sections[3].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "centar" ? 3 : 1}
+                        fill={
+                          selectedSection === "centar" || hoveredSection === "centar"
+                            ? sections[3].color
+                            : "hsl(var(--muted))"
+                        }
+                        opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
+                        stroke={
+                          selectedSection === "centar" || hoveredSection === "centar"
+                            ? sections[3].color
+                            : "hsl(var(--border))"
+                        }
+                        strokeWidth={selectedSection === "centar" ? 3 : hoveredSection === "centar" ? 2 : 1}
                         rx="8"
                         className="transition-all duration-300"
                       />
                     </g>
 
-                    <g>
+                    <g
+                      className="cursor-pointer transition-all duration-300"
+                      onClick={() => handleSectionSelect("desna")}
+                      onMouseEnter={() => setHoveredSection("desna")}
+                      onMouseLeave={() => setHoveredSection("")}
+                    >
                       <rect
                         x="275"
                         y="220"
                         width="135"
                         height="380"
-                        fill={selectedSection === "desna" ? sections[4].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "desna" ? 0.4 : 0.1}
-                        stroke={selectedSection === "desna" ? sections[4].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "desna" ? 3 : 1}
+                        fill={
+                          selectedSection === "desna" || hoveredSection === "desna"
+                            ? sections[4].color
+                            : "hsl(var(--muted))"
+                        }
+                        opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
+                        stroke={
+                          selectedSection === "desna" || hoveredSection === "desna"
+                            ? sections[4].color
+                            : "hsl(var(--border))"
+                        }
+                        strokeWidth={selectedSection === "desna" ? 3 : hoveredSection === "desna" ? 2 : 1}
                         rx="8"
                         className="transition-all duration-300"
                       />
                     </g>
 
-                    <g>
+                    <g
+                      className="cursor-pointer transition-all duration-300"
+                      onClick={() => handleSectionSelect("glavni-sank")}
+                      onMouseEnter={() => setHoveredSection("glavni-sank")}
+                      onMouseLeave={() => setHoveredSection("")}
+                    >
                       <rect
                         x="425"
                         y="240"
                         width="95"
                         height="380"
-                        fill={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--muted))"}
-                        opacity={selectedSection === "glavni-sank" ? 0.4 : 0.1}
-                        stroke={selectedSection === "glavni-sank" ? sections[5].color : "hsl(var(--border))"}
-                        strokeWidth={selectedSection === "glavni-sank" ? 3 : 1}
+                        fill={
+                          selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
+                            ? sections[5].color
+                            : "hsl(var(--muted))"
+                        }
+                        opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
+                        stroke={
+                          selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
+                            ? sections[5].color
+                            : "hsl(var(--border))"
+                        }
+                        strokeWidth={selectedSection === "glavni-sank" ? 3 : hoveredSection === "glavni-sank" ? 2 : 1}
                         rx="8"
                         className="transition-all duration-300"
                       />
