@@ -92,9 +92,9 @@ const Contact = () => {
                   <div className="flex items-start gap-4 p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
                     <Mail className="w-6 h-6 text-club-bronze flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold mb-1">​E-mail</h3>
-                      <a href="mailto:info@basementclub.ba" className="text-muted-foreground hover:text-primary transition-colors">
-                        info@basementclub.ba
+                    <h3 className="font-semibold mb-1">​E-mail</h3>
+                      <a href="mailto:guta@znanje.ba" className="text-muted-foreground hover:text-primary transition-colors">
+                        guta@znanje.ba
                       </a>
                     </div>
                   </div>
