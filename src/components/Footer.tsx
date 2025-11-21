@@ -39,14 +39,14 @@ const Footer = () => {
               <Link to="/events" className="block text-muted-foreground hover:text-primary transition-colors">
                 Događaji
               </Link>
-              <Link to="/reservations" className="block text-muted-foreground hover:text-primary transition-colors">
-                Rezervacije
-              </Link>
               <Link to="/menu" className="block text-muted-foreground hover:text-primary transition-colors">
                 Meni
               </Link>
               <Link to="/gallery" className="block text-muted-foreground hover:text-primary transition-colors">
                 Galerija
+              </Link>
+              <Link to="/contact" className="block text-muted-foreground hover:text-primary transition-colors">
+                Kontakt
               </Link>
             </div>
           </div>
