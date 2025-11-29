@@ -56,12 +56,11 @@ const Home = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="animate-slide-up">
-              <h2 className="text-4xl font-bold mb-6 text-primary">O klubu</h2>
+              <h2 className="text-4xl font-bold mb-6 text-primary">O nama</h2>
               <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                The Basement Club & Lounge je ekskluzivan noćni klub smješten u srcu Čitluka. 
-                Nudimo jedinstvenu kombinaciju elegantne atmosfere, vrhunske muzike i premium usluge.
+                Danju smo vaš omiljeni kafić za kavu, piće i ukusne zalogaje. Navečer pravo mjesto za zabavu i druženje uz dobro piće. 
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">Sa našim VIP prostorom, live nastupima i pažljivo odabranom ponudom pića, garantujemo nezaboravno iskustvo za sve naše goste.</p>
+              <p className="text-lg text-muted-foreground leading-relaxed">Ponosimo se vrhunskom uslugom, odličnom ponudom hrane i pića, kao i pažnjom posvećenom svakom našem gostu.</p>
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img src={crowdImg} alt="Club atmosphere" className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300" />
@@ -80,7 +79,7 @@ const Home = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <Music className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-normal mb-2">Live muzika</h3>
+              <h3 className="text-xl font-normal mb-2">Live glazba</h3>
               <p className="text-muted-foreground font-normal">Vrhunski izvođači i DJ-evi</p>
             </div>
             
@@ -88,16 +87,16 @@ const Home = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <Wine className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-normal mb-2">Premium piće</h3>
-              <p className="text-muted-foreground font-normal">Odabrana vina i kokteli</p>
+              <h3 className="text-xl font-normal mb-2">Piće i hrana</h3>
+              <p className="text-muted-foreground font-normal">Kvalitetna pića i odlična gastronomija</p>
             </div>
             
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary transition-colors">
                 <MapPin className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-normal mb-2">VIP prostor</h3>
-              <p className="text-muted-foreground font-normal">Ekskluzivni stolovi i boksi</p>
+              <h3 className="text-xl font-normal mb-2">Ambijent</h3>
+              <p className="text-muted-foreground font-normal">Savršen provod u odličnoj atmosferi</p>
             </div>
             
             <div className="text-center group">
@@ -105,7 +104,7 @@ const Home = () => {
                 <Calendar className="w-8 h-8 text-club-bronze group-hover:text-primary-foreground" />
               </div>
               <h3 className="text-xl font-normal mb-2">Događaji</h3>
-              <p className="text-muted-foreground font-normal">Tematske noći i nastupi</p>
+              <p className="text-muted-foreground font-normal">Nezaboravne zabave i specijalni gosti</p>
             </div>
           </div>
         </div>
@@ -115,7 +114,7 @@ const Home = () => {
       <section ref={ctaSection.ref} className={`py-20 px-4 bg-gradient-to-br from-primary/20 to-purple-900/20 transition-all duration-1000 ${ctaSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Spremni za nezaboravnu noć?</h2>
-          <p className="text-xl text-white/80 mb-8">Rezervirajte svoj stol danas i postanite dio ekskluzivnog iskustva!</p>
+          <p className="text-xl text-white/80 mb-8">Rezervirajte svoj stol i postanite dio naše priče!</p>
           <Link to="/events">
             <Button size="lg" variant="premium" className="px-12 py-6 text-lg">
               Rezervirajte sada
