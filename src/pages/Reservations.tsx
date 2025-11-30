@@ -328,153 +328,126 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className="bg-card rounded-lg border border-border p-2">
-                <svg viewBox="0 0 1100 850" className="w-full h-auto max-h-[800px]">
-                  {/* Background */}
-                  <rect width="1100" height="850" fill="#2A1A3D" />
+                <svg viewBox="0 0 1100 900" className="w-full h-auto max-h-[800px]">
+                  {/* Background - Dark Purple */}
+                  <rect width="1100" height="900" fill="#2D1B3D" />
                   
-                  {/* Outer Club Walls - Red Border */}
-                  <rect x="50" y="50" width="1000" height="750" fill="none" stroke="#DC2626" strokeWidth="6" />
+                  {/* Outer Club Walls - Gray Border */}
+                  <rect x="100" y="50" width="950" height="800" fill="none" stroke="#6B7280" strokeWidth="4" />
                   
-                  {/* Inner Walls */}
-                  <rect x="70" y="70" width="960" height="710" fill="none" stroke="#6B7280" strokeWidth="3" />
+                  {/* Inner space */}
+                  <rect x="110" y="60" width="930" height="780" fill="#3D1F52" stroke="none" />
                   
                   {/* WC Area - Top Left */}
-                  <rect x="90" y="90" width="120" height="80" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
-                  <text x="150" y="135" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">WC</text>
+                  <rect x="120" y="80" width="130" height="100" fill="none" stroke="#9CA3AF" strokeWidth="2" />
+                  <text x="185" y="135" fill="#E5E7EB" fontSize="18" fontWeight="bold" textAnchor="middle">WC</text>
                   
-                  {/* DJ Area - Top Center */}
-                  <rect x="620" y="90" width="100" height="80" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
-                  <text x="670" y="135" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">DJ</text>
+                  {/* DJ Area - Top Center-Right */}
+                  <rect x="680" y="80" width="100" height="80" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
+                  <text x="730" y="125" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">DJ</text>
                   
                   {/* ŠANK Area - Top Right */}
-                  <rect x="750" y="90" width="130" height="80" fill="#9333EA" stroke="#A855F7" strokeWidth="2" />
-                  <text x="815" y="135" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">ŠANK</text>
+                  <rect x="800" y="80" width="140" height="80" fill="#9333EA" stroke="#A855F7" strokeWidth="2" />
+                  <text x="870" y="125" fill="white" fontSize="18" fontWeight="bold" textAnchor="middle">ŠANK</text>
                   
-                  {/* BINA (Stage) - Right Side */}
-                  <rect x="950" y="650" width="70" height="120" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
-                  <text x="985" y="700" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle" transform={`rotate(-90, 985, 710)`}>BINA</text>
+                  {/* Large ŠANK Area - Left Side */}
+                  <rect x="120" y="300" width="180" height="300" fill="#E91E8C" stroke="#EC4899" strokeWidth="3" />
+                  <text x="210" y="460" fill="white" fontSize="24" fontWeight="bold" textAnchor="middle" transform="rotate(-90, 210, 450)">ŠANK</text>
                   
-                  {/* ŠANK Standing Zone - Left Side */}
-                  <rect x="90" y="200" width="120" height="400" fill="#9333EA" opacity="0.3" stroke="#A855F7" strokeWidth="2" />
-                  <text x="150" y="400" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle" transform={`rotate(-90, 150, 400)`}>ŠANK</text>
+                  {/* BINA Area - Right Bottom */}
+                  <rect x="960" y="730" width="70" height="100" fill="#374151" stroke="#6B7280" strokeWidth="2" />
+                  <text x="995" y="790" fill="#E5E7EB" fontSize="16" fontWeight="bold" textAnchor="middle" transform="rotate(-90, 995, 780)">BINA</text>
                   
-                  {/* ULAZ Standing Zone - Right Side Lower */}
-                  <rect x="900" y="620" width="110" height="130" fill="#9333EA" opacity="0.3" stroke="#A855F7" strokeWidth="2" />
-                  <text x="955" y="685" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle">ULAZ</text>
+                  {/* ULAZ Standing Zone - Right Bottom */}
+                  <rect x="850" y="710" width="100" height="120" fill="#9333EA" opacity="0.4" stroke="#A855F7" strokeWidth="2" />
+                  <text x="900" y="775" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">ULAZ</text>
                   
-                  {/* Entrance Stairs */}
-                  <rect x="90" y="630" width="40" height="60" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
-                  <line x1="90" y1="645" x2="130" y2="645" stroke="#9CA3AF" strokeWidth="1" />
-                  <line x1="90" y1="660" x2="130" y2="660" stroke="#9CA3AF" strokeWidth="1" />
-                  <line x1="90" y1="675" x2="130" y2="675" stroke="#9CA3AF" strokeWidth="1" />
+                  {/* Entrance Stairs - Bottom Left */}
+                  <rect x="120" y="750" width="50" height="70" fill="#4B5563" stroke="#6B7280" strokeWidth="2" />
+                  <line x1="120" y1="765" x2="170" y2="765" stroke="#9CA3AF" strokeWidth="2" />
+                  <line x1="120" y1="780" x2="170" y2="780" stroke="#9CA3AF" strokeWidth="2" />
+                  <line x1="120" y1="795" x2="170" y2="795" stroke="#9CA3AF" strokeWidth="2" />
                   
-                  {/* Pillars/Columns */}
-                  <rect x="340" y="480" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
-                  <rect x="720" y="480" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
-                  <rect x="760" y="560" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
+                  {/* Standing Area Text - Left Side */}
+                  <text x="50" y="450" fill="#9CA3AF" fontSize="11" fontWeight="normal" textAnchor="middle" transform="rotate(-90, 50, 450)">
+                    ? Room oznaceno polje slobodno za stajanje (uz muziku i nes)
+                  </text>
                   
-                  {/* Section Background Areas - Clickable */}
-                  {/* Yellow Zone - Top */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Pillars/Columns - Magenta */}
+                  <rect x="310" y="310" width="35" height="120" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="310" y="480" width="35" height="120" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="820" y="560" width="40" height="60" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="820" y="660" width="40" height="40" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="480" y="450" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
+                  <rect x="530" y="340" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
+                  
+                  {/* Section Background Areas - Invisible clickable zones */}
+                  {/* Yellow Zone */}
+                  <rect
+                    x="420"
+                    y="250"
+                    width="460"
+                    height="50"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("yellow")}
                     onMouseEnter={() => setHoveredSection("yellow")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="390"
-                      y="360"
-                      width="550"
-                      height="60"
-                      fill={selectedSection === "yellow" || hoveredSection === "yellow" ? "#FDB813" : "transparent"}
-                      opacity={selectedSection === "yellow" ? 0.4 : hoveredSection === "yellow" ? 0.3 : 0.1}
-                      stroke={selectedSection === "yellow" || hoveredSection === "yellow" ? "#FDB813" : "#6B7280"}
-                      strokeWidth={selectedSection === "yellow" ? 3 : hoveredSection === "yellow" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Red Zone - Center Upper */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Red Zone */}
+                  <rect
+                    x="380"
+                    y="320"
+                    width="390"
+                    height="130"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("red")}
                     onMouseEnter={() => setHoveredSection("red")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="450"
-                      y="420"
-                      width="430"
-                      height="130"
-                      fill={selectedSection === "red" || hoveredSection === "red" ? "#EF4444" : "transparent"}
-                      opacity={selectedSection === "red" ? 0.4 : hoveredSection === "red" ? 0.3 : 0.1}
-                      stroke={selectedSection === "red" || hoveredSection === "red" ? "#EF4444" : "#6B7280"}
-                      strokeWidth={selectedSection === "red" ? 3 : hoveredSection === "red" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Blue Zone - Center and Right */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Blue Zone */}
+                  <rect
+                    x="470"
+                    y="520"
+                    width="470"
+                    height="330"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("blue")}
                     onMouseEnter={() => setHoveredSection("blue")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="540"
-                      y="460"
-                      width="410"
-                      height="280"
-                      fill={selectedSection === "blue" || hoveredSection === "blue" ? "#3B82F6" : "transparent"}
-                      opacity={selectedSection === "blue" ? 0.4 : hoveredSection === "blue" ? 0.3 : 0.1}
-                      stroke={selectedSection === "blue" || hoveredSection === "blue" ? "#3B82F6" : "#6B7280"}
-                      strokeWidth={selectedSection === "blue" ? 3 : hoveredSection === "blue" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Green Zone - Bottom */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Green Zone */}
+                  <rect
+                    x="480"
+                    y="780"
+                    width="290"
+                    height="50"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("green")}
                     onMouseEnter={() => setHoveredSection("green")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="550"
-                      y="720"
-                      width="270"
-                      height="50"
-                      fill={selectedSection === "green" || hoveredSection === "green" ? "#10B981" : "transparent"}
-                      opacity={selectedSection === "green" ? 0.4 : hoveredSection === "green" ? 0.3 : 0.1}
-                      stroke={selectedSection === "green" || hoveredSection === "green" ? "#10B981" : "#6B7280"}
-                      strokeWidth={selectedSection === "green" ? 3 : hoveredSection === "green" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Orange Zone - Far Right */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Orange Zone */}
+                  <rect
+                    x="920"
+                    y="170"
+                    width="110"
+                    height="310"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("orange")}
                     onMouseEnter={() => setHoveredSection("orange")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="900"
-                      y="50"
-                      width="120"
-                      height="400"
-                      fill={selectedSection === "orange" || hoveredSection === "orange" ? "#F97316" : "transparent"}
-                      opacity={selectedSection === "orange" ? 0.4 : hoveredSection === "orange" ? 0.3 : 0.1}
-                      stroke={selectedSection === "orange" || hoveredSection === "orange" ? "#F97316" : "#6B7280"}
-                      strokeWidth={selectedSection === "orange" ? 3 : hoveredSection === "orange" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* All Tables */}
+                  {/* All Tables - White squares with black numbers */}
                   {tables.map((table) => {
                     const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
                     const isInSelectedSection = selectedSection === table.section;
@@ -483,29 +456,37 @@ const Reservations = () => {
                     return (
                       <g key={table.id} className="pointer-events-none">
                         <rect
-                          x={table.x - 18}
-                          y={table.y - 18}
-                          width="36"
-                          height="36"
+                          x={table.x - 20}
+                          y={table.y - 20}
+                          width="40"
+                          height="40"
                           rx="4"
                           fill={
                             !table.available
-                              ? "#4B5563"
+                              ? "#6B7280"
                               : isInSelectedSection || isInHoveredSection
-                                ? sectionColor
-                                : "#1F2937"
+                                ? "#FFFFFF"
+                                : "#FFFFFF"
                           }
-                          stroke={isInSelectedSection || isInHoveredSection ? sectionColor : "#6B7280"}
-                          strokeWidth={isInSelectedSection || isInHoveredSection ? 3 : 2}
-                          opacity={!table.available ? 0.5 : 1}
+                          stroke={
+                            isInSelectedSection || isInHoveredSection
+                              ? sectionColor
+                              : "#E5E7EB"
+                          }
+                          strokeWidth={isInSelectedSection || isInHoveredSection ? 2 : 1}
+                          opacity={!table.available ? 0.6 : 1}
                           className="transition-all duration-300"
                         />
                         <text
                           x={table.x}
                           y={table.y + 6}
                           textAnchor="middle"
-                          fill={!table.available ? "#9CA3AF" : isInSelectedSection || isInHoveredSection ? "white" : "#E5E7EB"}
-                          fontSize="14"
+                          fill={
+                            !table.available 
+                              ? "#E5E7EB"
+                              : "#000000"
+                          }
+                          fontSize="16"
                           fontWeight="bold"
                           className="pointer-events-none"
                         >
@@ -623,187 +604,173 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className="bg-card rounded-lg border-2 border-border p-4">
-                <svg viewBox="0 0 1100 850" className="w-full h-auto max-h-[800px]">
-                  {/* Background */}
-                  <rect width="1100" height="850" fill="#2A1A3D" />
+                <svg viewBox="0 0 1100 900" className="w-full h-auto max-h-[800px]">
+                  {/* Background - Dark Purple */}
+                  <rect width="1100" height="900" fill="#2D1B3D" />
                   
-                  {/* Outer Club Walls - Red Border */}
-                  <rect x="50" y="50" width="1000" height="750" fill="none" stroke="#DC2626" strokeWidth="6" />
+                  {/* Outer Club Walls - Gray Border */}
+                  <rect x="100" y="50" width="950" height="800" fill="none" stroke="#6B7280" strokeWidth="4" />
                   
-                  {/* Inner Walls */}
-                  <rect x="70" y="70" width="960" height="710" fill="none" stroke="#6B7280" strokeWidth="3" />
+                  {/* Inner space */}
+                  <rect x="110" y="60" width="930" height="780" fill="#3D1F52" stroke="none" />
                   
                   {/* WC Area - Top Left */}
-                  <rect x="90" y="90" width="120" height="80" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
-                  <text x="150" y="135" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">WC</text>
+                  <rect x="120" y="80" width="130" height="100" fill="none" stroke="#9CA3AF" strokeWidth="2" />
+                  <text x="185" y="135" fill="#E5E7EB" fontSize="18" fontWeight="bold" textAnchor="middle">WC</text>
                   
-                  {/* DJ Area - Top Center */}
-                  <rect x="620" y="90" width="100" height="80" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
-                  <text x="670" y="135" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">DJ</text>
+                  {/* DJ Area - Top Center-Right */}
+                  <rect x="680" y="80" width="100" height="80" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
+                  <text x="730" y="125" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">DJ</text>
                   
                   {/* ŠANK Area - Top Right */}
-                  <rect x="750" y="90" width="130" height="80" fill="#9333EA" stroke="#A855F7" strokeWidth="2" />
-                  <text x="815" y="135" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">ŠANK</text>
+                  <rect x="800" y="80" width="140" height="80" fill="#9333EA" stroke="#A855F7" strokeWidth="2" />
+                  <text x="870" y="125" fill="white" fontSize="18" fontWeight="bold" textAnchor="middle">ŠANK</text>
                   
-                  {/* BINA (Stage) - Right Side */}
-                  <rect x="950" y="650" width="70" height="120" fill="#4B5563" stroke="#9CA3AF" strokeWidth="2" />
-                  <text x="985" y="700" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle" transform={`rotate(-90, 985, 710)`}>BINA</text>
+                  {/* Large ŠANK Area - Left Side */}
+                  <rect x="120" y="300" width="180" height="300" fill="#E91E8C" stroke="#EC4899" strokeWidth="3" />
+                  <text x="210" y="460" fill="white" fontSize="24" fontWeight="bold" textAnchor="middle" transform="rotate(-90, 210, 450)">ŠANK</text>
                   
-                  {/* ŠANK Standing Zone - Left Side */}
-                  <rect x="90" y="200" width="120" height="400" fill="#9333EA" opacity="0.3" stroke="#A855F7" strokeWidth="2" />
-                  <text x="150" y="400" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle" transform={`rotate(-90, 150, 400)`}>ŠANK</text>
+                  {/* BINA Area - Right Bottom */}
+                  <rect x="960" y="730" width="70" height="100" fill="#374151" stroke="#6B7280" strokeWidth="2" />
+                  <text x="995" y="790" fill="#E5E7EB" fontSize="16" fontWeight="bold" textAnchor="middle" transform="rotate(-90, 995, 780)">BINA</text>
                   
-                  {/* ULAZ Standing Zone - Right Side Lower */}
-                  <rect x="900" y="620" width="110" height="130" fill="#9333EA" opacity="0.3" stroke="#A855F7" strokeWidth="2" />
-                  <text x="955" y="685" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle">ULAZ</text>
+                  {/* ULAZ Standing Zone - Right Bottom */}
+                  <rect x="850" y="710" width="100" height="120" fill="#9333EA" opacity="0.4" stroke="#A855F7" strokeWidth="2" />
+                  <text x="900" y="775" fill="white" fontSize="16" fontWeight="bold" textAnchor="middle">ULAZ</text>
                   
-                  {/* Entrance Stairs */}
-                  <rect x="90" y="630" width="40" height="60" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
-                  <line x1="90" y1="645" x2="130" y2="645" stroke="#9CA3AF" strokeWidth="1" />
-                  <line x1="90" y1="660" x2="130" y2="660" stroke="#9CA3AF" strokeWidth="1" />
-                  <line x1="90" y1="675" x2="130" y2="675" stroke="#9CA3AF" strokeWidth="1" />
+                  {/* Entrance Stairs - Bottom Left */}
+                  <rect x="120" y="750" width="50" height="70" fill="#4B5563" stroke="#6B7280" strokeWidth="2" />
+                  <line x1="120" y1="765" x2="170" y2="765" stroke="#9CA3AF" strokeWidth="2" />
+                  <line x1="120" y1="780" x2="170" y2="780" stroke="#9CA3AF" strokeWidth="2" />
+                  <line x1="120" y1="795" x2="170" y2="795" stroke="#9CA3AF" strokeWidth="2" />
                   
-                  {/* Pillars/Columns */}
-                  <rect x="340" y="480" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
-                  <rect x="720" y="480" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
-                  <rect x="760" y="560" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
+                  {/* Standing Area Text - Left Side */}
+                  <text x="50" y="450" fill="#9CA3AF" fontSize="11" fontWeight="normal" textAnchor="middle" transform="rotate(-90, 50, 450)">
+                    ? Room oznaceno polje slobodno za stajanje (uz muziku i nes)
+                  </text>
                   
-                  {/* Section Background Areas - Clickable */}
-                  {/* Yellow Zone - Top */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Pillars/Columns - Magenta */}
+                  <rect x="310" y="310" width="35" height="120" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="310" y="480" width="35" height="120" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="820" y="560" width="40" height="60" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="820" y="660" width="40" height="40" fill="#E91E8C" stroke="#EC4899" strokeWidth="2" />
+                  <rect x="480" y="450" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
+                  <rect x="530" y="340" width="30" height="30" fill="#6B7280" stroke="#9CA3AF" strokeWidth="2" />
+                  
+                  {/* Section Background Areas - Invisible clickable zones */}
+                  {/* Yellow Zone */}
+                  <rect
+                    x="420"
+                    y="250"
+                    width="460"
+                    height="50"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("yellow")}
                     onMouseEnter={() => setHoveredSection("yellow")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="390"
-                      y="360"
-                      width="550"
-                      height="60"
-                      fill={selectedSection === "yellow" || hoveredSection === "yellow" ? "#FDB813" : "transparent"}
-                      opacity={selectedSection === "yellow" ? 0.4 : hoveredSection === "yellow" ? 0.3 : 0.1}
-                      stroke={selectedSection === "yellow" || hoveredSection === "yellow" ? "#FDB813" : "#6B7280"}
-                      strokeWidth={selectedSection === "yellow" ? 3 : hoveredSection === "yellow" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Red Zone - Center Upper */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Red Zone */}
+                  <rect
+                    x="380"
+                    y="320"
+                    width="390"
+                    height="130"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("red")}
                     onMouseEnter={() => setHoveredSection("red")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="450"
-                      y="420"
-                      width="430"
-                      height="130"
-                      fill={selectedSection === "red" || hoveredSection === "red" ? "#EF4444" : "transparent"}
-                      opacity={selectedSection === "red" ? 0.4 : hoveredSection === "red" ? 0.3 : 0.1}
-                      stroke={selectedSection === "red" || hoveredSection === "red" ? "#EF4444" : "#6B7280"}
-                      strokeWidth={selectedSection === "red" ? 3 : hoveredSection === "red" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Blue Zone - Center and Right */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Blue Zone */}
+                  <rect
+                    x="470"
+                    y="520"
+                    width="470"
+                    height="330"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("blue")}
                     onMouseEnter={() => setHoveredSection("blue")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="540"
-                      y="460"
-                      width="410"
-                      height="280"
-                      fill={selectedSection === "blue" || hoveredSection === "blue" ? "#3B82F6" : "transparent"}
-                      opacity={selectedSection === "blue" ? 0.4 : hoveredSection === "blue" ? 0.3 : 0.1}
-                      stroke={selectedSection === "blue" || hoveredSection === "blue" ? "#3B82F6" : "#6B7280"}
-                      strokeWidth={selectedSection === "blue" ? 3 : hoveredSection === "blue" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Green Zone - Bottom */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Green Zone */}
+                  <rect
+                    x="480"
+                    y="780"
+                    width="290"
+                    height="50"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("green")}
                     onMouseEnter={() => setHoveredSection("green")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="550"
-                      y="720"
-                      width="270"
-                      height="50"
-                      fill={selectedSection === "green" || hoveredSection === "green" ? "#10B981" : "transparent"}
-                      opacity={selectedSection === "green" ? 0.4 : hoveredSection === "green" ? 0.3 : 0.1}
-                      stroke={selectedSection === "green" || hoveredSection === "green" ? "#10B981" : "#6B7280"}
-                      strokeWidth={selectedSection === "green" ? 3 : hoveredSection === "green" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* Orange Zone - Far Right */}
-                  <g
-                    className="cursor-pointer transition-all duration-300"
+                  {/* Orange Zone */}
+                  <rect
+                    x="920"
+                    y="170"
+                    width="110"
+                    height="310"
+                    fill="transparent"
+                    className="cursor-pointer"
                     onClick={() => handleSectionSelect("orange")}
                     onMouseEnter={() => setHoveredSection("orange")}
                     onMouseLeave={() => setHoveredSection("")}
-                  >
-                    <rect
-                      x="900"
-                      y="50"
-                      width="120"
-                      height="400"
-                      fill={selectedSection === "orange" || hoveredSection === "orange" ? "#F97316" : "transparent"}
-                      opacity={selectedSection === "orange" ? 0.4 : hoveredSection === "orange" ? 0.3 : 0.1}
-                      stroke={selectedSection === "orange" || hoveredSection === "orange" ? "#F97316" : "#6B7280"}
-                      strokeWidth={selectedSection === "orange" ? 3 : hoveredSection === "orange" ? 2 : 1}
-                      rx="8"
-                    />
-                  </g>
+                  />
                   
-                  {/* All Tables */}
+                  {/* All Tables - White squares with black numbers */}
                   {tables.map((table) => {
                     const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
                     const isSelected = selectedTable?.id === table.id;
                     const isInSelectedSection = table.section === selectedSection;
+                    const isHovered = hoveredSection === table.section;
                     
                     return (
                       <g key={table.id}>
                         <rect
-                          x={table.x - 18}
-                          y={table.y - 18}
-                          width="36"
-                          height="36"
+                          x={table.x - 20}
+                          y={table.y - 20}
+                          width="40"
+                          height="40"
                           rx="4"
                           fill={
                             !table.available
-                              ? "#4B5563"
+                              ? "#6B7280"
                               : isSelected
                                 ? sectionColor
-                                : isInSelectedSection
-                                  ? sectionColor
-                                  : "#1F2937"
+                                : isInSelectedSection || isHovered
+                                  ? "#FFFFFF"
+                                  : "#FFFFFF"
                           }
-                          stroke={isSelected || isInSelectedSection ? sectionColor : "#6B7280"}
-                          strokeWidth={isSelected ? 4 : isInSelectedSection ? 3 : 2}
+                          stroke={
+                            isSelected 
+                              ? sectionColor
+                              : isInSelectedSection || isHovered
+                                ? sectionColor
+                                : "#E5E7EB"
+                          }
+                          strokeWidth={isSelected ? 3 : isInSelectedSection || isHovered ? 2 : 1}
                           className="cursor-pointer transition-all duration-200"
                           onClick={() => handleTableSelect(table)}
-                          opacity={!table.available ? 0.5 : 1}
+                          opacity={!table.available ? 0.6 : 1}
                         />
                         <text
                           x={table.x}
                           y={table.y + 6}
                           textAnchor="middle"
-                          fill={!table.available ? "#9CA3AF" : isSelected || isInSelectedSection ? "white" : "#E5E7EB"}
-                          fontSize="14"
+                          fill={
+                            !table.available 
+                              ? "#E5E7EB"
+                              : isSelected
+                                ? "#FFFFFF"
+                                : "#000000"
+                          }
+                          fontSize="16"
                           fontWeight="bold"
                           className="pointer-events-none"
                         >
