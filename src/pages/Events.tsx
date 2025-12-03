@@ -20,16 +20,16 @@ import DzenanL from "@/assets/DzenanL.png";
 import RadaM from "@/assets/RadaM.png";
 const Events = () => {
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState("Svi");
+  const [selectedCategory, setSelectedCategory] = useState("SVI");
   const eventsSection = useScrollAnimation();
   const parallaxOffset = useParallax(0.5);
-  const categories = ["Svi", "Specijalni gosti", "Muzika uživo", "DJ program"];
+  const categories = ["SVI", "SPECIJALNI GOSTI", "MUZIKA UŽIVO", "DJ PROGRAM"];
   const events = [{
     id: 1,
     title: "Večer vina i harmonike - TS Mediteran",
     date: "Utorak 2. 12. 2025.",
     time: "20:00",
-    category: "Muzika uživo",
+    category: "MUZIKA UŽIVO",
     description: "Ovog utorka uživajte u notama TS Mediteran uz neodoljivu ponudu vina i meze! 🫒😋",
     image: TSMediteran
   }, {
@@ -37,7 +37,7 @@ const Events = () => {
     title: "Dženan Lončarević",
     date: "Petak 5. 12. 2025.",
     time: "21:00",
-    category: "Specijalni gosti",
+    category: "SPECIJALNI GOSTI",
     description: "Prepusti se emocijama, atmosferi i hitovima koje svi znamo napamet. ❤️",
     image: DzenanL
   }, {
@@ -45,7 +45,7 @@ const Events = () => {
     title: "Saturday madness",
     date: "Subota 6. 11. 2025.",
     time: "22:00",
-    category: "DJ program",
+    category: "DJ PROGRAM",
     description: "Ovaj vikend, najbolji provod vam priređuju DJ Grandeee & DJ Scylla ⚡️💯",
     image: DJGrandee
   }, , {
@@ -53,7 +53,7 @@ const Events = () => {
     title: "Večer vina i harmonike - TS Tajna",
     date: "Utorak 9. 12. 2025.",
     time: "20:00",
-    category: "Muzika uživo",
+    category: "MUZIKA UŽIVO",
     description: "Što vas čeka? TS Tajna, bogata vinska ponuda, ukusna meza i zabava za pamćenje! 💃🏻",
     image: TSTajna
   }, {
@@ -61,11 +61,11 @@ const Events = () => {
     title: "Rada Manojlović",
     date: "Subota 13. 12. 2025.",
     time: "21:00",
-    category: "Specijalni gosti",
+    category: "SPECIJALNI GOSTI",
     description: "Pripremite se za energične ritmove, svima poznate hitove i ludu atmosferu kakvu samo Rada zna prirediti! 🎶🎤",
     image: RadaM
   }];
-  const filteredEvents = selectedCategory === "Svi" ? events : events.filter(event => event.category === selectedCategory);
+  const filteredEvents = selectedCategory === "SVI" ? events : events.filter(event => event.category === selectedCategory);
   return <div className="min-h-screen bg-background">
       <Navigation />
 
@@ -86,9 +86,9 @@ const Events = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 px-4 border-b border-border">
+      <section className="py-6 px-4 border-b border-border">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap gap-10 justify-center">
             {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-all border-2 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
                 {category}
               </button>)}

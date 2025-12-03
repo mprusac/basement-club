@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useParallax } from "@/hooks/useParallax";
 import heroImg from "@/assets/basement_30-2.jpg";
 import { Separator } from "@/components/ui/separator";
@@ -8,6 +7,7 @@ import { Separator } from "@/components/ui/separator";
 interface MenuItem {
   name: string;
   price: string;
+  quantity?: string;
   description?: string;
 }
 
@@ -22,7 +22,7 @@ interface Category {
 }
 
 const Menu = () => {
-  const menuSection = useScrollAnimation();
+
   const parallaxOffset = useParallax(0.5);
 
   const menuData: Category[] = [
@@ -32,31 +32,37 @@ const Menu = () => {
         {
           name: "Bijela Vina",
           items: [
-            { name: "Kameno", price: "32 KM", description: "Premium bijelo vino" },
-            { name: "Graševina", price: "28 KM", description: "Suho bijelo vino" },
-            { name: "Chardonnay", price: "35 KM", description: "Francusko bijelo vino" },
+            { name: "Andrija Žilavka", quantity: "0.75 l", price: "40 KM", description: "Premium bijelo vino" },
+            { name: "Andrija Žilavka Selekcija", quantity: "0.75 l", price: "55 KM", description: "Suho bijelo vino" },
+            { name: "AG Carska Vina Carska Žilavka", quantity: "0.75 l", price: "40 KM", description: "Francusko bijelo vino" },
+            { name: "Carska Vina Žilavka Selekcija Limited Edition", quantity: "0.75 l", price: "55 KM", description: "Francusko bijelo vino" },
+            { name: "Marijanović Žilavka", quantity: "0.75 l", price: "40 KM", description: "Premium bijelo vino" },
+            { name: "Vinarija Čitluk Kameno", quantity: "0.75 l", price: "40 KM", description: "Premium bijelo vino" },
+            { name: "Vinarija Čitluk Teuta Žilavka", quantity: "0.75 l", price: "55 KM", description: "Premium bijelo vino" },
+            { name: "Vinarija Čitluk Žilavka Teuta Selekcija", quantity: "0.75 l", price: "60 KM", description: "Premium bijelo vino" },
           ],
         },
         {
           name: "Crna Vina",
           items: [
-            { name: "Blatina", price: "35 KM", description: "Tradicionalno crno vino" },
-            { name: "Vranac", price: "30 KM", description: "Crnogorsko crno vino" },
-            { name: "Merlot", price: "38 KM", description: "Premium crno vino" },
+            { name: "Andrija Blatina", quantity: "0.75 l", price: "40 KM", description: "Tradicionalno crno vino" },
+            { name: "Andrija Syrah", quantity: "0.75 l", price: "55 KM", description: "Crnogorsko crno vino" },
+            { name: "Vinarija Čitluk Teuta Blatina", quantity: "0.75 l", price: "55 KM", description: "Premium crno vino" },
           ],
         },
         {
           name: "Rose Vina",
           items: [
-            { name: "Teuta Rose", price: "30 KM", description: "Vrhunsko roze vino" },
-            { name: "Provence Rose", price: "40 KM", description: "Francusko roze vino" },
+            { name: "Andrija Vrhunski Rosé", quantity: "0.75 l", price: "40 KM", description: "Vrhunsko roze vino" },
+            { name: "Carska Vina Rosé Nika", quantity: "0.75 l", price: "40 KM", description: "Francusko roze vino" },
           ],
         },
         {
-          name: "Pjenušava Vina",
+          name: "ŠampanjCI",
           items: [
-            { name: "Prosecco", price: "45 KM", description: "Talijansko pjenušavo vino" },
-            { name: "Champagne", price: "120 KM", description: "Premium šampanjac" },
+            { name: "Moët & Chandon Brut Impérial", quantity: "0.75 l", price: "190 KM", description: "Talijansko pjenušavo vino" },
+            { name: "Moët & Chandon Brut Ice Impérial", quantity: "0.75 l", price: "240 KM", description: "Premium šampanjac" },
+            { name: "Moët & Chandon N.I.R Nectar Impérial Dry Rosé", quantity: "0.75 l", price: "290 KM", description: "Premium šampanjac" },
           ],
         },
       ],
@@ -67,26 +73,31 @@ const Menu = () => {
         {
           name: "Whiskey",
           items: [
-            { name: "Jack Daniel's", price: "8 KM", description: "Bourbon whiskey" },
-            { name: "Jameson", price: "7 KM", description: "Irish whiskey" },
-            { name: "Ballantine's", price: "6 KM", description: "Scotch whisky" },
-            { name: "Johnnie Walker Black", price: "10 KM", description: "Premium scotch" },
+            { name: "Jack Daniel's", quantity: "0.03 l", price: "5.50 KM", description: "Bourbon whiskey" },
+            { name: "Jack Daniel's Tennessee Honey", price: "6 KM", quantity: "0.03 l", description: "Irish whiskey" },
+            { name: "Gentleman Jack", quantity: "0.03 l", price: "7.50 KM", description: "Scotch whisky" },
+            { name: "Jack Daniel's Single Barrel", quantity: "0.03 l", price: "8.50 KM", description: "Premium scotch" },
           ],
         },
         {
           name: "Vodka",
           items: [
-            { name: "Absolut", price: "5 KM", description: "Premium vodka" },
-            { name: "Grey Goose", price: "12 KM", description: "Francuska premium vodka" },
-            { name: "Belvedere", price: "14 KM", description: "Poljska luksuzna vodka" },
+            { name: "Grey Goose", quantity: "0.03 l", price: "7 KM", description: "Premium vodka" },
+            { name: "Belvedere", quantity: "0.03 l", price: "6 KM", description: "Francuska premium vodka" },
+            { name: "Smirnoff Red Vodka", quantity: "0.03 l", price: "3.50 KM", description: "Poljska luksuzna vodka" },
+            { name: "Vodka Romana", quantity: "0.03 l", price: "2.50 KM", description: "Poljska luksuzna vodka" },
           ],
         },
         {
           name: "Gin",
           items: [
-            { name: "Bombay Sapphire", price: "7 KM", description: "London dry gin" },
-            { name: "Hendrick's", price: "10 KM", description: "Škotski premium gin" },
-            { name: "Tanqueray", price: "8 KM", description: "Klasični London gin" },
+            { name: "Gin Mare", quantity: "0.03 l", price: "8 KM", description: "Premium vodka" },
+            { name: "Bombay Sapphire", quantity: "0.03 l", price: "6.50 KM", description: "Francuska premium vodka" },
+            { name: "Gin Bob", quantity: "0.03 l", price: "2.50 KM", description: "Poljska luksuzna vodka" },
+            { name: "Beefeater Gin", quantity: "0.03 l", price: "3.50 KM", description: "Poljska luksuzna vodka" },
+            { name: "Hendrick's", quantity: "0.03 l", price: "5.5 KM", description: "Premium vodka" },
+            { name: "Bulldog London Dry Gin", quantity: "0.03 l", price: "4.5 KM", description: "Francuska premium vodka" },
+            { name: "Gin Old Pilot's", quantity: "0.03 l", price: "8 KM", description: "Poljska luksuzna vodka" },
           ],
         },
         {
@@ -103,10 +114,10 @@ const Menu = () => {
         {
           name: "Pivo",
           items: [
-            { name: "Heineken", price: "4 KM", description: "0.33l" },
-            { name: "Stella Artois", price: "4 KM", description: "0.33l" },
-            { name: "Corona", price: "5 KM", description: "0.33l" },
-            { name: "Točeno Pivo", price: "3 KM", description: "0.3l" },
+            { name: "Heineken", quantity: "0.33 l", price: "4 KM", description: "0.33l" },
+            { name: "Stella Artois", quantity: "0.33 l", price: "4 KM", description: "0.33l" },
+            { name: "Corona", quantity: "0.33 l", price: "5 KM", description: "0.33l" },
+            { name: "Točeno Pivo", quantity: "0.33 l", price: "3 KM", description: "0.3l" },
           ],
         },
       ],
@@ -124,7 +135,7 @@ const Menu = () => {
           ],
         },
         {
-          name: "Sokovi",
+          name: "Prirodni sokovi",
           items: [
             { name: "Narandža", price: "3 KM", description: "Svježe cijeđeni" },
             { name: "Jabuka", price: "3 KM", description: "100% voćni sok" },
@@ -191,36 +202,33 @@ const Menu = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Compact Hero Section */}
-      <section className="relative pt-24 pb-8 px-4 overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImg})`,
-            transform: `translateY(${parallaxOffset}px)`,
-          }}
-        />
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{
+          backgroundImage: `url(${heroImg})`,
+          transform: `translateY(${parallaxOffset}px)`
+        }} />
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-club-bronze animate-fade-in tracking-wide">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
             NAŠA PONUDA
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
-            Odabrana kolekcija premium pića i delicija
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Odabrana kolekcija premium pića i delicija</p>
         </div>
       </section>
 
+
+
       {/* Category Navigation */}
-      <section className="sticky top-0 z-40 py-4 px-4 bg-background/95 backdrop-blur-sm border-b border-border">
+      <section className="py-6 px-4 border-b border-border animate-fade-in">
         <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-8 justify-center">
             {menuData.map((category) => (
               <button
                 key={category.name}
                 onClick={() => scrollToCategory(category.name)}
-                className="px-6 py-2 text-sm font-medium tracking-widest text-foreground hover:text-club-bronze transition-colors duration-300 border-b-2 border-transparent hover:border-club-bronze"
+                className="px-6 py-2 rounded-full font-medium transition-all border-2 bg-card hover:bg-muted text-foreground border-club-bronze"
               >
                 {category.name}
               </button>
@@ -230,12 +238,7 @@ const Menu = () => {
       </section>
 
       {/* Menu Content */}
-      <section
-        ref={menuSection.ref}
-        className={`py-12 px-4 transition-all duration-1000 ${
-          menuSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
+      <section className="py-12 px-4 animate-fade-in">
         <div className="container mx-auto max-w-3xl">
           {menuData.map((category, categoryIndex) => (
             <div
@@ -284,10 +287,19 @@ const Menu = () => {
                               {item.name}
                             </h4>
                           </div>
-                          <div className="flex-1 border-b border-dotted border-muted-foreground/30 mb-1.5" />
-                          <span className="text-lg text-club-bronze font-semibold">
-                            {item.price}
-                          </span>
+                          {/* Količina (ako postoji) */}
+                          {item.quantity && (
+                            <span className="text-sm text-muted-foreground whitespace-nowrap">
+                              {item.quantity}
+                            </span>
+                          )}
+                          {/* Točkice + cijena unutra */}
+                          <div className="relative flex-1 mb-1.5">
+                            <div className="w-full border-b border-dotted border-muted-foreground/30" />
+                            <span className="absolute right-0 -top-4 text-lg text-club-bronze font-semibold bg-background pl-2">
+                              {item.price}
+                            </span>
+                          </div>
                         </div>
                         {/* Description */}
                         {item.description && (
