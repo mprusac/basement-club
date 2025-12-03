@@ -191,8 +191,8 @@ const Menu = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+      {/* Compact Hero Section */}
+      <section className="relative pt-24 pb-8 px-4 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -203,24 +203,24 @@ const Menu = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-club-bronze animate-fade-in tracking-wide">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-club-bronze animate-fade-in tracking-wide">
             NAŠA PONUDA
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-light tracking-wider">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-light">
             Odabrana kolekcija premium pića i delicija
           </p>
         </div>
       </section>
 
       {/* Category Navigation */}
-      <section className="sticky top-0 z-40 py-6 px-4 bg-background/95 backdrop-blur-sm border-b border-border">
+      <section className="sticky top-0 z-40 py-4 px-4 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto max-w-4xl">
           <div className="flex flex-wrap gap-4 justify-center">
             {menuData.map((category) => (
               <button
                 key={category.name}
                 onClick={() => scrollToCategory(category.name)}
-                className="px-6 py-2 text-sm font-serif tracking-[0.2em] text-foreground hover:text-club-bronze transition-colors duration-300 border-b-2 border-transparent hover:border-club-bronze"
+                className="px-6 py-2 text-sm font-medium tracking-widest text-foreground hover:text-club-bronze transition-colors duration-300 border-b-2 border-transparent hover:border-club-bronze"
               >
                 {category.name}
               </button>
@@ -232,7 +232,7 @@ const Menu = () => {
       {/* Menu Content */}
       <section
         ref={menuSection.ref}
-        className={`py-16 px-4 transition-all duration-1000 ${
+        className={`py-12 px-4 transition-all duration-1000 ${
           menuSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -241,11 +241,11 @@ const Menu = () => {
             <div
               key={category.name}
               id={category.name.toLowerCase().replace(/\s/g, '-')}
-              className={categoryIndex > 0 ? "mt-20" : ""}
+              className={categoryIndex > 0 ? "mt-16" : ""}
             >
               {/* Main Category Header */}
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-club-bronze tracking-[0.15em] mb-4">
+              <div className="text-center mb-10">
+                <h2 className="text-3xl md:text-4xl font-bold text-club-bronze tracking-wider mb-4">
                   {category.name}
                 </h2>
                 <div className="flex items-center justify-center gap-4">
@@ -257,12 +257,12 @@ const Menu = () => {
 
               {/* Subcategories */}
               {category.subcategories.map((subcategory, subIndex) => (
-                <div key={subcategory.name} className={subIndex > 0 ? "mt-12" : ""}>
+                <div key={subcategory.name} className={subIndex > 0 ? "mt-10" : ""}>
                   {/* Subcategory Header */}
-                  <div className="mb-6">
+                  <div className="mb-5">
                     <div className="flex items-center gap-4">
                       <Separator className="flex-1 bg-border" />
-                      <h3 className="text-lg font-serif tracking-[0.15em] text-foreground uppercase whitespace-nowrap">
+                      <h3 className="text-base font-semibold tracking-widest text-foreground uppercase whitespace-nowrap">
                         {subcategory.name}
                       </h3>
                       <Separator className="flex-1 bg-border" />
@@ -274,7 +274,7 @@ const Menu = () => {
                     {subcategory.items.map((item, itemIndex) => (
                       <div
                         key={item.name}
-                        className="group py-4 animate-fade-in"
+                        className="group py-3 animate-fade-in"
                         style={{ animationDelay: `${itemIndex * 0.05}s` }}
                       >
                         {/* Item Row */}
@@ -285,7 +285,7 @@ const Menu = () => {
                             </h4>
                           </div>
                           <div className="flex-1 border-b border-dotted border-muted-foreground/30 mb-1.5" />
-                          <span className="text-lg font-serif text-club-bronze font-medium">
+                          <span className="text-lg text-club-bronze font-semibold">
                             {item.price}
                           </span>
                         </div>
