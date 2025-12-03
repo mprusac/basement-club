@@ -34,80 +34,80 @@ const sections: { id: Section; name: string; color: string }[] = [
 
 const tables: Table[] = [
   // Ulaz zona (1-10)
-  { id: "1", number: 1, section: "ulaz", x: 100, y: 80, available: true },
-  { id: "2", number: 2, section: "ulaz", x: 150, y: 80, available: true },
-  { id: "3", number: 3, section: "ulaz", x: 200, y: 80, available: true },
-  { id: "4", number: 4, section: "ulaz", x: 100, y: 130, available: true },
-  { id: "5", number: 5, section: "ulaz", x: 150, y: 130, available: true },
-  { id: "6", number: 6, section: "ulaz", x: 200, y: 130, available: false },
-  { id: "7", number: 7, section: "ulaz", x: 250, y: 130, available: true },
-  { id: "8", number: 8, section: "ulaz", x: 100, y: 180, available: true },
-  { id: "9", number: 9, section: "ulaz", x: 150, y: 180, available: true },
-  { id: "10", number: 10, section: "ulaz", x: 200, y: 180, available: true },
+  { id: "1", number: 1, section: "ulaz", x: 90, y: -30, available: true },
+  { id: "2", number: 2, section: "ulaz", x: 160, y: -30, available: true },
+  { id: "3", number: 3, section: "ulaz", x: 230, y: -30, available: true },
+  { id: "4", number: 4, section: "ulaz", x: 90, y: 30, available: true },
+  { id: "5", number: 5, section: "ulaz", x: 145, y: 30, available: true },
+  { id: "6", number: 6, section: "ulaz", x: 200, y: 30, available: false },
+  { id: "7", number: 7, section: "ulaz", x: 255, y: 30, available: true },
+  { id: "8", number: 8, section: "ulaz", x: 145, y: 90, available: true },
+  { id: "9", number: 9, section: "ulaz", x: 200, y: 90, available: true },
+  { id: "10", number: 10, section: "ulaz", x: 255, y: 90, available: true },
 
   // Bina zona (11-20)
-  { id: "11", number: 11, section: "bina", x: 350, y: 80, available: true },
-  { id: "12", number: 12, section: "bina", x: 400, y: 80, available: true },
-  { id: "13", number: 13, section: "bina", x: 350, y: 130, available: true },
-  { id: "14", number: 14, section: "bina", x: 400, y: 130, available: false },
-  { id: "15", number: 15, section: "bina", x: 450, y: 130, available: true },
-  { id: "16", number: 16, section: "bina", x: 500, y: 130, available: true },
-  { id: "17", number: 17, section: "bina", x: 350, y: 180, available: true },
-  { id: "18", number: 18, section: "bina", x: 400, y: 180, available: true },
-  { id: "19", number: 19, section: "bina", x: 450, y: 180, available: true },
-  { id: "20", number: 20, section: "bina", x: 500, y: 180, available: true },
+  { id: "11", number: 11, section: "bina", x: 350, y: -37, available: true },
+  { id: "12", number: 12, section: "bina", x: 392, y: -17, available: true },
+  { id: "13", number: 13, section: "bina", x: 345, y: 30, available: true },
+  { id: "14", number: 14, section: "bina", x: 400, y: 30, available: false },
+  { id: "15", number: 15, section: "bina", x: 455, y: 30, available: true },
+  { id: "16", number: 16, section: "bina", x: 510, y: 30, available: true },
+  { id: "17", number: 17, section: "bina", x: 345, y: 90, available: true },
+  { id: "18", number: 18, section: "bina", x: 400, y: 90, available: true },
+  { id: "19", number: 19, section: "bina", x: 455, y: 90, available: true },
+  { id: "20", number: 20, section: "bina", x: 510, y: 90, available: true },
 
   // Lijevi šank/DJ zona (21-29)
-  { id: "21", number: 21, section: "lijevi-sank", x: 120, y: 280, available: true },
-  { id: "22", number: 22, section: "lijevi-sank", x: 120, y: 320, available: true },
-  { id: "23", number: 23, section: "lijevi-sank", x: 120, y: 360, available: true },
-  { id: "24", number: 24, section: "lijevi-sank", x: 120, y: 400, available: true },
-  { id: "25", number: 25, section: "lijevi-sank", x: 120, y: 440, available: false },
-  { id: "26", number: 26, section: "lijevi-sank", x: 120, y: 480, available: true },
-  { id: "27", number: 27, section: "lijevi-sank", x: 120, y: 520, available: true },
-  { id: "28", number: 28, section: "lijevi-sank", x: 120, y: 560, available: true },
-  { id: "29", number: 29, section: "lijevi-sank", x: 120, y: 600, available: true },
+  { id: "21", number: 21, section: "lijevi-sank", x: 130, y: 220, available: true },
+  { id: "22", number: 22, section: "lijevi-sank", x: 130, y: 270, available: true },
+  { id: "23", number: 23, section: "lijevi-sank", x: 130, y: 320, available: true },
+  { id: "24", number: 24, section: "lijevi-sank", x: 130, y: 370, available: true },
+  { id: "25", number: 25, section: "lijevi-sank", x: 130, y: 420, available: false },
+  { id: "26", number: 26, section: "lijevi-sank", x: 130, y: 470, available: true },
+  { id: "27", number: 27, section: "lijevi-sank", x: 130, y: 520, available: true },
+  { id: "28", number: 28, section: "lijevi-sank", x: 130, y: 570, available: true },
+  { id: "29", number: 29, section: "lijevi-sank", x: 130, y: 620, available: true },
 
   // Centralna zona (30-43)
-  { id: "30", number: 30, section: "centar", x: 220, y: 280, available: true },
-  { id: "31", number: 31, section: "centar", x: 200, y: 320, available: true },
-  { id: "32", number: 32, section: "centar", x: 240, y: 320, available: true },
-  { id: "33", number: 33, section: "centar", x: 220, y: 360, available: true },
-  { id: "34", number: 34, section: "centar", x: 200, y: 400, available: true },
-  { id: "35", number: 35, section: "centar", x: 200, y: 440, available: true },
-  { id: "36", number: 36, section: "centar", x: 200, y: 480, available: false },
-  { id: "37", number: 37, section: "centar", x: 240, y: 400, available: true },
-  { id: "38", number: 38, section: "centar", x: 240, y: 440, available: true },
-  { id: "39", number: 39, section: "centar", x: 240, y: 480, available: true },
-  { id: "40", number: 40, section: "centar", x: 240, y: 520, available: true },
-  { id: "41", number: 41, section: "centar", x: 220, y: 560, available: true },
-  { id: "42", number: 42, section: "centar", x: 240, y: 600, available: true },
-  { id: "43", number: 43, section: "centar", x: 200, y: 640, available: true },
+  { id: "30", number: 30, section: "centar", x: 220, y: 200, available: true },
+  { id: "31", number: 31, section: "centar", x: 185, y: 235, available: true },
+  { id: "32", number: 32, section: "centar", x: 255, y: 235, available: true },
+  { id: "33", number: 33, section: "centar", x: 220, y: 270, available: true },
+  { id: "34", number: 34, section: "centar", x: 195, y: 320, available: true },
+  { id: "35", number: 35, section: "centar", x: 195, y: 370, available: true },
+  { id: "36", number: 36, section: "centar", x: 195, y: 420, available: false },
+  { id: "37", number: 37, section: "centar", x: 245, y: 320, available: true },
+  { id: "38", number: 38, section: "centar", x: 245, y: 370, available: true },
+  { id: "39", number: 39, section: "centar", x: 245, y: 420, available: true },
+  { id: "40", number: 40, section: "centar", x: 255, y: 470, available: true },
+  { id: "41", number: 41, section: "centar", x: 220, y: 505, available: true },
+  { id: "42", number: 42, section: "centar", x: 255, y: 540, available: true },
+  { id: "43", number: 43, section: "centar", x: 185, y: 540, available: true },
 
   // Desna zona (44-52) - moved left and down closer to central zone
-  { id: "44", number: 44, section: "desna", x: 310, y: 250, available: true },
-  { id: "45", number: 45, section: "desna", x: 350, y: 250, available: true },
-  { id: "46", number: 46, section: "desna", x: 330, y: 310, available: true },
-  { id: "47", number: 47, section: "desna", x: 370, y: 310, available: true },
-  { id: "48", number: 48, section: "desna", x: 350, y: 360, available: false },
-  { id: "49", number: 49, section: "desna", x: 350, y: 420, available: true },
-  { id: "50", number: 50, section: "desna", x: 330, y: 480, available: true },
-  { id: "51", number: 51, section: "desna", x: 370, y: 480, available: true },
-  { id: "52", number: 52, section: "desna", x: 350, y: 550, available: true },
+  { id: "44", number: 44, section: "desna", x: 358, y: 157, available: true },
+  { id: "45", number: 45, section: "desna", x: 375, y: 200, available: true },
+  { id: "46", number: 46, section: "desna", x: 340, y: 240, available: true },
+  { id: "47", number: 47, section: "desna", x: 410, y: 240, available: true },
+  { id: "48", number: 48, section: "desna", x: 375, y: 320, available: false },
+  { id: "49", number: 49, section: "desna", x: 375, y: 390, available: true },
+  { id: "50", number: 50, section: "desna", x: 340, y: 470, available: true },
+  { id: "51", number: 51, section: "desna", x: 410, y: 470, available: true },
+  { id: "52", number: 52, section: "desna", x: 375, y: 505, available: true },
 
   // Glavni šank (53-64)
-  { id: "53", number: 53, section: "glavni-sank", x: 440, y: 260, available: true },
-  { id: "54", number: 54, section: "glavni-sank", x: 440, y: 340, available: true },
-  { id: "55", number: 55, section: "glavni-sank", x: 440, y: 400, available: true },
-  { id: "56", number: 56, section: "glavni-sank", x: 440, y: 460, available: true },
-  { id: "57", number: 57, section: "glavni-sank", x: 440, y: 540, available: true },
-  { id: "58", number: 58, section: "glavni-sank", x: 500, y: 260, available: true },
-  { id: "59", number: 59, section: "glavni-sank", x: 500, y: 320, available: false },
-  { id: "60", number: 60, section: "glavni-sank", x: 500, y: 360, available: true },
-  { id: "61", number: 61, section: "glavni-sank", x: 500, y: 420, available: true },
-  { id: "62", number: 62, section: "glavni-sank", x: 500, y: 480, available: true },
-  { id: "63", number: 63, section: "glavni-sank", x: 500, y: 540, available: true },
-  { id: "64", number: 64, section: "glavni-sank", x: 500, y: 600, available: true },
+  { id: "53", number: 53, section: "glavni-sank", x: 463, y: 205, available: true },
+  { id: "54", number: 54, section: "glavni-sank", x: 463, y: 290, available: true },
+  { id: "55", number: 55, section: "glavni-sank", x: 463, y: 360, available: true },
+  { id: "56", number: 56, section: "glavni-sank", x: 463, y: 430, available: true },
+  { id: "57", number: 57, section: "glavni-sank", x: 463, y: 540, available: true },
+  { id: "58", number: 58, section: "glavni-sank", x: 510, y: 165, available: true },
+  { id: "59", number: 59, section: "glavni-sank", x: 510, y: 235, available: false },
+  { id: "60", number: 60, section: "glavni-sank", x: 510, y: 305, available: true },
+  { id: "61", number: 61, section: "glavni-sank", x: 510, y: 375, available: true },
+  { id: "62", number: 62, section: "glavni-sank", x: 518, y: 444.5, available: true },
+  { id: "63", number: 63, section: "glavni-sank", x: 484, y: 480, available: true },
+  { id: "64", number: 64, section: "glavni-sank", x: 518, y: 515, available: true },
 ];
 
 const Reservations = () => {
@@ -334,272 +334,321 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className="bg-card rounded-lg border border-border p-2">
-                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
-                  {/* Background */}
-                  <rect width="750" height="480" fill="hsl(var(--background))" />
+                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
 
-                  {/* Rotated layout container */}
-                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
-                    {/* Section Background Areas - Clickable */}
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("ulaz")}
-                      onMouseEnter={() => setHoveredSection("ulaz")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="70"
-                        y="60"
-                        width="200"
-                        height="150"
-                        fill={
-                          selectedSection === "ulaz" || hoveredSection === "ulaz"
-                            ? sections[0].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "ulaz" || hoveredSection === "ulaz"
-                            ? sections[0].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "ulaz" ? 3 : hoveredSection === "ulaz" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
+                    {/* Background */}
+                    <rect width="750" height="480" fill="hsl(var(--background))" />
+
+                    {/* Rotated layout container */}
+                    <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
+                      {/* Šankovi ljubicasti */}
+                      <rect x="335" y="120" width="200" height="15" fill="hsl(var(--primary))" /> {/* DONJI šank */}
+                      <rect x="110" y="120" width="160" height="15" fill="hsl(var(--primary))" /> {/* GORNJI šank */}
+                      <rect x="240" y="580" width="295" height="105" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" /> {/* GLAVNI SANK OBRUB */}
+                      <rect x="240" y="580" width="15" height="105" fill="hsl(var(--primary))" /> {/* GORNJI šank GLAVNOG */}
+                      <rect x="330" y="580" width="100" height="15" fill="hsl(var(--primary))" /> {/* DONJI šank GLAVNOG */}
+
+
+                      {/* Stubovi */}
+                      <rect x="208" y="457.5" width="24" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* STUB kraj 40*/}
+                      <rect x="208" y="223" width="24" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* STUB kraj 30*/}
+                      <rect x="363" y="223" width="24" height="40" fill="none" stroke="hsl(var(--border))" strokeWidth="2" /> {/* STUB kraj 45*/}
+                      <rect x="363" y="457.5" width="24" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" /> {/* STUB kraj 50*/}
+                      <rect x="507" y="467.5" width="30" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" /> {/* STUB kraj 64*/}
+                      <rect x="270" y="120" width="65" height="16" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* Stepenica gornja*/}
+                      <rect x="270" y="136" width="65" height="16" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* Stepenica donja*/}
+                      <rect x="277" y="-55" width="50" height="16" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* ULAZ */}
+
+
+                      {/* BINE PROSTOR  */}
+                      <rect x="70" y="85" width="40" height="90" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" />{/* SANK kraj DJ*/}
+                      <rect x="70" y="175" width="30" height="470" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" />{/* Igraonica*/}
+                      <rect x="420" y="-55" width="115" height="60" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" /> {/* BINA*/}
+                      <rect x="255" y="595" width="280" height="90" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" /> {/* GLAVNI SANK */}
+                      <rect x="70" y="195" width="30" height="60" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" />{/* DJ */}
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("ulaz")}
+                        onMouseEnter={() => setHoveredSection("ulaz")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="65"
+                          y="-55"
+                          width="220"
+                          height="175"
+                          fill={
+                            selectedSection === "ulaz" || hoveredSection === "ulaz"
+                              ? sections[0].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.2}
+                          stroke={
+                            selectedSection === "ulaz" || hoveredSection === "ulaz"
+                              ? sections[0].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "ulaz" ? 3 : hoveredSection === "ulaz" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("bina")}
+                        onMouseEnter={() => setHoveredSection("bina")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="315"
+                          y="-55"
+                          width="220"
+                          height="175"
+                          fill={
+                            selectedSection === "bina" || hoveredSection === "bina"
+                              ? sections[1].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.2}
+                          stroke={
+                            selectedSection === "bina" || hoveredSection === "bina"
+                              ? sections[1].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "bina" ? 3 : hoveredSection === "bina" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("lijevi-sank")}
+                        onMouseEnter={() => setHoveredSection("lijevi-sank")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="105"
+                          y="190"
+                          width="50"
+                          height="460"
+                          fill={
+                            selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
+                              ? sections[2].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.2}
+                          stroke={
+                            selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
+                              ? sections[2].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "lijevi-sank" ? 3 : hoveredSection === "lijevi-sank" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("centar")}
+                        onMouseEnter={() => setHoveredSection("centar")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="160"
+                          y="170"
+                          width="120"
+                          height="397"
+                          fill={
+                            selectedSection === "centar" || hoveredSection === "centar"
+                              ? sections[3].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.2}
+                          stroke={
+                            selectedSection === "centar" || hoveredSection === "centar"
+                              ? sections[3].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "centar" ? 3 : hoveredSection === "centar" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("desna")}
+                        onMouseEnter={() => setHoveredSection("desna")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="315"
+                          y="137"
+                          width="120"
+                          height="405"
+                          fill={
+                            selectedSection === "desna" || hoveredSection === "desna"
+                              ? sections[4].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.2}
+                          stroke={
+                            selectedSection === "desna" || hoveredSection === "desna"
+                              ? sections[4].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "desna" ? 3 : hoveredSection === "desna" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("glavni-sank")}
+                        onMouseEnter={() => setHoveredSection("glavni-sank")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="438"
+                          y="137"
+                          width="100"
+                          height="430"
+                          fill={
+                            selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
+                              ? sections[5].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.2}
+                          stroke={
+                            selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
+                              ? sections[5].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "glavni-sank" ? 3 : hoveredSection === "glavni-sank" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      {/* All Tables - rotated circles but upright text */}
+                      {tables.map((table) => {
+                        const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
+                        const isInSelectedSection = selectedSection === table.section;
+                        const isInHoveredSection = hoveredSection === table.section;
+
+                        return (
+                          <g key={table.id} className="pointer-events-none">
+                            <circle
+                              cx={table.x}
+                              cy={table.y}
+                              r={isInSelectedSection || isInHoveredSection ? 20 : 16}
+                              fill={
+                                !table.available
+                                  ? "hsl(var(--muted))"
+                                  : isInSelectedSection || isInHoveredSection
+                                    ? sectionColor
+                                    : "hsl(var(--card))"
+                              }
+                              stroke={isInSelectedSection || isInHoveredSection ? sectionColor : "hsl(var(--border))"}
+                              strokeWidth={isInSelectedSection || isInHoveredSection ? 3 : 2}
+                              opacity={!table.available ? 0.5 : isInSelectedSection || isInHoveredSection ? 1 : 0.8}
+                              className="transition-all duration-300"
+                            />
+                            <text
+                              x={table.x}
+                              y={table.y + 5}
+                              textAnchor="middle"
+                              fill={isInSelectedSection || isInHoveredSection ? "white" : "hsl(var(--foreground))"}
+                              fontSize="11"
+                              fontWeight="bold"
+                              opacity={isInSelectedSection || isInHoveredSection ? 1 : 0.6}
+                              className="pointer-events-none"
+                              transform={`rotate(-90, ${table.x}, ${table.y})`}
+                            >
+                              {table.number}
+                            </text>
+                          </g>
+                        );
+                      })}
                     </g>
 
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("bina")}
-                      onMouseEnter={() => setHoveredSection("bina")}
-                      onMouseLeave={() => setHoveredSection("")}
+                    {/* Section Labels - positioned for horizontal layout */}
+                    <text
+                      x="673"
+                      y="238"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="14"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
+                      transform="rotate(90, 700, 270)"
                     >
-                      <rect
-                        x="330"
-                        y="60"
-                        width="200"
-                        height="150"
-                        fill={
-                          selectedSection === "bina" || hoveredSection === "bina"
-                            ? sections[1].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "bina" || hoveredSection === "bina"
-                            ? sections[1].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "bina" ? 3 : hoveredSection === "bina" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
-
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("lijevi-sank")}
-                      onMouseEnter={() => setHoveredSection("lijevi-sank")}
-                      onMouseLeave={() => setHoveredSection("")}
+                      ULAZ
+                    </text>
+                    <text
+                      x="670"
+                      y="300"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="14"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
+                      transform="rotate(90, 630, 380)"
                     >
-                      <rect
-                        x="90"
-                        y="260"
-                        width="60"
-                        height="370"
-                        fill={
-                          selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
-                            ? sections[2].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
-                            ? sections[2].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : hoveredSection === "lijevi-sank" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
-
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("centar")}
-                      onMouseEnter={() => setHoveredSection("centar")}
-                      onMouseLeave={() => setHoveredSection("")}
+                      BINA
+                    </text>
+                    <text
+                      x="465"
+                      y="30"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="12"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
                     >
-                      <rect
-                        x="160"
-                        y="260"
-                        width="100"
-                        height="370"
-                        fill={
-                          selectedSection === "centar" || hoveredSection === "centar"
-                            ? sections[3].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "centar" || hoveredSection === "centar"
-                            ? sections[3].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "centar" ? 3 : hoveredSection === "centar" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
-
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("desna")}
-                      onMouseEnter={() => setHoveredSection("desna")}
-                      onMouseLeave={() => setHoveredSection("")}
+                      DJ
+                    </text>
+                    <text
+                      x="560"
+                      y="35"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="12"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
                     >
-                      <rect
-                        x="275"
-                        y="220"
-                        width="135"
-                        height="400"
-                        fill={
-                          selectedSection === "desna" || hoveredSection === "desna"
-                            ? sections[4].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "desna" || hoveredSection === "desna"
-                            ? sections[4].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "desna" ? 3 : hoveredSection === "desna" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
-
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("glavni-sank")}
-                      onMouseEnter={() => setHoveredSection("glavni-sank")}
-                      onMouseLeave={() => setHoveredSection("")}
+                      ŠANK
+                    </text>{/* SANK kraj DJ */}
+                    <text
+                      x="390"
+                      y="530"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="20"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
+                      transform="rotate(90, 320, 260)"
                     >
-                      <rect
-                        x="425"
-                        y="240"
-                        width="95"
-                        height="380"
-                        fill={
-                          selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
-                            ? sections[5].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
-                            ? sections[5].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "glavni-sank" ? 3 : hoveredSection === "glavni-sank" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
+                      ŠANK
+                    </text>
+                  </svg>
 
-                    {/* All Tables - rotated circles but upright text */}
-                    {tables.map((table) => {
-                      const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
-                      const isInSelectedSection = selectedSection === table.section;
-                      const isInHoveredSection = hoveredSection === table.section;
-
-                      return (
-                        <g key={table.id} className="pointer-events-none">
-                          <circle
-                            cx={table.x}
-                            cy={table.y}
-                            r={isInSelectedSection || isInHoveredSection ? 20 : 16}
-                            fill={
-                              !table.available
-                                ? "hsl(var(--muted))"
-                                : isInSelectedSection || isInHoveredSection
-                                  ? sectionColor
-                                  : "hsl(var(--card))"
-                            }
-                            stroke={isInSelectedSection || isInHoveredSection ? sectionColor : "hsl(var(--border))"}
-                            strokeWidth={isInSelectedSection || isInHoveredSection ? 3 : 2}
-                            opacity={!table.available ? 0.5 : isInSelectedSection || isInHoveredSection ? 1 : 0.8}
-                            className="transition-all duration-300"
-                          />
-                          <text
-                            x={table.x}
-                            y={table.y + 5}
-                            textAnchor="middle"
-                            fill={isInSelectedSection || isInHoveredSection ? "white" : "hsl(var(--foreground))"}
-                            fontSize="11"
-                            fontWeight="bold"
-                            opacity={isInSelectedSection || isInHoveredSection ? 1 : 0.6}
-                            className="pointer-events-none"
-                            transform={`rotate(-90, ${table.x}, ${table.y})`}
-                          >
-                            {table.number}
-                          </text>
-                        </g>
-                      );
-                    })}
-                  </g>
-
-                  {/* Section Labels - positioned for horizontal layout */}
-                  <text
-                    x="700"
-                    y="270"
-                    fill="hsl(var(--muted-foreground))"
-                    fontSize="14"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                    className="pointer-events-none"
-                    transform="rotate(90, 700, 270)"
-                  >
-                    ULAZ
-                  </text>
-                  <text
-                    x="630"
-                    y="380"
-                    fill="hsl(var(--muted-foreground))"
-                    fontSize="14"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                    className="pointer-events-none"
-                    transform="rotate(90, 630, 380)"
-                  >
-                    BINA
-                  </text>
-                  <text
-                    x="375"
-                    y="35"
-                    fill="hsl(var(--muted-foreground))"
-                    fontSize="12"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                    className="pointer-events-none"
-                  >
-                    DJ
-                  </text>
-                </svg>
-
-                {/* Legend */}
-                <div className="flex items-center justify-center gap-6 mt-6 text-sm flex-wrap">
-                  {sections.map((section) => (
-                    <div key={section.id} className="flex items-center gap-2">
-                      <div className="w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
-                      <span className={selectedSection === section.id ? "font-bold text-primary" : ""}>
-                        {section.name}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                  {/* Legend */}
+                  <div className="flex items-center justify-center gap-6 mt-6 text-sm flex-wrap">
+                    {sections.map((section) => (
+                      <div key={section.id} className="flex items-center gap-2">
+                        <div className="w-4 h-4 rounded-full" style={{ backgroundColor: section.color }} />
+                        <span className={selectedSection === section.id ? "font-bold text-primary" : ""}>
+                          {section.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -696,278 +745,326 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className="bg-card rounded-lg border-2 border-border p-4">
-                <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
-                  {/* Background */}
-                  <rect width="750" height="480" fill="hsl(var(--background))" />
+                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
+                    {/* Background */}
+                    <rect width="750" height="480" fill="hsl(var(--background))" />
 
-                  {/* Rotated layout container */}
-                  <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
-                    {/* Section Background Areas - Clickable */}
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("ulaz")}
-                      onMouseEnter={() => setHoveredSection("ulaz")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="70"
-                        y="60"
-                        width="200"
-                        height="150"
-                        fill={
-                          selectedSection === "ulaz" || hoveredSection === "ulaz"
-                            ? sections[0].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "ulaz" || hoveredSection === "ulaz"
-                            ? sections[0].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "ulaz" ? 3 : hoveredSection === "ulaz" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
+                    {/* Rotated layout container */}
+                    <g transform="translate(375, 240) rotate(90) translate(-300, -315)">
+                      {/* Šankovi ljubicasti */}
+                      <rect x="335" y="120" width="200" height="15" fill="hsl(var(--primary))" /> {/* DONJI šank */}
+                      <rect x="110" y="120" width="160" height="15" fill="hsl(var(--primary))" /> {/* GORNJI šank */}
+                      <rect x="240" y="580" width="295" height="105" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" /> {/* GLAVNI SANK OBRUB */}
+                      <rect x="240" y="580" width="15" height="105" fill="hsl(var(--primary))" /> {/* GORNJI šank GLAVNOG */}
+                      <rect x="330" y="580" width="100" height="15" fill="hsl(var(--primary))" /> {/* DONJI šank GLAVNOG */}
 
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("bina")}
-                      onMouseEnter={() => setHoveredSection("bina")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="330"
-                        y="60"
-                        width="200"
-                        height="150"
-                        fill={
-                          selectedSection === "bina" || hoveredSection === "bina"
-                            ? sections[1].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "bina" || hoveredSection === "bina"
-                            ? sections[1].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "bina" ? 3 : hoveredSection === "bina" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
 
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("lijevi-sank")}
-                      onMouseEnter={() => setHoveredSection("lijevi-sank")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="90"
-                        y="260"
-                        width="60"
-                        height="370"
-                        fill={
-                          selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
-                            ? sections[2].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
-                            ? sections[2].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "lijevi-sank" ? 3 : hoveredSection === "lijevi-sank" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
+                      {/* Stubovi */}
+                      <rect x="208" y="457.5" width="24" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* STUB kraj 40*/}
+                      <rect x="208" y="223" width="24" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* STUB kraj 30*/}
+                      <rect x="363" y="223" width="24" height="40" fill="none" stroke="hsl(var(--border))" strokeWidth="2" /> {/* STUB kraj 45*/}
+                      <rect x="363" y="457.5" width="24" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" /> {/* STUB kraj 50*/}
+                      <rect x="507" y="467.5" width="30" height="24" fill="none" stroke="hsl(var(--border))" strokeWidth="2" /> {/* STUB kraj 64*/}
+                      <rect x="270" y="120" width="65" height="16" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* Stepenica gornja*/}
+                      <rect x="270" y="136" width="65" height="16" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* Stepenica donja*/}
+                      <rect x="277" y="-55" width="50" height="16" fill="none" stroke="hsl(var(--border))" strokeWidth="2" />{/* ULAZ */}
 
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("centar")}
-                      onMouseEnter={() => setHoveredSection("centar")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="160"
-                        y="260"
-                        width="100"
-                        height="370"
-                        fill={
-                          selectedSection === "centar" || hoveredSection === "centar"
-                            ? sections[3].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "centar" || hoveredSection === "centar"
-                            ? sections[3].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "centar" ? 3 : hoveredSection === "centar" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
 
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("desna")}
-                      onMouseEnter={() => setHoveredSection("desna")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="275"
-                        y="220"
-                        width="135"
-                        height="380"
-                        fill={
-                          selectedSection === "desna" || hoveredSection === "desna"
-                            ? sections[4].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "desna" || hoveredSection === "desna"
-                            ? sections[4].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "desna" ? 3 : hoveredSection === "desna" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
+                      {/* BINE PROSTOR  */}
+                      <rect x="70" y="85" width="40" height="90" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" />{/* SANK kraj DJ*/}
+                      <rect x="70" y="175" width="30" height="470" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" />{/* Igraonica*/}
+                      <rect x="420" y="-55" width="115" height="60" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" /> {/* BINA*/}
+                      <rect x="255" y="595" width="280" height="90" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" /> {/* GLAVNI SANK */}
+                      <rect x="70" y="195" width="30" height="60" fill="hsl(var(--background))" stroke="hsl(var(--border))" strokeWidth="2" />{/* DJ */}
+                      {/* Section Background Areas - Clickable */}
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("ulaz")}
+                        onMouseEnter={() => setHoveredSection("ulaz")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="65"
+                          y="-55"
+                          width="220"
+                          height="175"
+                          fill={
+                            selectedSection === "ulaz" || hoveredSection === "ulaz"
+                              ? sections[0].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.1}
+                          stroke={
+                            selectedSection === "ulaz" || hoveredSection === "ulaz"
+                              ? sections[0].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "ulaz" ? 3 : hoveredSection === "ulaz" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
 
-                    <g
-                      className="cursor-pointer transition-all duration-300"
-                      onClick={() => handleSectionSelect("glavni-sank")}
-                      onMouseEnter={() => setHoveredSection("glavni-sank")}
-                      onMouseLeave={() => setHoveredSection("")}
-                    >
-                      <rect
-                        x="425"
-                        y="240"
-                        width="95"
-                        height="380"
-                        fill={
-                          selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
-                            ? sections[5].color
-                            : "hsl(var(--muted))"
-                        }
-                        opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
-                        stroke={
-                          selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
-                            ? sections[5].color
-                            : "hsl(var(--border))"
-                        }
-                        strokeWidth={selectedSection === "glavni-sank" ? 3 : hoveredSection === "glavni-sank" ? 2 : 1}
-                        rx="8"
-                        className="transition-all duration-300"
-                      />
-                    </g>
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("bina")}
+                        onMouseEnter={() => setHoveredSection("bina")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="315"
+                          y="-55"
+                          width="220"
+                          height="175"
+                          fill={
+                            selectedSection === "bina" || hoveredSection === "bina"
+                              ? sections[1].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
+                          stroke={
+                            selectedSection === "bina" || hoveredSection === "bina"
+                              ? sections[1].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "bina" ? 3 : hoveredSection === "bina" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
 
-                    {/* All Tables */}
-                    {tables.map((table) => {
-                      const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
-                      const isSelected = selectedTable?.id === table.id;
-                      const isInSelectedSection = table.section === selectedSection;
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("lijevi-sank")}
+                        onMouseEnter={() => setHoveredSection("lijevi-sank")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="105"
+                          y="190"
+                          width="50"
+                          height="460"
+                          fill={
+                            selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
+                              ? sections[2].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.1}
+                          stroke={
+                            selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
+                              ? sections[2].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "lijevi-sank" ? 3 : hoveredSection === "lijevi-sank" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
 
-                      return (
-                        <g key={table.id}>
-                          <circle
-                            cx={table.x}
-                            cy={table.y}
-                            r={isSelected ? 22 : isInSelectedSection ? 20 : 16}
-                            fill={
-                              !table.available
-                                ? "hsl(var(--muted))"
-                                : isSelected
-                                  ? sectionColor
-                                  : isInSelectedSection
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("centar")}
+                        onMouseEnter={() => setHoveredSection("centar")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="160"
+                          y="170"
+                          width="120"
+                          height="397"
+                          fill={
+                            selectedSection === "centar" || hoveredSection === "centar"
+                              ? sections[3].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
+                          stroke={
+                            selectedSection === "centar" || hoveredSection === "centar"
+                              ? sections[3].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "centar" ? 3 : hoveredSection === "centar" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("desna")}
+                        onMouseEnter={() => setHoveredSection("desna")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="315"
+                          y="137"
+                          width="120"
+                          height="405"
+                          fill={
+                            selectedSection === "desna" || hoveredSection === "desna"
+                              ? sections[4].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
+                          stroke={
+                            selectedSection === "desna" || hoveredSection === "desna"
+                              ? sections[4].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "desna" ? 3 : hoveredSection === "desna" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      <g
+                        className="cursor-pointer transition-all duration-300"
+                        onClick={() => handleSectionSelect("glavni-sank")}
+                        onMouseEnter={() => setHoveredSection("glavni-sank")}
+                        onMouseLeave={() => setHoveredSection("")}
+                      >
+                        <rect
+                          x="438"
+                          y="137"
+                          width="100"
+                          height="430"
+                          fill={
+                            selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
+                              ? sections[5].color
+                              : "hsl(var(--muted))"
+                          }
+                          opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
+                          stroke={
+                            selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
+                              ? sections[5].color
+                              : "hsl(var(--border))"
+                          }
+                          strokeWidth={selectedSection === "glavni-sank" ? 3 : hoveredSection === "glavni-sank" ? 2 : 1}
+                          rx="8"
+                          className="transition-all duration-300"
+                        />
+                      </g>
+
+                      {/* All Tables */}
+                      {tables.map((table) => {
+                        const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
+                        const isSelected = selectedTable?.id === table.id;
+                        const isInSelectedSection = table.section === selectedSection;
+
+                        return (
+                          <g key={table.id}>
+                            <circle
+                              cx={table.x}
+                              cy={table.y}
+                              r={isSelected ? 22 : isInSelectedSection ? 20 : 16}
+                              fill={
+                                !table.available
+                                  ? "hsl(var(--muted))"
+                                  : isSelected
                                     ? sectionColor
-                                    : "hsl(var(--card))"
-                            }
-                            stroke={isSelected || isInSelectedSection ? sectionColor : "hsl(var(--border))"}
-                            strokeWidth={isSelected ? 3 : isInSelectedSection ? 2 : 1}
-                            className="cursor-pointer transition-all duration-200"
-                            onClick={() => handleTableSelect(table)}
-                            opacity={!table.available ? 0.5 : isSelected || isInSelectedSection ? 1 : 0.6}
-                          />
-                          <text
-                            x={table.x}
-                            y={table.y + 5}
-                            textAnchor="middle"
-                            fill={isSelected || isInSelectedSection ? "white" : "hsl(var(--foreground))"}
-                            fontSize="12"
-                            fontWeight="bold"
-                            className="pointer-events-none"
-                            transform={`rotate(-90, ${table.x}, ${table.y})`}
-                          >
-                            {table.number}
-                          </text>
-                        </g>
-                      );
-                    })}
-                  </g>
+                                    : isInSelectedSection
+                                      ? sectionColor
+                                      : "hsl(var(--card))"
+                              }
+                              stroke={isSelected || isInSelectedSection ? sectionColor : "hsl(var(--border))"}
+                              strokeWidth={isSelected ? 3 : isInSelectedSection ? 2 : 1}
+                              className="cursor-pointer transition-all duration-200"
+                              onClick={() => handleTableSelect(table)}
+                              opacity={!table.available ? 0.5 : isSelected || isInSelectedSection ? 1 : 0.6}
+                            />
+                            <text
+                              x={table.x}
+                              y={table.y + 5}
+                              textAnchor="middle"
+                              fill={isSelected || isInSelectedSection ? "white" : "hsl(var(--foreground))"}
+                              fontSize="12"
+                              fontWeight="bold"
+                              className="pointer-events-none"
+                              transform={`rotate(-90, ${table.x}, ${table.y})`}
+                            >
+                              {table.number}
+                            </text>
+                          </g>
+                        );
+                      })}
+                    </g>
 
-                  {/* Section Labels - positioned for horizontal layout */}
-                  <text
-                    x="700"
-                    y="270"
-                    fill="hsl(var(--muted-foreground))"
-                    fontSize="14"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                    transform="rotate(90, 700, 270)"
-                  >
-                    ULAZ
-                  </text>
-                  <text
-                    x="630"
-                    y="380"
-                    fill="hsl(var(--muted-foreground))"
-                    fontSize="14"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                    transform="rotate(90, 630, 380)"
-                  >
-                    BINA
-                  </text>
-                  <text
-                    x="375"
-                    y="35"
-                    fill="hsl(var(--muted-foreground))"
-                    fontSize="14"
-                    fontWeight="bold"
-                    textAnchor="middle"
-                  >
-                    DJ
-                  </text>
-                </svg>
+                    {/* Section Labels - positioned for horizontal layout */}
+                    <text
+                      x="673"
+                      y="238"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="14"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      transform="rotate(90, 700, 270)"
+                    >
+                      ULAZ
+                    </text>
+                    <text
+                      x="670"
+                      y="300"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="14"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      transform="rotate(90, 630, 380)"
+                    >
+                      BINA
+                    </text>
+                    <text
+                      x="465"
+                      y="30"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="14"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                    >
+                      DJ
+                    </text>
+                    <text
+                      x="560"
+                      y="35"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="12"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
+                    >
+                      ŠANK
+                    </text>{/* SANK kraj DJ */}
+                    <text
+                      x="390"
+                      y="530"
+                      fill="hsl(var(--muted-foreground))"
+                      fontSize="20"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      className="pointer-events-none"
+                      transform="rotate(90, 320, 260)"
+                    >
+                      ŠANK
+                    </text>
+                  </svg>
 
-                {/* Legend */}
-                <div className="flex items-center justify-center gap-6 mt-6 text-sm">
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full bg-card border-2 border-border" />
-                    <span>Dostupno</span>
+                  {/* Legend */}
+                  <div className="flex items-center justify-center gap-6 mt-6 text-sm">
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full bg-card border-2 border-border" />
+                      <span>Dostupno</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div
+                        className="w-4 h-4 rounded-full"
+                        style={{ backgroundColor: sections.find((s) => s.id === selectedSection)?.color }}
+                      />
+                      <span>Odabrano</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-4 h-4 rounded-full bg-muted opacity-50" />
+                      <span>Zauzeto</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div
-                      className="w-4 h-4 rounded-full"
-                      style={{ backgroundColor: sections.find((s) => s.id === selectedSection)?.color }}
-                    />
-                    <span>Odabrano</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 rounded-full bg-muted opacity-50" />
-                    <span>Zauzeto</span>
-                  </div>
-                </div>
                 </div>
               </div>
 
@@ -1066,11 +1163,10 @@ const Reservations = () => {
                         key={option.value}
                         type="button"
                         onClick={() => setFormData({ ...formData, gender: option.value })}
-                        className={`p-3 rounded-lg border transition-all duration-300 ${
-                          formData.gender === option.value
-                            ? "bg-primary text-primary-foreground border-primary shadow-lg"
-                            : "bg-card border-border hover:border-primary hover:shadow-md"
-                        }`}
+                        className={`p-3 rounded-lg border transition-all duration-300 ${formData.gender === option.value
+                          ? "bg-primary text-primary-foreground border-primary shadow-lg"
+                          : "bg-card border-border hover:border-primary hover:shadow-md"
+                          }`}
                       >
                         {option.label}
                       </button>
