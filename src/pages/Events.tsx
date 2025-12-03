@@ -13,44 +13,57 @@ import kafanskaImg from "@/assets/basement_7-2.jpg";
 import newYearImg from "@/assets/basement_39.jpg";
 import saturdayPartyImg from "@/assets/saturday-party.jpg";
 import heroImg from "@/assets/party-crowd.jpg";
+import DJGrandee from "@/assets/DJGrande.png";
+import TSMediteran from "@/assets/TSMediteran.png";
+import TSTajna from "@/assets/TSTajna.png";
+import DzenanL from "@/assets/DzenanL.png";
+import RadaM from "@/assets/RadaM.png";
 const Events = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("Svi");
   const eventsSection = useScrollAnimation();
   const parallaxOffset = useParallax(0.5);
-  const categories = ["Svi", "Muzika uživo", "DJ program", "Kafanska večer"];
+  const categories = ["Svi", "Specijalni gosti", "Muzika uživo", "DJ program"];
   const events = [{
     id: 1,
-    title: "Subotnja žurka",
-    date: "20. 11. 2025.",
-    time: "22:00",
-    category: "DJ program",
-    description: "Pridružite nam se za nezaboravnu subotnju noć uz najbolje DJ-eve i neumoljivu energiju!",
-    image: saturdayPartyImg
+    title: "Večer vina i harmonike - TS Mediteran",
+    date: "Utorak 2. 12. 2025.",
+    time: "20:00",
+    category: "Muzika uživo",
+    description: "Ovog utorka uživajte u notama TS Mediteran uz neodoljivu ponudu vina i meze! 🫒😋",
+    image: TSMediteran
   }, {
     id: 2,
-    title: "Live band večer",
-    date: "27. 11. 2025.",
+    title: "Dženan Lončarević",
+    date: "Petak 5. 12. 2025.",
     time: "21:00",
-    category: "Muzika uživo",
-    description: "Uživajte u vrhunskoj svirci i toplom ambijentu uz najbolji regionalni bend!",
-    image: liveBandImg
+    category: "Specijalni gosti",
+    description: "Prepusti se emocijama, atmosferi i hitovima koje svi znamo napamet. ❤️",
+    image: DzenanL
   }, {
     id: 3,
-    title: "Kafanska noć",
-    date: "4. 12. 2025.",
-    time: "20:00",
-    category: "Kafanska večer",
-    description: "Tradicionalna kafanska atmosfera sa najboljim hitovima i sjajnom zabavom.",
-    image: kafanskaImg
-  }, {
-    id: 4,
-    title: "Novogodišnja noć 2026",
-    date: "31. 12. 2025.",
-    time: "21:00",
+    title: "Saturday madness",
+    date: "Subota 6. 11. 2025.",
+    time: "22:00",
     category: "DJ program",
-    description: "Dočekajte Novu godinu uz ekskluzivni program, šampanjac i nezaboravnu atmosferu!",
-    image: newYearImg
+    description: "Ovaj vikend, najbolji provod vam priređuju DJ Grandeee & DJ Scylla ⚡️💯",
+    image: DJGrandee
+  }, , {
+    id: 4,
+    title: "Večer vina i harmonike - TS Tajna",
+    date: "Utorak 9. 12. 2025.",
+    time: "20:00",
+    category: "Muzika uživo",
+    description: "Što vas čeka? TS Tajna, bogata vinska ponuda, ukusna meza i zabava za pamćenje! 💃🏻",
+    image: TSTajna
+  }, {
+    id: 5,
+    title: "Rada Manojlović",
+    date: "Subota 13. 12. 2025.",
+    time: "21:00",
+    category: "Specijalni gosti",
+    description: "Pripremite se za energične ritmove, svima poznate hitove i ludu atmosferu kakvu samo Rada zna prirediti! 🎶🎤",
+    image: RadaM
   }];
   const filteredEvents = selectedCategory === "Svi" ? events : events.filter(event => event.category === selectedCategory);
   return <div className="min-h-screen bg-background">
@@ -68,7 +81,7 @@ const Events = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
             Nadolazeći događaji
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Doživi savršenu noć - od svirki uživo do tematskih partija!</p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Doživi nezaboravnu noć !</p>
         </div>
       </section>
 

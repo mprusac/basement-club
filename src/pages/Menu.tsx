@@ -165,34 +165,6 @@ const Menu = () => {
         </div>
       </section>
 
-      {/* Special Offers */}
-      <section className="py-16 px-4 bg-gradient-to-br from-primary/10 to-purple-900/5">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6 text-primary">Ponuda paketa</h2>
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
-            <div className="bg-card p-8 rounded-lg border-2 border-primary shadow-xl">
-              <h3 className="text-2xl font-bold mb-3 text-primary">Standard paket</h3>
-              <p className="text-4xl font-bold text-club-bronze mb-4">150 KM</p>
-              <ul className="text-left space-y-2 text-muted-foreground">
-                <li>✓ Rezervacija stola (6 osoba)</li>
-                <li>✓ 2 flaše vina po izboru</li>
-                <li>✓ Voćna plata</li>
-              </ul>
-            </div>
-            
-            <div className="bg-card p-8 rounded-lg border-2 border-secondary shadow-xl">
-              <h3 className="text-2xl font-bold mb-3 text-secondary">VIP paket</h3>
-              <p className="text-4xl font-bold text-club-bronze mb-4">300 KM</p>
-              <ul className="text-left space-y-2 text-muted-foreground">
-                <li>✓ VIP box (10 osoba)</li>
-                <li>✓ Flaša šampanjca</li>
-                <li>✓ 2 flaše premium vina</li>
-                <li>✓ Voćna i slana plata</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>;
