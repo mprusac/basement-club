@@ -12,7 +12,7 @@ import { toast } from "sonner";
 import { Calendar, Clock, Tag } from "lucide-react";
 import heroImg from "@/assets/basement_45-2.jpg";
 
-type Section = "yellow" | "red" | "blue" | "green" | "orange";
+type Section = "ulaz" | "bina" | "lijevi-sank" | "centar" | "desna" | "glavni-sank";
 
 interface Table {
   id: string;
@@ -24,11 +24,12 @@ interface Table {
 }
 
 const sections: { id: Section; name: string; color: string }[] = [
-  { id: "yellow", name: "Žuta Zona", color: "#FDB813" },
-  { id: "red", name: "Crvena Zona", color: "#EF4444" },
-  { id: "blue", name: "Plava Zona", color: "#3B82F6" },
-  { id: "green", name: "Zelena Zona", color: "#10B981" },
-  { id: "orange", name: "Narandžasta Zona", color: "#F97316" },
+  { id: "ulaz", name: "Ulaz Zona", color: "#FDB813" },
+  { id: "bina", name: "Bina Zona", color: "#EF4444" },
+  { id: "lijevi-sank", name: "Lijevi Šank", color: "#3B82F6" },
+  { id: "centar", name: "Centralna Zona", color: "#10B981" },
+  { id: "desna", name: "Desna Zona", color: "#F97316" },
+  { id: "glavni-sank", name: "Glavni Šank", color: "#8B5CF6" },
 ];
 
 const tables: Table[] = [
