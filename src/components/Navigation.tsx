@@ -28,8 +28,8 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
+        isScrolled || isMobileMenuOpen
           ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
           : "bg-transparent"
       }`}
@@ -70,7 +70,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-0 bg-background/70 backdrop-blur-3xl z-40 pt-20">
+          <div className="md:hidden fixed inset-0 top-[60px] bg-background/60 backdrop-blur-3xl z-[90]">
             <div className="container mx-auto px-6 py-6">
               {navLinks.map((link) => (
                 <Link
