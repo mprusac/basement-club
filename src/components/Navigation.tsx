@@ -73,21 +73,25 @@ const Navigation = () => {
           <>
             {/* Blur backdrop - starts below header */}
             <div 
-              className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-black/70 backdrop-blur-md z-[80]"
+              className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-black/70 backdrop-blur-md z-[80] animate-fade-in"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             {/* Menu content */}
-            <div className="md:hidden fixed inset-x-0 top-[60px] bg-background/95 z-[90] border-b border-border">
+            <div className="md:hidden fixed inset-x-0 top-[60px] bg-background/95 z-[90] border-b border-border animate-fade-in">
               <div className="container mx-auto px-6 py-6">
-                {navLinks.map((link) => (
+                {navLinks.map((link, index) => (
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary relative ${
+                    className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 relative opacity-0 animate-slide-up ${
                       location.pathname === link.path
                         ? "text-primary"
                         : "text-foreground/80"
                     }`}
+                    style={{ 
+                      animationDelay: `${index * 80}ms`,
+                      animationFillMode: 'forwards'
+                    }}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <span className="relative inline-block">
