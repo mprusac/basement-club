@@ -71,9 +71,9 @@ const Navigation = () => {
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
           <>
-            {/* Blur backdrop */}
+            {/* Blur backdrop - starts below header */}
             <div 
-              className="md:hidden fixed inset-0 bg-black/70 backdrop-blur-md z-[80]"
+              className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-black/70 backdrop-blur-md z-[80]"
               onClick={() => setIsMobileMenuOpen(false)}
             />
             {/* Menu content */}
