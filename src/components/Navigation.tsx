@@ -70,7 +70,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-[60px] bg-background/95 backdrop-blur-xl z-40">
+          <div className="md:hidden fixed inset-0 top-0 bg-background/70 backdrop-blur-3xl z-40 pt-20">
             <div className="container mx-auto px-6 py-6">
               {navLinks.map((link) => (
                 <Link
