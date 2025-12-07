@@ -70,21 +70,28 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`block py-3 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 ${
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground/80"
-                }`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+          <div className="md:hidden fixed inset-0 top-[60px] bg-background/95 backdrop-blur-xl z-40">
+            <div className="container mx-auto px-6 py-6">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary relative ${
+                    location.pathname === link.path
+                      ? "text-primary"
+                      : "text-foreground/80"
+                  }`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <span className="relative inline-block">
+                    {link.name}
+                    {location.pathname === link.path && (
+                      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></span>
+                    )}
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </div>
