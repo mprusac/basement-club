@@ -68,31 +68,39 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-[60px] bg-background/60 backdrop-blur-3xl z-[90]">
-            <div className="container mx-auto px-6 py-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary relative ${
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-foreground/80"
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span className="relative inline-block">
-                    {link.name}
-                    {location.pathname === link.path && (
-                      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></span>
-                    )}
-                  </span>
-                </Link>
-              ))}
+          <>
+            {/* Blur backdrop */}
+            <div 
+              className="md:hidden fixed inset-0 bg-black/70 backdrop-blur-md z-[80]"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            {/* Menu content */}
+            <div className="md:hidden fixed inset-x-0 top-[60px] bg-background/95 z-[90] border-b border-border">
+              <div className="container mx-auto px-6 py-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary relative ${
+                      location.pathname === link.path
+                        ? "text-primary"
+                        : "text-foreground/80"
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <span className="relative inline-block">
+                      {link.name}
+                      {location.pathname === link.path && (
+                        <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-secondary"></span>
+                      )}
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </nav>
