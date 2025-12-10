@@ -29,6 +29,8 @@ const Menu = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const navPlaceholderRef = useRef<HTMLDivElement>(null);
   const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const navScrollRef = useRef<HTMLDivElement>(null);
+  const buttonRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
   const menuData: Category[] = [
     {
@@ -203,6 +205,17 @@ const Menu = () => {
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({ top: elementPosition - navHeight - 20, behavior: 'smooth' });
     }
+    
+    // Center the button in navigation
+    const button = buttonRefs.current[categoryName];
+    const scrollContainer = navScrollRef.current;
+    if (button && scrollContainer) {
+      const containerWidth = scrollContainer.offsetWidth;
+      const buttonLeft = button.offsetLeft;
+      const buttonWidth = button.offsetWidth;
+      const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
+      scrollContainer.scrollTo({ left: Math.max(0, scrollPosition), behavior: 'smooth' });
+    }
   };
 
   // Sticky nav and scroll spy
@@ -228,6 +241,19 @@ const Menu = () => {
           if (rect.top <= navHeight + 100) {
             currentCategory = category.name;
           }
+        }
+      }
+      
+      // Auto-center button when category changes via scroll
+      if (currentCategory !== activeCategory) {
+        const button = buttonRefs.current[currentCategory];
+        const scrollContainer = navScrollRef.current;
+        if (button && scrollContainer) {
+          const containerWidth = scrollContainer.offsetWidth;
+          const buttonLeft = button.offsetLeft;
+          const buttonWidth = button.offsetWidth;
+          const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
+          scrollContainer.scrollTo({ left: Math.max(0, scrollPosition), behavior: 'smooth' });
         }
       }
       
@@ -275,15 +301,19 @@ const Menu = () => {
             {/* Fade indicators for mobile */}
             <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
             <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
-            <div className="flex gap-3 md:gap-8 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-1 -mb-1 px-2 md:px-0">
+            <div 
+              ref={navScrollRef}
+              className="flex gap-3 md:gap-8 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-1 -mb-1 px-2 md:px-0 scroll-smooth"
+            >
               {menuData.map((category) => (
                 <button
                   key={category.name}
+                  ref={(el) => buttonRefs.current[category.name] = el}
                   onClick={() => scrollToCategory(category.name)}
-                  className={`px-5 py-2 rounded-full font-medium transition-all border-2 whitespace-nowrap flex-shrink-0 ${
+                  className={`px-5 py-2 rounded-full font-medium transition-all duration-300 border-2 whitespace-nowrap flex-shrink-0 ${
                     activeCategory === category.name 
-                      ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" 
-                      : "bg-card hover:bg-muted text-foreground border-club-bronze"
+                      ? "bg-primary text-primary-foreground border-club-bronze shadow-lg scale-105" 
+                      : "bg-card hover:bg-muted text-foreground border-club-bronze hover:scale-105"
                   }`}
                 >
                   {category.name}
