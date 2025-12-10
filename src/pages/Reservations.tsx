@@ -744,7 +744,7 @@ const Reservations = () => {
                 </div>
 
                 {/* Right Column: Floor Plan */}
-                <div className="bg-card rounded-lg border-2 border-border p-4">
+                <div className="bg-card rounded-lg border-2 border-border p-2">
                   <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
                     {/* Background */}
                     <rect width="750" height="480" fill="hsl(var(--background))" />
@@ -793,7 +793,7 @@ const Reservations = () => {
                               ? sections[0].color
                               : "hsl(var(--muted))"
                           }
-                          opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.1}
+                          opacity={selectedSection === "ulaz" ? 0.4 : hoveredSection === "ulaz" ? 0.3 : 0.2}
                           stroke={
                             selectedSection === "ulaz" || hoveredSection === "ulaz"
                               ? sections[0].color
@@ -821,7 +821,7 @@ const Reservations = () => {
                               ? sections[1].color
                               : "hsl(var(--muted))"
                           }
-                          opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.1}
+                          opacity={selectedSection === "bina" ? 0.4 : hoveredSection === "bina" ? 0.3 : 0.2}
                           stroke={
                             selectedSection === "bina" || hoveredSection === "bina"
                               ? sections[1].color
@@ -849,7 +849,7 @@ const Reservations = () => {
                               ? sections[2].color
                               : "hsl(var(--muted))"
                           }
-                          opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.1}
+                          opacity={selectedSection === "lijevi-sank" ? 0.4 : hoveredSection === "lijevi-sank" ? 0.3 : 0.2}
                           stroke={
                             selectedSection === "lijevi-sank" || hoveredSection === "lijevi-sank"
                               ? sections[2].color
@@ -877,7 +877,7 @@ const Reservations = () => {
                               ? sections[3].color
                               : "hsl(var(--muted))"
                           }
-                          opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.1}
+                          opacity={selectedSection === "centar" ? 0.4 : hoveredSection === "centar" ? 0.3 : 0.2}
                           stroke={
                             selectedSection === "centar" || hoveredSection === "centar"
                               ? sections[3].color
@@ -905,7 +905,7 @@ const Reservations = () => {
                               ? sections[4].color
                               : "hsl(var(--muted))"
                           }
-                          opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.1}
+                          opacity={selectedSection === "desna" ? 0.4 : hoveredSection === "desna" ? 0.3 : 0.2}
                           stroke={
                             selectedSection === "desna" || hoveredSection === "desna"
                               ? sections[4].color
@@ -933,7 +933,7 @@ const Reservations = () => {
                               ? sections[5].color
                               : "hsl(var(--muted))"
                           }
-                          opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.1}
+                          opacity={selectedSection === "glavni-sank" ? 0.4 : hoveredSection === "glavni-sank" ? 0.3 : 0.2}
                           stroke={
                             selectedSection === "glavni-sank" || hoveredSection === "glavni-sank"
                               ? sections[5].color
@@ -970,7 +970,7 @@ const Reservations = () => {
                               strokeWidth={isSelected ? 3 : isInSelectedSection ? 2 : 1}
                               className="cursor-pointer transition-all duration-200"
                               onClick={() => handleTableSelect(table)}
-                              opacity={!table.available ? 0.5 : isSelected || isInSelectedSection ? 1 : 0.6}
+                              opacity={!table.available ? 0.5 : isSelected || isInSelectedSection ? 1 : 0.8}
                             />
                             <text
                               x={table.x}

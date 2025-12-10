@@ -205,7 +205,7 @@ const Menu = () => {
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({ top: elementPosition - navHeight - 20, behavior: 'smooth' });
     }
-    
+
     // Center the button in navigation
     const button = buttonRefs.current[categoryName];
     const scrollContainer = navScrollRef.current;
@@ -221,19 +221,18 @@ const Menu = () => {
   // Sticky nav and scroll spy
   useEffect(() => {
     const mainNavHeight = 64; // Height of main navigation
-    
+
     const handleScroll = () => {
       if (navPlaceholderRef.current && navRef.current) {
         const placeholderRect = navPlaceholderRef.current.getBoundingClientRect();
-        // On mobile, stick below main nav; on desktop, stick at top
-        const stickyThreshold = window.innerWidth < 768 ? mainNavHeight : 0;
+        // I na mobu i na kompu lijepi ispod glavne navigacije
+        const stickyThreshold = mainNavHeight;
         setIsNavSticky(placeholderRect.top <= stickyThreshold);
       }
 
-      // Scroll spy - find active category
       const navHeight = navRef.current?.offsetHeight || 60;
       let currentCategory = "VINA";
-      
+
       for (const category of menuData) {
         const element = categoryRefs.current[category.name];
         if (element) {
@@ -243,8 +242,7 @@ const Menu = () => {
           }
         }
       }
-      
-      // Auto-center button when category changes via scroll
+
       if (currentCategory !== activeCategory) {
         const button = buttonRefs.current[currentCategory];
         const scrollContainer = navScrollRef.current;
@@ -252,11 +250,15 @@ const Menu = () => {
           const containerWidth = scrollContainer.offsetWidth;
           const buttonLeft = button.offsetLeft;
           const buttonWidth = button.offsetWidth;
-          const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
-          scrollContainer.scrollTo({ left: Math.max(0, scrollPosition), behavior: 'smooth' });
+          const scrollPosition =
+            buttonLeft - containerWidth / 2 + buttonWidth / 2;
+          scrollContainer.scrollTo({
+            left: Math.max(0, scrollPosition),
+            behavior: "smooth",
+          });
         }
       }
-      
+
       setActiveCategory(currentCategory);
     };
 
@@ -288,20 +290,19 @@ const Menu = () => {
 
       {/* Category Navigation Placeholder for sticky behavior */}
       <div ref={navPlaceholderRef} className={isNavSticky ? "h-[60px]" : ""} />
-      
+
       {/* Category Navigation */}
-      <section 
+      <section
         ref={navRef}
-        className={`py-3 px-0 border-b border-border bg-background z-40 transition-shadow ${
-          isNavSticky ? "fixed left-0 right-0 shadow-lg top-16 md:top-0" : ""
-        }`}
+        className={`py-3 px-0 border-b border-border bg-background z-40 transition-shadow ${isNavSticky ? "fixed left-0 right-0 shadow-lg top-[4.8rem]" : ""
+          }`}
       >
         <div className="container mx-auto max-w-4xl px-4">
           <div className="relative">
             {/* Fade indicators for mobile */}
             <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
             <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
-            <div 
+            <div
               ref={navScrollRef}
               className="flex gap-3 md:gap-8 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-1 -mb-1 px-2 md:px-0 scroll-smooth"
             >
@@ -310,11 +311,10 @@ const Menu = () => {
                   key={category.name}
                   ref={(el) => buttonRefs.current[category.name] = el}
                   onClick={() => scrollToCategory(category.name)}
-                  className={`px-5 py-2 rounded-full font-medium transition-all duration-300 border-2 whitespace-nowrap flex-shrink-0 ${
-                    activeCategory === category.name 
-                      ? "bg-primary text-primary-foreground border-club-bronze shadow-lg scale-105" 
+                  className={`px-5 py-2 rounded-full font-medium transition-all duration-300 border-2 whitespace-nowrap flex-shrink-0 ${activeCategory === category.name
+                      ? "bg-primary text-primary-foreground border-club-bronze shadow-lg scale-105"
                       : "bg-card hover:bg-muted text-foreground border-club-bronze hover:scale-105"
-                  }`}
+                    }`}
                 >
                   {category.name}
                 </button>
