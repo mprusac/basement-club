@@ -207,10 +207,14 @@ const Menu = () => {
 
   // Sticky nav and scroll spy
   useEffect(() => {
+    const mainNavHeight = 64; // Height of main navigation
+    
     const handleScroll = () => {
       if (navPlaceholderRef.current && navRef.current) {
         const placeholderRect = navPlaceholderRef.current.getBoundingClientRect();
-        setIsNavSticky(placeholderRect.top <= 0);
+        // On mobile, stick below main nav; on desktop, stick at top
+        const stickyThreshold = window.innerWidth < 768 ? mainNavHeight : 0;
+        setIsNavSticky(placeholderRect.top <= stickyThreshold);
       }
 
       // Scroll spy - find active category
@@ -263,7 +267,7 @@ const Menu = () => {
       <section 
         ref={navRef}
         className={`py-3 px-0 border-b border-border bg-background z-40 transition-shadow ${
-          isNavSticky ? "fixed top-0 left-0 right-0 shadow-lg" : ""
+          isNavSticky ? "fixed left-0 right-0 shadow-lg top-16 md:top-0" : ""
         }`}
       >
         <div className="container mx-auto max-w-4xl px-4">
