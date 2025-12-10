@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useParallax } from "@/hooks/useParallax";
@@ -22,8 +23,12 @@ interface Category {
 }
 
 const Menu = () => {
-
   const parallaxOffset = useParallax(0.5);
+  const [activeCategory, setActiveCategory] = useState<string>("VINA");
+  const [isNavSticky, setIsNavSticky] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+  const navPlaceholderRef = useRef<HTMLDivElement>(null);
+  const categoryRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
   const menuData: Category[] = [
     {
@@ -192,11 +197,42 @@ const Menu = () => {
   ];
 
   const scrollToCategory = (categoryName: string) => {
-    const element = document.getElementById(categoryName.toLowerCase().replace(/\s/g, '-'));
+    const element = categoryRefs.current[categoryName];
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const navHeight = navRef.current?.offsetHeight || 60;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: elementPosition - navHeight - 20, behavior: 'smooth' });
     }
   };
+
+  // Sticky nav and scroll spy
+  useEffect(() => {
+    const handleScroll = () => {
+      if (navPlaceholderRef.current && navRef.current) {
+        const placeholderRect = navPlaceholderRef.current.getBoundingClientRect();
+        setIsNavSticky(placeholderRect.top <= 0);
+      }
+
+      // Scroll spy - find active category
+      const navHeight = navRef.current?.offsetHeight || 60;
+      let currentCategory = "VINA";
+      
+      for (const category of menuData) {
+        const element = categoryRefs.current[category.name];
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top <= navHeight + 100) {
+            currentCategory = category.name;
+          }
+        }
+      }
+      
+      setActiveCategory(currentCategory);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -220,19 +256,36 @@ const Menu = () => {
 
 
 
+      {/* Category Navigation Placeholder for sticky behavior */}
+      <div ref={navPlaceholderRef} className={isNavSticky ? "h-[60px]" : ""} />
+      
       {/* Category Navigation */}
-      <section className="py-6 px-4 border-b border-border animate-fade-in">
-        <div className="container mx-auto max-w-4xl">
-          <div className="flex gap-4 md:gap-8 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-2 -mb-2">
-            {menuData.map((category) => (
-              <button
-                key={category.name}
-                onClick={() => scrollToCategory(category.name)}
-                className="px-6 py-2 rounded-full font-medium transition-all border-2 bg-card hover:bg-muted text-foreground border-club-bronze whitespace-nowrap flex-shrink-0"
-              >
-                {category.name}
-              </button>
-            ))}
+      <section 
+        ref={navRef}
+        className={`py-3 px-0 border-b border-border bg-background z-40 transition-shadow ${
+          isNavSticky ? "fixed top-0 left-0 right-0 shadow-lg" : ""
+        }`}
+      >
+        <div className="container mx-auto max-w-4xl px-4">
+          <div className="relative">
+            {/* Fade indicators for mobile */}
+            <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
+            <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
+            <div className="flex gap-3 md:gap-8 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-1 -mb-1 px-2 md:px-0">
+              {menuData.map((category) => (
+                <button
+                  key={category.name}
+                  onClick={() => scrollToCategory(category.name)}
+                  className={`px-5 py-2 rounded-full font-medium transition-all border-2 whitespace-nowrap flex-shrink-0 ${
+                    activeCategory === category.name 
+                      ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" 
+                      : "bg-card hover:bg-muted text-foreground border-club-bronze"
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -243,7 +296,7 @@ const Menu = () => {
           {menuData.map((category, categoryIndex) => (
             <div
               key={category.name}
-              id={category.name.toLowerCase().replace(/\s/g, '-')}
+              ref={(el) => categoryRefs.current[category.name] = el}
               className={categoryIndex > 0 ? "mt-16" : ""}
             >
               {/* Main Category Header */}
