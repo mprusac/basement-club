@@ -86,12 +86,23 @@ const Events = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-6 px-4 border-b border-border">
-        <div className="container mx-auto max-w-6xl">
-          <div className="flex gap-4 md:gap-10 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-2 -mb-2">
-            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-all border-2 whitespace-nowrap flex-shrink-0 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
-                {category}
-              </button>)}
+      <section className="py-6 px-0 border-b border-border">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="relative">
+            {/* Fade indicators for mobile */}
+            <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
+            <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
+            <div className="flex gap-3 md:gap-10 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-2 -mb-2 px-2 md:px-0">
+              {categories.map(category => (
+                <button 
+                  key={category} 
+                  onClick={() => setSelectedCategory(category)} 
+                  className={`px-5 py-2 rounded-full font-medium transition-all border-2 whitespace-nowrap flex-shrink-0 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
