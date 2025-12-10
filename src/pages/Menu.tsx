@@ -223,12 +223,12 @@ const Menu = () => {
       {/* Category Navigation */}
       <section className="py-6 px-4 border-b border-border animate-fade-in">
         <div className="container mx-auto max-w-4xl">
-          <div className="flex flex-wrap gap-8 justify-center">
+          <div className="flex gap-4 md:gap-8 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-2 -mb-2">
             {menuData.map((category) => (
               <button
                 key={category.name}
                 onClick={() => scrollToCategory(category.name)}
-                className="px-6 py-2 rounded-full font-medium transition-all border-2 bg-card hover:bg-muted text-foreground border-club-bronze"
+                className="px-6 py-2 rounded-full font-medium transition-all border-2 bg-card hover:bg-muted text-foreground border-club-bronze whitespace-nowrap flex-shrink-0"
               >
                 {category.name}
               </button>

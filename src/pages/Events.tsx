@@ -88,8 +88,8 @@ const Events = () => {
       {/* Category Filter */}
       <section className="py-6 px-4 border-b border-border">
         <div className="container mx-auto max-w-6xl">
-          <div className="flex flex-wrap gap-10 justify-center">
-            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-all border-2 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
+          <div className="flex gap-4 md:gap-10 justify-start md:justify-center overflow-x-auto scrollbar-hide pb-2 -mb-2">
+            {categories.map(category => <button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-2 rounded-full font-medium transition-all border-2 whitespace-nowrap flex-shrink-0 ${selectedCategory === category ? "bg-primary text-primary-foreground border-club-bronze shadow-lg" : "bg-card hover:bg-muted text-foreground border-club-bronze"}`}>
                 {category}
               </button>)}
           </div>
