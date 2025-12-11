@@ -953,6 +953,19 @@ const Reservations = () => {
 
                         return (
                           <g key={table.id}>
+                            {/* Outer glow ring for selected table */}
+                            {isSelected && (
+                              <circle
+                                cx={table.x}
+                                cy={table.y}
+                                r={28}
+                                fill="none"
+                                stroke="white"
+                                strokeWidth={3}
+                                opacity={0.8}
+                                className="animate-pulse"
+                              />
+                            )}
                             <circle
                               cx={table.x}
                               cy={table.y}
@@ -961,23 +974,23 @@ const Reservations = () => {
                                 !table.available
                                   ? "hsl(var(--muted))"
                                   : isSelected
-                                    ? sectionColor
+                                    ? "white"
                                     : isInSelectedSection
                                       ? sectionColor
                                       : "hsl(var(--card))"
                               }
-                              stroke={isSelected || isInSelectedSection ? sectionColor : "hsl(var(--border))"}
-                              strokeWidth={isSelected ? 3 : isInSelectedSection ? 2 : 1}
+                              stroke={isSelected ? sectionColor : isInSelectedSection ? sectionColor : "hsl(var(--border))"}
+                              strokeWidth={isSelected ? 4 : isInSelectedSection ? 2 : 1}
                               className="cursor-pointer transition-all duration-200"
                               onClick={() => handleTableSelect(table)}
-                              opacity={!table.available ? 0.5 : isSelected || isInSelectedSection ? 1 : 0.8}
+                              opacity={!table.available ? 0.5 : 1}
                             />
                             <text
                               x={table.x}
                               y={table.y + 5}
                               textAnchor="middle"
-                              fill={isSelected || isInSelectedSection ? "white" : "hsl(var(--foreground))"}
-                              fontSize="12"
+                              fill={isSelected ? sectionColor : isInSelectedSection ? "white" : "hsl(var(--foreground))"}
+                              fontSize={isSelected ? "14" : "12"}
                               fontWeight="bold"
                               className="pointer-events-none"
                               transform={`rotate(-90, ${table.x}, ${table.y})`}
