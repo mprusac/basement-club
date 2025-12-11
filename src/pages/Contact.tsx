@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import contactHeroImage from "@/assets/contact-hero.png";
 import { toast } from "sonner";
 const Contact = () => {
   const contactSection = useScrollAnimation();
@@ -34,13 +35,23 @@ const Contact = () => {
   return <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 bg-gradient-to-br from-primary/20 to-purple-900/10">
-        <div className="container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
+      {/* Hero Section with Image */}
+      <section className="relative pt-20 pb-16 px-4 min-h-[50vh] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src={contactHeroImage} 
+            alt="The Basement Club & Lounge - Terasa" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+        </div>
+        
+        <div className="container mx-auto max-w-6xl text-center relative z-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in drop-shadow-lg">
             Kontaktirajte nas
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Imate pitanja? Rado ćemo vam pomoći!</p>
+          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">Imate pitanja? Rado ćemo vam pomoći!</p>
         </div>
       </section>
 
