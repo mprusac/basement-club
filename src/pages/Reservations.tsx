@@ -139,8 +139,9 @@ const Reservations = () => {
   };
 
   const handleTableSelect = (table: Table) => {
+    // If clicking on a table in a different section, switch to that section
     if (table.section !== selectedSection) {
-      toast.error("Molimo odaberite stol iz odabranog sektora");
+      handleSectionSelect(table.section);
       return;
     }
     if (!table.available) {
