@@ -241,32 +241,32 @@ const Reservations = () => {
           <div className="mb-12">
             <div className="flex items-center justify-center gap-4 mb-8">
               <div
-                className={`flex items-center gap-2 ${step === "section" ? "text-primary" : step === "table" || step === "details" ? "text-primary" : "text-muted-foreground"}`}
+                className={`flex items-center gap-2 transition-all duration-500 ${step === "section" ? "text-primary scale-110" : step === "table" || step === "details" ? "text-primary" : "text-muted-foreground"}`}
               >
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${step === "section" ? "border-primary bg-primary text-primary-foreground" : "border-primary bg-primary/20"}`}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-500 ${step === "section" ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/50 scale-110" : "border-primary bg-primary/20"}`}
                 >
                   1
                 </div>
                 <span className="font-medium">Sektor</span>
               </div>
-              <div className={`h-0.5 w-16 ${step === "table" || step === "details" ? "bg-primary" : "bg-border"}`} />
+              <div className={`h-0.5 w-16 transition-all duration-700 ${step === "table" || step === "details" ? "bg-primary" : "bg-border"}`} />
               <div
-                className={`flex items-center gap-2 ${step === "table" ? "text-primary" : step === "details" ? "text-primary" : "text-muted-foreground"}`}
+                className={`flex items-center gap-2 transition-all duration-500 ${step === "table" ? "text-primary scale-110" : step === "details" ? "text-primary" : "text-muted-foreground"}`}
               >
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${step === "table" ? "border-primary bg-primary text-primary-foreground" : step === "details" ? "border-primary bg-primary/20" : "border-border"}`}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-500 ${step === "table" ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/50 scale-110" : step === "details" ? "border-primary bg-primary/20" : "border-border"}`}
                 >
                   2
                 </div>
                 <span className="font-medium">Stol</span>
               </div>
-              <div className={`h-0.5 w-16 ${step === "details" ? "bg-primary" : "bg-border"}`} />
+              <div className={`h-0.5 w-16 transition-all duration-700 ${step === "details" ? "bg-primary" : "bg-border"}`} />
               <div
-                className={`flex items-center gap-2 ${step === "details" ? "text-primary" : "text-muted-foreground"}`}
+                className={`flex items-center gap-2 transition-all duration-500 ${step === "details" ? "text-primary scale-110" : "text-muted-foreground"}`}
               >
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 ${step === "details" ? "border-primary bg-primary text-primary-foreground" : "border-border"}`}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-500 ${step === "details" ? "border-primary bg-primary text-primary-foreground shadow-lg shadow-primary/50 scale-110" : "border-border"}`}
                 >
                   3
                 </div>
@@ -277,7 +277,7 @@ const Reservations = () => {
 
           {/* Step 1: Section Selection */}
           {step === "section" && (
-            <div className="max-w-full mx-auto">
+            <div className="max-w-full mx-auto animate-fade-in">
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-3 items-start">
                 {/* Left Column: Event Info + Dropdown */}
@@ -671,7 +671,7 @@ const Reservations = () => {
 
           {/* Step 2: Table Selection */}
           {step === "table" && (
-            <div className="max-w-full mx-auto">
+            <div className="max-w-full mx-auto animate-fade-in">
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-3 items-start">
                 {/* Left Column: Event Info + Dropdown */}
@@ -1087,14 +1087,14 @@ const Reservations = () => {
 
           {/* Step 3: Details Form */}
           {step === "details" && (
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl mx-auto animate-fade-in">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4 text-primary">Završite rezervaciju</h2>
                 <p className="text-muted-foreground">Unesite svoje podatke</p>
               </div>
 
               {selectedTable && (
-                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8">
+                <div className="bg-primary/10 border border-primary rounded-lg p-6 mb-8 animate-fade-in">
                   <p className="text-center">
                     <span className="text-muted-foreground">Stol</span>{" "}
                     <span className="text-2xl font-bold text-primary">#{selectedTable.number}</span>{" "}
@@ -1104,7 +1104,7 @@ const Reservations = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg border border-border shadow-xl">
+              <form onSubmit={handleSubmit} className="space-y-6 bg-card p-8 rounded-lg border border-border shadow-xl animate-slide-up">
                 {/* Name */}
                 <div>
                   <Label htmlFor="name">Ime i Prezime *</Label>
