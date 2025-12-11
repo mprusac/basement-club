@@ -333,7 +333,7 @@ const Reservations = () => {
                 </div>
 
                 {/* Right Column: Floor Plan */}
-                <div className="bg-card rounded-lg border border-border p-2">
+                <div className="bg-card rounded-lg border-2 border-border p-2">
                   <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
 
                     {/* Background */}
@@ -540,33 +540,33 @@ const Reservations = () => {
                         const sectionColor = sections.find((s) => s.id === table.section)?.color || "#666";
                         const isInSelectedSection = selectedSection === table.section;
                         const isInHoveredSection = hoveredSection === table.section;
+                        const isHighlighted = isInSelectedSection || isInHoveredSection;
 
                         return (
                           <g key={table.id} className="pointer-events-none">
                             <circle
                               cx={table.x}
                               cy={table.y}
-                              r={isInSelectedSection || isInHoveredSection ? 20 : 16}
+                              r={isHighlighted ? 20 : 16}
                               fill={
                                 !table.available
                                   ? "hsl(var(--muted))"
-                                  : isInSelectedSection || isInHoveredSection
+                                  : isHighlighted
                                     ? sectionColor
                                     : "hsl(var(--card))"
                               }
-                              stroke={isInSelectedSection || isInHoveredSection ? sectionColor : "hsl(var(--border))"}
-                              strokeWidth={isInSelectedSection || isInHoveredSection ? 3 : 2}
-                              opacity={!table.available ? 0.5 : isInSelectedSection || isInHoveredSection ? 1 : 0.8}
-                              className="transition-all duration-300"
+                              stroke={isHighlighted ? sectionColor : "hsl(var(--border))"}
+                              strokeWidth={isHighlighted ? 2 : 1}
+                              opacity={!table.available ? 0.5 : isHighlighted ? 1 : 0.8}
+                              className="transition-all duration-200"
                             />
                             <text
                               x={table.x}
                               y={table.y + 5}
                               textAnchor="middle"
-                              fill={isInSelectedSection || isInHoveredSection ? "white" : "hsl(var(--foreground))"}
-                              fontSize="11"
+                              fill={isHighlighted ? "white" : "hsl(var(--foreground))"}
+                              fontSize="12"
                               fontWeight="bold"
-                              opacity={isInSelectedSection || isInHoveredSection ? 1 : 0.6}
                               className="pointer-events-none"
                               transform={`rotate(-90, ${table.x}, ${table.y})`}
                             >
