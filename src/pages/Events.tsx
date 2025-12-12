@@ -108,9 +108,9 @@ const Events = () => {
       </section>
 
       {/* Events Grid */}
-      <section ref={eventsSection.ref} className={`py-16 px-4 transition-all duration-1000 ${eventsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section ref={eventsSection.ref} className={`py-8 md:py-16 px-2 md:px-4 transition-all duration-1000 ${eventsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-6xl px-0 md:px-4">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
             {filteredEvents.map((event, index) => <Card key={event.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card border-border animate-fade-in" style={{
             animationDelay: `${index * 0.1}s`
           }}>
