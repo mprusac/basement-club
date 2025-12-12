@@ -234,9 +234,9 @@ const Reservations = () => {
       {/* Reservation Section */}
       <section
         ref={reservationSection.ref}
-        className={`py-8 px-2 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`py-4 md:py-8 px-1 md:px-2 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        <div className="container mx-auto max-w-[1400px]">
+        <div className="container mx-auto max-w-[1400px] px-0 md:px-4">
           {/* Progress Steps */}
           <div className="mb-12">
             <div className="flex items-center justify-center gap-4 mb-8">
@@ -279,7 +279,7 @@ const Reservations = () => {
           {step === "section" && (
             <div className="max-w-full mx-auto animate-fade-in">
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
-              <div className="grid lg:grid-cols-[280px_1fr] gap-3 items-start">
+              <div className="grid lg:grid-cols-[280px_1fr] gap-2 md:gap-3 items-start px-0 md:px-0">
                 {/* Left Column: Event Info + Dropdown */}
                 <div className="space-y-4">
                   {/* Event Info Banner */}
@@ -334,8 +334,8 @@ const Reservations = () => {
                 </div>
 
                 {/* Right Column: Floor Plan */}
-                <div className="bg-card rounded-lg border-2 border-border p-2">
-                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
+                <div className="bg-card rounded-lg border-2 border-border p-0.5 md:p-2">
+                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[70vh] md:max-h-[600px]">
 
                     {/* Background */}
                     <rect width="750" height="480" fill="hsl(var(--background))" />
@@ -673,7 +673,7 @@ const Reservations = () => {
           {step === "table" && (
             <div className="max-w-full mx-auto animate-fade-in">
               {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
-              <div className="grid lg:grid-cols-[280px_1fr] gap-3 items-start">
+              <div className="grid lg:grid-cols-[280px_1fr] gap-2 md:gap-3 items-start px-0 md:px-0">
                 {/* Left Column: Event Info + Dropdown */}
                 <div className="space-y-4">
                   {/* Event Info Banner */}
@@ -745,8 +745,8 @@ const Reservations = () => {
                 </div>
 
                 {/* Right Column: Floor Plan */}
-                <div className="bg-card rounded-lg border-2 border-border p-2">
-                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[600px]">
+                <div className={`bg-card rounded-lg border-2 border-border p-0.5 md:p-2 transition-all duration-500 ${selectedSection ? 'lg:col-span-1' : ''}`}>
+                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[70vh] md:max-h-[600px]">
                     {/* Background */}
                     <rect width="750" height="480" fill="hsl(var(--background))" />
 
