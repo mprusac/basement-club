@@ -278,10 +278,10 @@ const Reservations = () => {
           {/* Step 1: Section Selection */}
           {step === "section" && (
             <div className="max-w-full mx-auto animate-fade-in">
-              {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
+              {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right - reversed on mobile */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-2 md:gap-3 items-start px-0 md:px-0">
-                {/* Left Column: Event Info + Dropdown */}
-                <div className="space-y-4">
+                {/* Left Column: Event Info + Dropdown - hidden on mobile, shown on desktop */}
+                <div className="hidden lg:block space-y-4">
                   {/* Event Info Banner */}
                   {eventInfo && (
                     <div className="bg-primary/10 border-2 border-primary/30 rounded-lg p-3">
@@ -651,6 +651,52 @@ const Reservations = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* Mobile Controls Below Floor Plan */}
+                <div className="lg:hidden space-y-4 mt-4">
+                  {/* Event Info Banner - Mobile */}
+                  {eventInfo && (
+                    <div className="bg-primary/10 border-2 border-primary/30 rounded-lg p-3">
+                      <h3 className="text-base font-bold text-primary mb-2">{eventInfo.eventTitle}</h3>
+                      <div className="space-y-1.5 text-xs text-muted-foreground">
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {eventInfo.eventDate}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-3.5 h-3.5" />
+                          {eventInfo.eventTime}
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Tag className="w-3.5 h-3.5" />
+                          {eventInfo.eventCategory}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Section Dropdown - Mobile */}
+                  <div>
+                    <Label>Odaberite iz liste</Label>
+                    <Select value={selectedSection} onValueChange={(value) => handleSectionSelect(value as Section)}>
+                      <SelectTrigger className="mt-2">
+                        <SelectValue placeholder="Odaberite sektor..." />
+                      </SelectTrigger>
+                      <SelectContent className="z-50 bg-background">
+                        {sections.map((section) => (
+                          <SelectItem key={section.id} value={section.id}>
+                            {section.name} ({tables.filter((t) => t.section === section.id && t.available).length} dostupno)
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Continue Button - Mobile */}
+                  <Button onClick={handleContinue} size="lg" className="w-full" disabled={!selectedSection}>
+                    Nastavi
+                  </Button>
+                </div>
               </div>
 
               {selectedSection && (
@@ -672,10 +718,10 @@ const Reservations = () => {
           {/* Step 2: Table Selection */}
           {step === "table" && (
             <div className="max-w-full mx-auto animate-fade-in">
-              {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right */}
+              {/* Grid Layout: Event Info + Dropdown on Left, Floor Plan on Right - reversed on mobile */}
               <div className="grid lg:grid-cols-[280px_1fr] gap-2 md:gap-3 items-start px-0 md:px-0">
-                {/* Left Column: Event Info + Dropdown */}
-                <div className="space-y-4">
+                {/* Left Column: Event Info + Dropdown - hidden on mobile */}
+                <div className="hidden lg:block space-y-4">
                   {/* Event Info Banner */}
                   {eventInfo && (
                     <div className="bg-primary/10 border-2 border-primary/30 rounded-lg p-3">
@@ -1078,6 +1124,48 @@ const Reservations = () => {
                       <div className="w-4 h-4 rounded-full bg-muted opacity-50" />
                       <span>Zauzeto</span>
                     </div>
+                  </div>
+                </div>
+
+                {/* Mobile Controls Below Floor Plan */}
+                <div className="lg:hidden space-y-4 mt-4">
+                  {/* Selected Table Info - Mobile (shown first) */}
+                  {selectedTable && (
+                    <div className="bg-primary/10 border border-primary rounded-lg p-3 text-center">
+                      <p className="text-sm font-semibold">
+                        Odabrani stol: <span className="text-primary text-lg">#{selectedTable.number}</span>
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        u sektoru {sections.find((s) => s.id === selectedTable.section)?.name}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Section Dropdown - Mobile */}
+                  <div>
+                    <Label>Odaberite sektor</Label>
+                    <Select value={selectedSection} onValueChange={(value) => handleSectionSelect(value as Section)}>
+                      <SelectTrigger className="mt-2">
+                        <SelectValue placeholder="Odaberite sektor..." />
+                      </SelectTrigger>
+                      <SelectContent className="z-50 bg-background">
+                        {sections.map((section) => (
+                          <SelectItem key={section.id} value={section.id}>
+                            {section.name} ({tables.filter((t) => t.section === section.id && t.available).length} dostupno)
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  {/* Action Buttons - Mobile */}
+                  <div className="flex gap-2">
+                    <Button onClick={handleBack} variant="outline" size="lg" className="flex-1 hover:bg-club-bronze hover:text-black border-club-bronze">
+                      Nazad
+                    </Button>
+                    <Button onClick={handleContinue} size="lg" className="flex-1" disabled={!selectedTable}>
+                      Nastavi
+                    </Button>
                   </div>
                 </div>
               </div>
