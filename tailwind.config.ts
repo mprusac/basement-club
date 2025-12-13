@@ -65,12 +65,18 @@ export default {
           light: 'hsl(280 60% 60%)',
         },
         'club-gold': {
-          DEFAULT: 'hsl(32 55% 58%)',
-          dark: 'hsl(32 55% 50%)',
+          DEFAULT: 'hsl(35 50% 52%)',
+          light: 'hsl(40 45% 65%)',
+          dark: 'hsl(30 55% 40%)',
         },
         'club-bronze': {
           DEFAULT: 'hsl(var(--club-bronze))',
           foreground: 'hsl(var(--club-bronze-foreground))',
+        },
+        'gold': {
+          light: 'hsl(var(--gold-light))',
+          DEFAULT: 'hsl(var(--gold-main))',
+          dark: 'hsl(var(--gold-dark))',
         },
       },
       borderRadius: {
