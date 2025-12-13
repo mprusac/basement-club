@@ -43,12 +43,19 @@ All colors MUST be HSL.
     
     /* Luxurious gradients */
     --gradient-primary: linear-gradient(135deg, hsl(24 85% 50%), hsl(32 90% 40%));
-    --gradient-gold: linear-gradient(135deg, hsl(32 100% 55%), hsl(28 100% 45%));
+    --gradient-gold: linear-gradient(135deg, hsl(40 45% 65%), hsl(35 50% 50%), hsl(30 55% 40%));
+    --gradient-gold-subtle: linear-gradient(135deg, hsl(38 35% 55%), hsl(32 40% 45%));
     --gradient-hero: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(40,20,10,0.5));
+    
+    /* Luxury gold colors */
+    --gold-light: 40 45% 65%;
+    --gold-main: 35 50% 52%;
+    --gold-dark: 30 55% 40%;
     
     /* Shadows */
     --shadow-glow: 0 0 40px rgba(220, 120, 50, 0.3);
-    --shadow-gold: 0 10px 30px rgba(220, 140, 50, 0.3);
+    --shadow-gold: 0 4px 20px rgba(180, 140, 80, 0.25);
+    --shadow-gold-hover: 0 6px 25px rgba(180, 140, 80, 0.35);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
