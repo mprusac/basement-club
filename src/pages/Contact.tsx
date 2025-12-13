@@ -36,7 +36,7 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section with Image */}
-      <section className="relative pt-20 pb-8 md:pb-16 px-2 md:px-4 min-h-[40vh] md:min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-20 md:pt-24 pb-4 md:pb-8 px-2 md:px-4 min-h-[25vh] md:min-h-[30vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -48,10 +48,10 @@ const Contact = () => {
         </div>
         
         <div className="container mx-auto max-w-6xl text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-club-bronze animate-fade-in drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-club-bronze animate-fade-in drop-shadow-lg">
             Kontaktirajte nas
           </h1>
-          <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">Imate pitanja? Rado ćemo vam pomoći!</p>
+          <p className="text-base md:text-lg text-foreground/90 max-w-2xl mx-auto drop-shadow-md">Imate pitanja? Rado ćemo vam pomoći!</p>
         </div>
       </section>
 

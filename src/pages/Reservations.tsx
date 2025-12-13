@@ -792,7 +792,7 @@ const Reservations = () => {
 
                 {/* Right Column: Floor Plan */}
                 <div className={`bg-card rounded-lg border-2 border-border p-0.5 md:p-2 transition-all duration-500 ${selectedSection ? 'lg:col-span-1' : ''}`}>
-                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[70vh] md:max-h-[600px]">
+                  <svg viewBox="0 0 750 480" className="w-full h-auto max-h-[70vh] md:max-h-[450px]">
                     {/* Background */}
                     <rect width="750" height="480" fill="hsl(var(--background))" />
 

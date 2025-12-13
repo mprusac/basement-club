@@ -271,7 +271,7 @@ const Menu = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+      <section className="relative pt-20 md:pt-24 pb-4 md:pb-8 px-4 overflow-hidden min-h-[25vh] md:min-h-[30vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url(${heroImg})`,
           transform: `translateY(${parallaxOffset}px)`
@@ -279,10 +279,10 @@ const Menu = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-club-bronze animate-fade-in">
             NAŠA PONUDA
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Odabrana kolekcija premium pića i delicija</p>
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">Odabrana kolekcija premium pića i delicija</p>
         </div>
       </section>
 
