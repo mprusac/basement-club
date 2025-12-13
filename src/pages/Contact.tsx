@@ -36,7 +36,7 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section with Image */}
-      <section className="relative pt-20 pb-16 px-4 min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative pt-20 pb-8 md:pb-16 px-2 md:px-4 min-h-[40vh] md:min-h-[50vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -48,17 +48,17 @@ const Contact = () => {
         </div>
         
         <div className="container mx-auto max-w-6xl text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-club-bronze animate-fade-in drop-shadow-lg">
             Kontaktirajte nas
           </h1>
-          <p className="text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">Imate pitanja? Rado ćemo vam pomoći!</p>
+          <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto drop-shadow-md">Imate pitanja? Rado ćemo vam pomoći!</p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section ref={contactSection.ref} className={`py-16 px-4 transition-all duration-1000 ${contactSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12">
+      <section ref={contactSection.ref} className={`py-8 md:py-16 px-2 md:px-4 transition-all duration-1000 ${contactSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-7xl px-1 md:px-4">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-12">
             {/* Contact Info */}
             <div className="space-y-8">
               <div>

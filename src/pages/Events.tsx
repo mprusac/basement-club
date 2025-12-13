@@ -70,7 +70,7 @@ const Events = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-4 overflow-hidden">
+      <section className="relative pt-24 md:pt-32 pb-8 md:pb-16 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${heroImg})`,
         transform: `translateY(${parallaxOffset}px)`
@@ -78,10 +78,10 @@ const Events = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-club-bronze animate-fade-in">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 text-club-bronze animate-fade-in">
             Nadolazeći događaji
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Doživi nezaboravnu noć !</p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">Doživi nezaboravnu noć !</p>
         </div>
       </section>
 
