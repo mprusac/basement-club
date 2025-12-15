@@ -12,7 +12,7 @@ import liveBandImg from "@/assets/basement_12.jpg";
 import kafanskaImg from "@/assets/basement_7-2.jpg";
 import newYearImg from "@/assets/basement_39.jpg";
 import saturdayPartyImg from "@/assets/saturday-party.jpg";
-import heroImg from "@/assets/party-crowd.jpg";
+import heroImg from "@/assets/basement_45-2.jpg";
 import DJGrandee from "@/assets/DJGrande.png";
 import TSMediteran from "@/assets/TSMediteran.png";
 import TSTajna from "@/assets/TSTajna.png";
@@ -111,7 +111,7 @@ const Events = () => {
       <section ref={eventsSection.ref} className={`py-8 md:py-16 px-2 md:px-4 transition-all duration-1000 ${eventsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl px-0 md:px-4">
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-            {filteredEvents.map((event, index) => <Card key={event.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-card border-border animate-fade-in" style={{
+            {filteredEvents.map((event, index) => <Card key={event.id} className="overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_40px_-10px_hsl(var(--gold-main)/0.4)] bg-card border-border animate-fade-in group" style={{
             animationDelay: `${index * 0.1}s`
           }}>
                 <div className="relative h-32 md:h-40 overflow-hidden">
