@@ -50,11 +50,13 @@ const Navigation = () => {
                 className={`text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-club-bronze relative group ${
                   location.pathname === link.path
                     ? "text-club-bronze"
-                    : "text-club-bronze/80"
+                    : "text-club-bronze/60"
                 }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 group-hover:w-full"></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-club-bronze to-club-gold transition-all duration-300 ${
+                  location.pathname === link.path ? "w-full" : "w-0 group-hover:w-full"
+                }`}></span>
               </Link>
             ))}
           </div>
