@@ -203,17 +203,17 @@ const Reservations = () => {
 
   const sectionTables = tables.filter((t) => t.section === selectedSection);
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
 
       {/* Reservation Section */}
       <section
         ref={reservationSection.ref}
-        className={`py-4 md:py-8 px-1 md:px-2 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`pt-24 md:pt-28 pb-4 px-1 md:px-2 transition-all duration-1000 flex-1 flex flex-col ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        <div className="container mx-auto max-w-[1400px] px-0 md:px-4">
+        <div className="container mx-auto max-w-[1400px] px-0 md:px-4 flex-1 flex flex-col">
           {/* Progress Steps */}
-          <div className="mb-12">
+          <div className="mb-6">
             <div className="flex items-center justify-center gap-4 mb-8">
               <div
                 className={`flex items-center gap-2 transition-all duration-500 ${step === "section" ? "text-primary scale-110" : step === "table" || step === "details" ? "text-primary" : "text-muted-foreground"}`}
