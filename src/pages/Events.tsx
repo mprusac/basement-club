@@ -86,7 +86,7 @@ const Events = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-6 px-0 border-b border-border">
+      <section className="py-3 px-0 border-b border-border">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="relative">
             {/* Fade indicators for mobile */}

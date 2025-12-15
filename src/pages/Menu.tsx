@@ -271,7 +271,7 @@ const Menu = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-24 pb-4 md:pb-8 px-4 overflow-hidden min-h-[25vh] md:min-h-[30vh] flex items-center justify-center">
+      <section className="relative pt-16 md:pt-20 pb-2 md:pb-4 px-4 overflow-hidden min-h-[18vh] md:min-h-[22vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{
           backgroundImage: `url(${heroImg})`,
           transform: `translateY(${parallaxOffset}px)`
@@ -279,8 +279,8 @@ const Menu = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-club-bronze animate-fade-in">
-            NAŠA PONUDA
+          <h1 className="text-3xl md:text-4xl font-bold mb-1 md:mb-2 text-club-bronze animate-fade-in">
+            Naša ponuda
           </h1>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">Odabrana kolekcija premium pića i delicija</p>
         </div>
@@ -294,13 +294,13 @@ const Menu = () => {
       {/* Category Navigation */}
       <section
         ref={navRef}
-        className={`py-3 px-0 border-b border-border bg-background z-40 transition-shadow ${isNavSticky ? "fixed left-0 right-0 shadow-lg top-[4.8rem]" : ""
+        className={`py-3 px-0 border-b border-border bg-background z-40 transition-shadow ${isNavSticky ? "fixed left-0 right-0 shadow-lg top-[4.3rem]" : ""
           }`}
       >
         <div className="container mx-auto max-w-4xl px-4">
           <div className="relative">
             {/* Fade indicators for mobile */}
-            <div className="absolute left-0 top-0 bottom-0 w-6 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
+            <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none md:hidden" />
             <div className="absolute right-0 top-0 bottom-0 w-6 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none md:hidden" />
             <div
               ref={navScrollRef}

@@ -10,7 +10,6 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 import { Calendar, Clock, Tag } from "lucide-react";
-import heroImg from "@/assets/basement_45-2.jpg";
 
 type Section = "ulaz" | "bina" | "lijevi-sank" | "centar" | "desna" | "glavni-sank";
 
@@ -145,7 +144,7 @@ const Reservations = () => {
       return;
     }
     if (!table.available) {
-      toast.error("Ovaj stol je već rezervisan");
+      toast.error("Ovaj stol je već rezerviran!");
       return;
     }
     setSelectedTable(table);
@@ -166,6 +165,7 @@ const Reservations = () => {
       setStep("section");
       setSelectedSection("");
       setSelectedTable(null);
+      setHoveredSection(""); 
     }
   };
 
@@ -208,27 +208,8 @@ const Reservations = () => {
       <Navigation />
 
       {/* Hero Section with Parallax */}
-      <section className="relative pt-24 pb-6 px-4 overflow-hidden">
-        {/* Parallax Background */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${heroImg})`,
-            transform: `translateY(${parallaxOffset}px)`,
-            willChange: "transform",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-primary/30" />
-
-        {/* Content */}
-        <div className="container mx-auto max-w-6xl text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-club-bronze drop-shadow-lg animate-fade-in">
-            Rezervirajte svoj stol
-          </h1>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto drop-shadow-md">
-            Odaberite stol ili VIP box i osigurajte sebi nezaboravnu večer!
-          </p>
-        </div>
+      <section className="relative pt-6 pb-6 px-4 overflow-hidden">
+        
       </section>
 
       {/* Reservation Section */}
@@ -236,10 +217,10 @@ const Reservations = () => {
         ref={reservationSection.ref}
         className={`py-4 md:py-8 px-1 md:px-2 transition-all duration-1000 ${reservationSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        <div className="container mx-auto max-w-[1400px] px-0 md:px-4">
+        <div className="container mx-auto max-w-[1200px] px-0 md:px-8">
           {/* Progress Steps */}
-          <div className="mb-12">
-            <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="mb-8">
+            <div className="flex items-center justify-center gap-3 mb-8">
               <div
                 className={`flex items-center gap-2 transition-all duration-500 ${step === "section" ? "text-primary scale-110" : step === "table" || step === "details" ? "text-primary" : "text-muted-foreground"}`}
               >

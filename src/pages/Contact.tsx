@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
-import contactHeroImage from "@/assets/contact-hero.png";
+import contactHeroImage from "@/assets/kontakt-hero.jpg";
 import { toast } from "sonner";
 const Contact = () => {
   const contactSection = useScrollAnimation();

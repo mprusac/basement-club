@@ -82,7 +82,7 @@ const Gallery = () => {
             transform: `translateY(${parallaxOffset}px)`,
           }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-club-bronze animate-fade-in">
