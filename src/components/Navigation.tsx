@@ -47,10 +47,10 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary relative group ${
+                className={`text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-club-bronze relative group ${
                   location.pathname === link.path
-                    ? "text-primary"
-                    : "text-foreground/80"
+                    ? "text-club-bronze"
+                    : "text-club-bronze/80"
                 }`}
               >
                 {link.name}
@@ -83,10 +83,10 @@ const Navigation = () => {
                   <Link
                     key={link.path}
                     to={link.path}
-                    className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-primary hover:translate-x-2 relative opacity-0 animate-slide-up ${
+                    className={`block py-4 text-lg font-montserrat font-bold tracking-wide transition-all duration-300 hover:text-club-bronze hover:translate-x-2 relative opacity-0 animate-slide-up ${
                       location.pathname === link.path
-                        ? "text-primary"
-                        : "text-foreground/80"
+                        ? "text-club-bronze"
+                        : "text-club-bronze/80"
                     }`}
                     style={{ 
                       animationDelay: `${index * 80}ms`,
