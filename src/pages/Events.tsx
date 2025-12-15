@@ -70,7 +70,7 @@ const Events = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-20 md:pt-24 pb-4 md:pb-8 px-4 overflow-hidden min-h-[25vh] md:min-h-[30vh] flex items-center justify-center">
+      <section className="relative pt-16 md:pt-20 pb-2 md:pb-4 px-4 overflow-hidden min-h-[18vh] md:min-h-[22vh] flex items-center justify-center">
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: `url(${heroImg})`,
         transform: `translateY(${parallaxOffset}px)`
@@ -78,10 +78,10 @@ const Events = () => {
         <div className="absolute inset-0 bg-black/60" />
         
         <div className="relative container mx-auto max-w-6xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-2 md:mb-4 text-club-bronze animate-fade-in">
+          <h1 className="text-3xl md:text-4xl font-bold mb-1 md:mb-2 text-club-bronze animate-fade-in">
             Nadolazeći događaji
           </h1>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">Doživi nezaboravnu noć !</p>
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">Doživi nezaboravnu noć !</p>
         </div>
       </section>
 
@@ -110,29 +110,29 @@ const Events = () => {
       {/* Events Grid */}
       <section ref={eventsSection.ref} className={`py-8 md:py-16 px-2 md:px-4 transition-all duration-1000 ${eventsSection.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl px-0 md:px-4">
-          <div className="grid md:grid-cols-2 gap-4 md:gap-8">
-            {filteredEvents.map((event, index) => <Card key={event.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card border-border animate-fade-in" style={{
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
+            {filteredEvents.map((event, index) => <Card key={event.id} className="overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 bg-card border-border animate-fade-in" style={{
             animationDelay: `${index * 0.1}s`
           }}>
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-32 md:h-40 overflow-hidden">
                   <img src={event.image} alt={event.title} className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
-                  <Badge className="absolute top-4 right-4 bg-primary text-primary-foreground">
+                  <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs">
                     {event.category}
                   </Badge>
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-2xl text-primary">{event.title}</CardTitle>
-                  <CardDescription className="flex items-center gap-4 text-lg">
-                    <span className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
+                <CardHeader className="p-3 md:p-4">
+                  <CardTitle className="text-base md:text-lg text-primary line-clamp-1">{event.title}</CardTitle>
+                  <CardDescription className="flex flex-col md:flex-row md:items-center gap-1 md:gap-3 text-xs md:text-sm">
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
                       {event.date}
                     </span>
                     <span>{event.time}</span>
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground leading-relaxed">{event.description}</p>
+                <CardContent className="space-y-2 p-3 md:p-4 pt-0">
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed line-clamp-2">{event.description}</p>
                   <Button 
                     onClick={() => navigate('/reservations', { 
                       state: { 
@@ -142,8 +142,9 @@ const Events = () => {
                         eventCategory: event.category
                       } 
                     })}
-                    className="w-full"
+                    className="w-full text-xs md:text-sm py-2"
                     variant="premium"
+                    size="sm"
                   >
                     Rezerviraj
                   </Button>
